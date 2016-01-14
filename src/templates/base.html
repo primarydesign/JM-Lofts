@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="{{ fn.app('assets/js/common.chunk.js') }}" asycn></script>
+	<script src="{{ fn.app('assets/js/' + filename + '.chunk.js') }}" async></script>
+</head>
+<body class="page">
+	{% include 'navbar.html' %}
+	<main class="page__content" role="main">
+		{% block content %}
+		{% endblock %}
+	</main>
+	{% include 'footer.html' %}
+</body>
+</html>
