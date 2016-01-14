@@ -1,6 +1,5 @@
 # UPPSTA IGNORES
 node_modules
 app
-src
 *.sublime*
 *.sublime*
