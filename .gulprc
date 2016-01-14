@@ -1,0 +1,42 @@
+{
+  "envs": {},
+  "servers": {},
+  "paths": {
+    "root": {
+      "src": "./src/",
+      "app": "./app/",
+      "build": "./app/"
+    },
+    "data": {
+      "src": "./src/assets/_data"
+    },
+    "pages": {
+      "src": "./src/",
+      "dest": "./app/",
+      "temp": "./src/templates/",
+      "globs": ["~/**/*.{html,swig,php}", "!~/templates/**/*"],
+      "watch": ["~/**/*.{html,swig,php}", "!~/templates/**/*", "./src/assets/_data/**/*.json"],
+      "views": ["~/**/*.{html,swig,php}"]
+    },
+    "assets": {
+      "src": "./src/assets/",
+      "dest": "./app/assets/",
+      "globs": ["~/**/*", "!~/{_data,css,js,img}/**/*", "!~/**/_*"]
+    },
+    "css": {
+      "src": "src/assets/css/",
+      "dest": "./app/assets/css/",
+      "globs": ["~/*.css", "!**/_*"]
+    },
+    "js": {
+      "src": "./src/assets/js/",
+      "dest": "./app/assets/js/",
+      "globs": ["~/*.js", "!~/_*"]
+    },
+    "img": {
+      "src": "./src/assets/img/",
+      "dest": "./app/assets/img/",
+      "globs": ["~/**/*.{jpeg,jpg,png,svg}"]
+    }
+  }
+}
