@@ -18,45 +18,44 @@ var Browser = bsync.create();
 var $ = Uppsta.configure.paths;
 var _ = Uppsta.Options;
 
-function Pages() {
+gulp.task('pages', function() {
+  console.log('x');
   return gulp.src($.pages.globs)
   .pipe(data(_.data))
   .pipe(swig(_.swig()))
-  .pipe(htmlmin(_.htmlmin))
-  .pipe(gulp.dest($.pages.dest));
-}
+  // .pipe(htmlmin(_.htmlmin))
+  .pipe(gulp.dest($.pages.dest))
+  .pipe(Browser.stream());
+});
 
-function Styles() {
+gulp.task('styles', function() {
   return gulp.src($.css.globs)
   .pipe(postcss(_.postcss))
   .pipe(cssnano(_.cssnano))
-  .pipe(gulp.dest($.css.dest));
-}
+  .pipe(gulp.dest($.css.dest))
+  .pipe(Browser.stream());
+});
 
-function Scripts() {
+gulp.task('scripts', function() {
   return gulp.src($.js.globs)
   .pipe(named())
   .pipe(webpack(_.webpack))
-  .pipe(gulp.dest($.js.dest));
-}
+  .pipe(gulp.dest($.js.dest))
+  .pipe(Browser.stream());
+});
 
-function Images() {
+gulp.task('images', function() {
   return gulp.src($.img.globs)
   .pipe(cached())
   .pipe(imagemin())
-  .pipe(gulp.dest($.img.dest));
-}
+  .pipe(gulp.dest($.img.dest))
+  .pipe(Browser.stream());
+});
 
-function Watch() {
+gulp.task('watch', function() {
   Browser.init(_.browsersync);
-	gulp.watch($.pages.globs, Pages);
-  gulp.watch($.css.globs, Styles);
-  gulp.watch($.js.globs, Scripts);
-  gulp.watch($.img.globs, Images);
-}
-
-gulp.task('pages', Pages);
-gulp.task('styles', Styles);
-gulp.task('scripts', Scripts);
-gulp.task('images', Images);
-gulp.task('watch', Watch);
+	gulp.watch($.pages.watch, ['pages']);
+  gulp.watch($.css.watch, ['styles']);
+  gulp.watch($.js.watch, ['scripts']);
+  gulp.watch($.img.watch, ['images']);
+});

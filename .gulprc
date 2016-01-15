@@ -15,7 +15,7 @@
       "dest": "./app/",
       "temp": "./src/templates/",
       "globs": ["~/**/*.{html,swig,php}", "!~/templates/**/*"],
-      "watch": ["~/**/*.{html,swig,php}", "!~/templates/**/*", "./src/assets/_data/**/*.json"],
+      "watch": ["~/**/*.{html,swig,php}", "~/templates/**/*.{html,swig}", "./src/assets/_data/**/*.json"],
       "views": ["~/**/*.{html,swig,php}"]
     },
     "assets": {
@@ -24,7 +24,7 @@
       "globs": ["~/**/*", "!~/{_data,css,js,img}/**/*", "!~/**/_*"]
     },
     "css": {
-      "src": "src/assets/css/",
+      "src": "./src/assets/css/",
       "dest": "./app/assets/css/",
       "globs": ["~/*.css", "!**/_*"]
     },
