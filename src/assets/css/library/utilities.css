@@ -1,0 +1,12 @@
+.sh--1n2 {
+  height: calc(100%/2) !important;
+}
+.sh--1n3 {
+  height: calc(100%/3) !important;
+}
+.sh--3n8 {
+  height: calc(300%/8) !important;
+}
+.sh--5n8 {
+  height: calc(500%/8) !important;
+}

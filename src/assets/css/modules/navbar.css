@@ -1,19 +1,16 @@
-.h-1n3 {
-  display: block;
-  height: calc(100%/3);
-}
 .navbar {
   box-sizing: content-box;
   height: calc(100vw * (2/16.5));
   overflow: hidden;
   width: 100%;
-  background-color: $black;
+  background-color: $sable;
   display: flex;
   justify-content: space-between;
   border: 0.5vw solid $black;
   border-left: none;border-right: none;
   font-family: $gotham;
 }
+
 .navbar__brandLogo {
   display: inline-block;
   height: 100%;
@@ -30,11 +27,16 @@
   height: 100%;
   vertical-align: top;
   width: calc(100% * (1.6/16.5));
-  background-color: $sable;
-  background-image: url(../img/brand-image.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: auto 100%;
+  &:before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-image: url(../img/brand-image.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+  }
 }
 .navbar__toggle {
   display: none;
@@ -54,7 +56,7 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-.hoverInk:hover:after{
+.hoverInk:hover:after, .hoverInk:focus:after{
   opacity: 1;
 }
 
@@ -87,7 +89,6 @@
   size: 100% 100%;
   z-index: 1;
   text-align: center;
-  background: $sable;
   font-size: 0;
   text-transform: uppercase;
 }
@@ -121,53 +122,4 @@
   display: inline-block;
   text-align: center;
   vertical-align: middle;
-}
-
-.sh--1n2 {
-  height: calc(100%/2);
-}
-.sh--1n3 {
-  height: calc(100%/3);
-}
-.sh--3n8 {
-  height: calc(300%/8);
-}
-.sh--5n8 {
-  height: calc(500%/8);
-}
-
-.navMenu__item {
-  background-image: url(../img/border-bottom.svg), url(../img/border-top.svg), url(../img/border-left.svg);
-  background-origin: border-box;
-  background-repeat: repeat-x, repeat-x, repeat-y;
-  background-position: center bottom, center top, left center;
-  background-size: auto 10px, auto 10px, 10px auto;
-
-  background-image: url(../img/border-bottom.svg), url(../img/border-bottom.svg), url(../img/border-left.svg), url(../img/border-left.svg);
-  background-origin: border-box;
-  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
-  background-position: left calc(000% - 6px), left calc(100% + 6px), calc(000% - 6px) center, calc(100% + 7px) center;
-  background-size: auto 10px, auto 10px, 10px auto, 10px auto;
-
-  /*background-image:
-    url(../img/border-bottom.svg),
-    url(../img/border-bottom.svg),
-    url(../img/border-left.svg),
-    url(../img/border-left.svg);
-  background-origin: border-box;
-  background-repeat:
-    repeat-x,
-    repeat-x,
-    repeat-y,
-    repeat-y;
-  background-position:
-    calc(000% - 5px) center,
-    calc(100% + 5px) center,
-    center calc(000 - 5px),
-    center calc(100% + 5px);
-  background-size:
-    10px auto,
-    10px auto,
-    auto 10px,
-    auto 10px;*/
 }
