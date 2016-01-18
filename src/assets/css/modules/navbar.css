@@ -42,7 +42,7 @@
   display: none;
 }
 .navbar__toggleLine {}
-
+.hoverInk {}
 .hoverInk:after {
   content: '';
   opacity: 0;

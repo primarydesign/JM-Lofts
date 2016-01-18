@@ -1,20 +1,18 @@
-<footer class="footer distress--top">
-  <address class="footer__column">
-    <ul class="footer__contacts">
-      <li class="footer__contact footer__phone">{{ company.contact.phone }}</li>
-      <li class="footer__contact footer__email">{{ company.contact.email }}</li>
-    </ul>
+<footer class="footer">
+  <address class="footer__column footer__contacts">
+    <p class="footer__item hoverInk borders--all"><a href="tel:+1{{ company.contact.phone | replace('.', '') }}"class="footer__text footer__phone">{{ company.contact.phone }}</a></p>
+    <p class="footer__item hoverInk borders--all"><a href="mailto:{{ company.contact.email }}" class="footer__text footer__email">{{ company.contact.email }}</a></p>
   </address>
-  <div class="footer__column footer__disclaimer"></div>
-  <div class="footer__column footer__signature"></div>
-  <address class="footer__column">
-    <ul class="footer__location">
-      <li class="footer__addressLine footer__street">{{ company.location.address }}</li>
-      <li class="footer__addressLine footer__cityState">{{ company.location.city }}, {{ company.location.state }}</li>
-    </ul>
+  <div class="footer__column footer__column--group">
+    <div class="footer__item footer__item--adjacent borders--all"><p class="footer__text footer__disclaimer">Renderings and images represent the apartment living concept and are subject to change.</p></div>
+    <div class="footer__item footer__item--adjacent borders--all"><p class="footer__signature"></p></div>
+  </div>
+  <address class="footer__column footer__location">
+    <p class="footer__item hoverInk borders--all"><a class="footer__text footer__address">{{ company.location.address }}</a></p>
+    <p class="footer__item hoverInk borders--all"><a class="footer__text footer__citystate">{{ company.location.city }} , {{ company.location.state }}</a></p>
   </address>
-  <ul class="footer__icons">
-    <li class="footer__icon footer__icon--FHA"></li>
-    <li class="footer__icon footer__icon--EHO"></li>
+  <ul class="footer__column footer__icons">
+    <li class="footer__icon"><a class="footer__iconInner icon--ADA"></a></li>
+    <li class="footer__icon"><a class="footer__iconInner icon--EHO"></a></li>
   </ul>
 </footer>

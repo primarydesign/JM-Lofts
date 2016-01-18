@@ -1,0 +1,116 @@
+.footer {
+  margin-top: 50px;
+  width: 100%;
+  background-color: $sable;
+  font-size: 0;
+}
+
+.footer__column {
+  display: inline-block;
+  width: 100%;
+  font-size: 0;
+}
+.footer__column--group {
+  display: table;
+}
+.footer__item {
+  display: block;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+  font-size: 0;
+}
+.footer__item:before {
+  content: '';
+  display: inline-block;
+  position: relative;
+  size: 0 100%;
+  vertical-align: middle;
+}
+.footer__item--adjacent {
+  display: table-cell;
+  vertical-align: top;
+  width: 50%;
+}
+.footer__text {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: $gotham;
+  font-size: 1rem;
+  font-style: normal;
+  text-transform: uppercase;
+  @media (width < 700px) {
+    padding: 15px;
+  }
+}
+
+.footer__contacts {}
+.footer__phone {
+  font-size: 4vw;
+  letter-spacing: 2vw;
+}
+.footer__email {
+  font-size: 4vw;
+  letter-spacing: 1.5vw;
+}
+
+.footer__location {}
+.footer__address {
+  @media (width < 700px) {
+    font-size: 4vw;
+    letter-spacing: 1.5vw;
+  }
+}
+.footer__citystate {
+  @media (width < 700px) {
+    font-size: 6vw;
+    letter-spacing: 2.2vw;
+  }
+}
+
+.footer__disclaimer {
+  width: 90%;
+  text-transform: none;
+}
+.footer__signature {
+  height: 100%;
+  width: 100%;
+  background-image: url(../img/graphic-signature.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80% 80%;
+}
+
+.footer__icons {
+  background-color: $black;
+  font-size: 0;
+  text-align: center;
+}
+.footer__icon {
+  display: inline-block;
+  height: auto;
+  min-width: 40px;
+  width: 3vw;
+}
+.footer__icon:first-child {
+  margin-right: 40px;
+}
+.footer__iconInner {
+  display: inline-block;
+  height: 0;
+  padding-bottom: 100%;
+  size: 100% 0;
+}
+.icon--ADA {
+  background-image: url(../img/icon-ada.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 70% 70%;
+}
+.icon--EHO {
+  background-image: url(../img/icon-eho.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 70% 70%;
+
+}
