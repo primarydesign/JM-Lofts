@@ -19,11 +19,10 @@ var $ = Uppsta.configure.paths;
 var _ = Uppsta.Options;
 
 gulp.task('pages', function() {
-  console.log('x');
   return gulp.src($.pages.globs)
   .pipe(data(_.data))
   .pipe(swig(_.swig()))
-  // .pipe(htmlmin(_.htmlmin))
+  .pipe(htmlmin(_.htmlmin))
   .pipe(gulp.dest($.pages.dest))
   .pipe(Browser.stream());
 });

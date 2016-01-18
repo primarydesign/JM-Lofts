@@ -26,7 +26,8 @@
     "css": {
       "src": "./src/assets/css/",
       "dest": "./app/assets/css/",
-      "globs": ["~/*.css", "!**/_*"]
+      "globs": ["~/*.css"],
+      "watch": ["~/**/*.css"]
     },
     "js": {
       "src": "./src/assets/js/",
