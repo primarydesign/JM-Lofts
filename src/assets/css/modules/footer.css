@@ -1,7 +1,7 @@
 .footer {
-  margin-top: 50px;
   width: 100%;
   background-color: $black;
+  border-top: 0.25vw solid $black;
   font-size: 0;
   @media (width >= 800px) {
     height: 10vw;

@@ -6,8 +6,7 @@
   background-color: $sable;
   display: flex;
   justify-content: space-between;
-  border: 0.5vw solid $black;
-  border-left: none;border-right: none;
+  border-bottom: $border-thick solid $black;
   font-family: $gotham;
 }
 

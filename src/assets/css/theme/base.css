@@ -1,0 +1,6 @@
+.page {
+  border: $border-thick solid $black;
+}
+.page__content {
+  min-height: calc(100vh - ((100vw * (2/16.5)) + ($border-thick * 2)));
+}
