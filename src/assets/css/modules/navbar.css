@@ -3,7 +3,7 @@
   height: calc(100vw * (2/16.5));
   overflow: hidden;
   width: 100%;
-  background-color: $sable;
+  background-color: $black;
   display: flex;
   justify-content: space-between;
   border-bottom: $border-thick solid $black;
@@ -26,6 +26,7 @@
   height: 100%;
   vertical-align: top;
   width: calc(100% * (1.6/16.5));
+  background-color: $sable;
   &:before {
     content: '';
     display: block;
@@ -36,11 +37,11 @@
     background-repeat: no-repeat;
     background-size: auto 100%;
   }
+  @media (width < 700px) {
+    display: none;
+  }
 }
-.navbar__toggle {
-  display: none;
-}
-.navbar__toggleLine {}
+
 .hoverInk {}
 .hoverInk:after {
   content: '';
@@ -64,6 +65,9 @@
   height: 100%;
   width: calc(100% * (12.5/16.5));
   font-size: 0;
+  @media (width < 700px) {
+    display: none;
+  }
 }
 
 .navMenu__column {
@@ -82,6 +86,7 @@
 }
 
 .navMenu__item {
+  background-color: $sable;
   border: 1px solid $black;
   display: block;
   position: relative;
@@ -121,4 +126,53 @@
   display: inline-block;
   text-align: center;
   vertical-align: middle;
+}
+
+.navbar__toggle {
+  position: relative;
+  height: 100%;
+  width: 15%;
+  &:hover {
+    cursor: pointer;
+  }
+  @media (width < 700px) {
+    display: inline-block;
+  }
+  @media (width >= 700px) {
+    display: none;
+  }
+}
+.navbar__toggle.is-active {
+
+}
+
+.navbar__toggleLine {
+  display: block;
+  position: absolute;
+  size: 50% 5%;
+  top: 50%;left: 50%;
+  transition: transform 400ms ease, opacity 150ms ease;
+  transform-origin: center center;
+  transform: translate(-50%,-50%);
+  background-color: $sable;
+}
+.navbar__toggleLine:nth-child(1) {
+  transform: translate(-50%, calc(-50% + 350%));
+}
+.navbar__toggleLine:nth-child(2) {
+  transform: translate(-50%,-50%);
+}
+.navbar__toggleLine:nth-child(3) {
+  transform: translate(-50%, calc(-50% - 350%));
+}
+
+.navbar__toggle:hover .navbar__toggleLine:nth-child(1) {
+  transform: translate(-50%, -50%) rotate(-225deg);
+}
+.navbar__toggle:hover .navbar__toggleLine:nth-child(2) {
+  transform: translate(-50%, -50%) rotate(90deg);
+  opacity: 0;
+}
+.navbar__toggle:hover .navbar__toggleLine:nth-child(3) {
+  transform: translate(-50%, -50%) rotate(45deg);
 }
