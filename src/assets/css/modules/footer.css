@@ -1,8 +1,7 @@
 .footer {
-  display: table;
   margin-top: 50px;
   width: 100%;
-  background-color: $sable;
+  background-color: $black;
   font-size: 0;
   @media (width >= 800px) {
     height: 10vw;
@@ -13,6 +12,7 @@
 .footer__column {
   display: inline-block;
   width: 100%;
+  background-color: $sable;
   font-size: 0;
   @media (width >= 800px) {
     display: inline-block;
