@@ -8,7 +8,12 @@ module.exports = {
     root: [path.join(__dirname, 'node_modules')],
   },
   output: {
-    filename: '[name].chunk.js',
+    filename: '[name].js',
     sourceMapFilename: '[name].map'
+  },
+  module: {
+    loaders: [
+      { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader"}
+    ]
   }
 }
