@@ -11,7 +11,12 @@
   font-size: 0;
 }
 .footer__column--group {
-  display: table;
+  @media (width >= 800px) {
+    display: inline-table;
+  }
+  @media (width < 800px) {
+    display: table;
+  }
 }
 .footer__item {
   display: block;
@@ -69,10 +74,26 @@
 }
 
 .footer__disclaimer {
-  width: 90%;
-  text-transform: none;
+  font-size: 0;
+  height: auto;
 }
-.footer__signature {
+.footer__disclaimer:after {
+  box-sizing: border-box;
+  content: attr(data-content);
+  display: inline-block;
+  padding: 4vw 4.5vw;
+  size: 100% auto;
+  vertical-align: middle;
+  font-family: $gotham;
+  font-size: 2.75vw;
+  font-style: normal;
+  letter-spacing: 0.25vw;
+  text-align: left;
+}
+.footer__signature {}
+.footer__signature:after {
+  content: '';
+  display: inline-block;
   height: 100%;
   width: 100%;
   background-image: url(../img/graphic-signature.svg);
@@ -80,7 +101,6 @@
   background-repeat: no-repeat;
   background-size: 80% 80%;
 }
-
 .footer__icons {
   background-color: $black;
   font-size: 0;

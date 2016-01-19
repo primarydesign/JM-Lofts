@@ -4,8 +4,8 @@
     <p class="footer__item hoverInk borders--all"><a href="mailto:{{ company.contact.email }}" class="footer__text footer__email">{{ company.contact.email }}</a></p>
   </address>
   <div class="footer__column footer__column--group">
-    <div class="footer__item footer__item--adjacent borders--all"><p class="footer__text footer__disclaimer">Renderings and images represent the apartment living concept and are subject to change.</p></div>
-    <div class="footer__item footer__item--adjacent borders--all"><p class="footer__signature"></p></div>
+    <div class="footer__item footer__item--adjacent footer__disclaimer borders--all" data-content="{{ company.disclaimer }}"></div>
+    <div class="footer__item footer__item--adjacent footer__signature borders--all"></div>
   </div>
   <address class="footer__column footer__location">
     <p class="footer__item hoverInk borders--all"><a class="footer__text footer__address">{{ company.location.address }}</a></p>
