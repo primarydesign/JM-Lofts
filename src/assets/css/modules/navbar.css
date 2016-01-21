@@ -10,6 +10,10 @@
   border-bottom: $border-thick solid $black;
   font-family: $gotham;
   z-index: 11;
+  transition: transform 300ms easeOutQuart;
+}
+.headroom--unpinned {
+  transform: translateY(-100%);
 }
 
 .navbar__brandLogo {

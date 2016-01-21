@@ -1,15 +1,20 @@
+const Headroom = require('headroom.js');
 const state = require('./library/state.js');
 const velocity = require('./library/velocity.js');
+
 const page = document.querySelector('.page');
+const navigation = document.querySelector('.navbar');
 const overlay = document.querySelector('.page__overlay');
 const toggle = document.querySelector('.navbar__toggle');
 const menu = document.querySelector('.navMenu');
+
 const pageState = state(page);
 const overlayState = state(overlay);
 const toggleState = state(toggle);
 const menuState = state(menu);
 
-
+const navHeadroom = new Headroom(navigation);
+navHeadroom.init();
 
 toggle.addEventListener('click', function(e) {
   overlayState.toggle('active');

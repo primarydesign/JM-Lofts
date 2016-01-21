@@ -12,7 +12,7 @@
   size: 100vw 100vh;
   top: 0;left: 0;
   background-color: rgba($black, 0.75);
-  transition: opacity 200ms ease;
+  transition: opacity 300ms ease;
   opacity: 0;
   z-index: -1;
 
