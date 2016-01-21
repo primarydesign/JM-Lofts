@@ -25,6 +25,7 @@ import extend from 'postcss-extend';
 import lookup from 'postcss-property-lookup';
 import root from 'postcss-atroot';
 /* transforming */
+import hexrgba from 'postcss-hexrgba';
 import color_alpha from 'postcss-color-alpha';
 import color_mix from 'postcss-color-mix';
 import time_machine from 'postcss-time-machine';
@@ -45,8 +46,6 @@ module.exports = [
   media_custom,
   selectors,
   time_machine,
-  color_alpha,
-  color_mix,
   easings,
   magician,
   media_minmax,
@@ -63,6 +62,9 @@ module.exports = [
   root,
   matches,
   not,
+  hexrgba,
+  color_alpha,
+  color_mix,
   autoprefixer({browsers: ['ie >= 9', 'last 4 versions']}),
   mqpacker,
   reporter({clearMessages: true})
