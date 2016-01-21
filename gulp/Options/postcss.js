@@ -17,11 +17,11 @@ import media_minmax from 'postcss-media-minmax';
 import size from 'postcss-short-size';
 import spacing from 'postcss-short-spacing';
 /* interpolating */
+import mixins from 'postcss-mixins';
 import variables from 'postcss-simple-vars';
 import functions from 'postcss-functions';
 import nested from 'postcss-nested';
 import extend from 'postcss-extend';
-import mixins from 'postcss-mixins';
 import lookup from 'postcss-property-lookup';
 import root from 'postcss-atroot';
 /* transforming */
@@ -52,13 +52,13 @@ module.exports = [
   media_minmax,
   size,
   spacing,
+  mixins,
   variables,
   functions({
     functions: direque('../postcss/')
   }),
   nested,
   extend,
-  mixins,
   lookup,
   root,
   matches,

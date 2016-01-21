@@ -17,7 +17,7 @@
   height: 100%;
   vertical-align: top;
   width: calc(100% * (2.4/16.5));
-  z-index: 1;
+  z-index: 2;
   background-color: $black;
   background-image: url(../img/brand-logo.svg);
   background-position: center;
@@ -73,28 +73,37 @@
   width: calc(100% * (12.5/16.5));
   font-size: 0;
   @media (width < 700px) {
+    @mixin borders--horizontal-bottom;
     display: block;
+    padding: 4vw 0;
     position: absolute;
-    size: 100vw calc(100vh - (100vw * (2/16.5)));
-    top: 100%;left: 100%;
+    size: 100% calc(100vh - (100vw * (2/16.5)));
+    bottom: 0;left: 0%;
     transition: transform 500ms easeOutQuart;
     z-index: -1;
+    background-color: $sable;
+    height: auto !important;
+    border-bottom: .5vw solid $black;
   }
 }
 .navMenu.not-active {
   @media (width < 700px) {
-    transform: translateX(0%);
+    transform: translateY(0%);
   }
 }
 .navMenu.is-active {
   @media (width < 700px) {
-    transform: translateX(-100%);
+    transform: translateY(100%);
   }
 }
 .navMenu__column {
   display: inline-block;
   height: 100%;
   vertical-align: top;
+  @media (width < 700px) {
+    display: block;
+    size: 100% auto !important;
+  }
 }
 .navMenu__column:nth-child(1) {
   width: 42%;
@@ -116,6 +125,13 @@
   text-align: center;
   font-size: 0;
   text-transform: uppercase;
+  @media (width < 700px) {
+    background: none;
+    border: none;
+    size: 60% auto !important;
+    padding: 3vw 0;
+    margin: 0 auto;
+  }
 }
 .navMenu__item:before {
   content: '';
@@ -130,6 +146,7 @@
   display: inline-block;
   height: 100%;
   width: 100%;
+  @media (width < 700px) {}
 }
 .navMenu__line {
   font-size: 0;
@@ -141,12 +158,20 @@
     vertical-align: middle;
     width: 0;
   }
+  @media (width < 700px) {
+    /* display: inline; */
+    size: auto auto !important;
+  }
 }
 
 .navMenu__text {
   display: inline-block;
   text-align: center;
   vertical-align: middle;
+  @media (width < 700px) {
+    font-size: 4.5vw !important;
+    margin: 0 !important;
+  }
 }
 
 .navbar__toggle {
@@ -154,20 +179,19 @@
   height: 100%;
   width: 15%;
   z-index: 1;
-  &:hover {
-    /* cursor: pointer; */
-  }
-  &:focus {
-    outline: none;
-    background: none;
-    box-shadow: none;
-  }
   @media (width < 700px) {
     display: inline-block;
   }
   @media (width >= 700px) {
     display: none;
   }
+}
+.navbar__toggle:before {
+  content: '';
+  position: absolute;
+  size: 100vw 100%;
+  top: 0;right: 0;
+  background-color: $black;
 }
 .navbar__toggle.is-active {
 
