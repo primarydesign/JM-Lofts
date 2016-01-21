@@ -32,7 +32,8 @@
     "js": {
       "src": "./src/assets/js/",
       "dest": "./app/assets/js/",
-      "globs": ["~/*.js", "!~/_*"]
+      "globs": ["~/*.js", "!~/_*"],
+      "watch": ["~/**/*.js"]
     },
     "img": {
       "src": "./src/assets/img/",

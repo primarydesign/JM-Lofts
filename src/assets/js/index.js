@@ -1,5 +1,6 @@
 const state = require('./library/state.js');
-
+const velocity = require('./library/velocity.js');
+window.state = state;
 const toggle = document.querySelector('.navbar__toggle');
 const menu = document.querySelector('.navMenu');
 const toggleState = state('.navbar__toggle');

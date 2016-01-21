@@ -23,6 +23,9 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 85% auto;
+  @media (width < 700px) {
+    margin-left: 2vw;
+  }
 }
 .navbar__brandImage {
   display: inline-block;
@@ -73,16 +76,19 @@
     display: block;
     position: absolute;
     size: 100vw calc(100vh - (100vw * (2/16.5)));
-    top: 100%;right: 0;
-    transform: translateX(100%);
-    transition: transform 400ms ease;
+    top: 100%;left: 100%;
+    transition: transform 500ms easeOutQuart;
     z-index: -1;
-    background-color: red !important;
+  }
+}
+.navMenu.not-active {
+  @media (width < 700px) {
+    transform: translateX(0%);
   }
 }
 .navMenu.is-active {
   @media (width < 700px) {
-    transform: translateX(0);
+    transform: translateX(-100%);
   }
 }
 .navMenu__column {
@@ -149,7 +155,12 @@
   width: 15%;
   z-index: 1;
   &:hover {
-    cursor: pointer;
+    /* cursor: pointer; */
+  }
+  &:focus {
+    outline: none;
+    background: none;
+    box-shadow: none;
   }
   @media (width < 700px) {
     display: inline-block;
@@ -183,10 +194,9 @@
 }
 
 .navbar__toggle.is-active .navbar__toggleLine:nth-child(1) {
-  transform: translate(-50%, -50%) rotate(-225deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 .navbar__toggle.is-active .navbar__toggleLine:nth-child(2) {
-  transform: translate(-50%, -50%) rotate(90deg);
   opacity: 0;
 }
 .navbar__toggle.is-active .navbar__toggleLine:nth-child(3) {
