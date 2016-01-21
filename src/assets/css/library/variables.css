@@ -1,8 +1,12 @@
 $black: rgb(0, 0, 0);
 $sable: rgb(214, 209, 186);
 
-$gotham: 'Montserrat', 'arial', sans-serif;
 $scala: 'Fanwood Text', serif;
+$gotham: Montserrat, arial, sans-serif;
+
+
+
 $baskerville: 'Libre Baskerville', serif;
 
 $border-thick: 0.65vw;
+$navHeight: (100vw * (2/16.5));

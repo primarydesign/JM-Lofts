@@ -1,0 +1,14 @@
+.romanceText {
+  margin: 0 auto;
+  padding-top: 4vw;
+  width: 80%;
+}
+.romanceText__paragraph {
+  font-family: 'Fanwood Text', serif;
+  font-size: 1.9vw;
+  font-variant: small-caps;
+  text-align: justify;
+  @media (width < 700px) {
+    font-size: 5vw;
+  }
+}

@@ -5,7 +5,9 @@
   overflow-y: hidden;
 }
 .page__content {
-  min-height: calc(100vh - ((100vw * (2/16.5)) + ($border-thick * 2)));
+  margin: 0 auto;
+  padding: calc($navHeight - 0.5px) 0 4vw;
+  background-color: $sable;
 }
 .page__overlay {
   position: fixed;

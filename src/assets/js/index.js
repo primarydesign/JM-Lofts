@@ -13,7 +13,9 @@ const overlayState = state(overlay);
 const toggleState = state(toggle);
 const menuState = state(menu);
 
-const navHeadroom = new Headroom(navigation);
+const navHeadroom = new Headroom(navigation, {
+  offset: ((2 * window.innerWidth)/16.5) * 2
+});
 navHeadroom.init();
 
 toggle.addEventListener('click', function(e) {

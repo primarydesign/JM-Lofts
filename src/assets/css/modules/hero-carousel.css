@@ -1,0 +1,61 @@
+.heroCarousel {
+  size: 100% calc(100vw * (5.5/8));
+  background-image: url('../img/brand-pattern.svg');
+  background-position: top left;
+  background-repeat: repeat;
+  background-size: 3vw 3vw;
+}
+.heroCarousel__frame {
+  size: 100%;
+}
+.heroCarousel__track {
+  overflow: hidden;
+  size: 100%;
+  font-size: 0;
+  white-space: nowrap;
+}
+.heroCarousel__item {
+  display: inline-block;
+  size: 100% 100%;
+  background-color: $black;
+}
+
+.heroSlide {
+  position: relative;
+}
+.heroSlide__block {
+  display: inline-block;
+  size: calc(100%/3) 100%;
+}
+
+.heroSlide__block--caption {
+  background-color: $sable;
+  @media (width >= 700px) {
+    /*position: absolute;*/
+    /*top: 0;left: 50%;*/
+    /*transform: translateX(-50%);*/
+  }
+}
+
+.heroSlide__block--image {
+  background-color: green;
+}
+.heroSlide__block--image:nth-child(1) {
+  background-color: green;
+  @media (width >= 700px) {
+    float: left;
+  }
+  @media (width < 700px) {
+    width: 50%;
+  }
+}
+.heroSlide__block--image:nth-child(2) {
+  background-color: red;
+  @media (width >= 700px) {
+    float: right;
+  }
+  @media (width < 700px) {
+    width: 50%;
+  }
+}
+
