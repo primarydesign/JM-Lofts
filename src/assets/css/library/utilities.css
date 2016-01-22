@@ -10,3 +10,14 @@
 .sh--5n8 {
   height: calc(500%/8) !important;
 }
+
+@mixin scaleH($ratio) {
+  height: calc(100% * ($ratio)) !important;
+}
+@mixin scaleW($ratio) {
+  width: calc(100% * ($ratio)) !important;
+}
+@mixin crossH($ratio) {
+  height: 0 !important;
+  padding-bottom: calc(100% * ($ratio)) !important;
+}

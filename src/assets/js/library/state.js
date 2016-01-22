@@ -1,12 +1,23 @@
 module.exports = state;
 
 function state(element) {
-  if (typeof element === 'string') element = document.querySelector(element);
+  if (typeof element === 'string') element = document.querySelectorAll(element);
+  else if (element instanceof HTMLElement) element = [element];
+  if (element instanceof NodeList) element = Array.prototype.slice.call(element);
   return {
-    get: function(state) { return getState.call(element, state); },
-    set: function(state, value) { setState.call(element, state, value); },
+    get: function(state) {
+      return getState.call(element[0], state);
+    },
+    set: function(state, value) {
+      for(let i = 0; i < element.length; i++) {
+        setState.call(element[i], state, value);
+      }
+    },
     toggle: function(state, activate, deactivate) {
-      toggleState.call(element, state, activate, deactivate); }
+      for(let i = 0; i < element.length; i++) {
+        toggleState.call(element[i], state, activate, deactivate);
+      }
+    }
   }
 }
 
