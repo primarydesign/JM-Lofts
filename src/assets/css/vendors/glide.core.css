@@ -1,0 +1,82 @@
+.heroCarousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.heroCarousel__frame {
+  overflow: hidden;
+}
+.heroCarousel__track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -ms-touch-action: pan-Y;
+      touch-action: pan-Y;
+}
+.heroCarousel__track.dragging {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.heroCarousel__item {
+  -webkit-perspective: 1000;
+          perspective: 1000;
+  width: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.heroCarousel__arrows {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.heroCarousel__arrow {
+  cursor: pointer;
+}
+.heroCarousel__bullets {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.heroCarousel__bullets li {
+  cursor: pointer;
+}
+.glide--slider .heroCarousel__item {
+  float: left;
+  clear: none;
+}
+.glide--carousel .heroCarousel__item {
+  float: left;
+  clear: none;
+}
+.glide--slideshow .heroCarousel__frame {
+  height: 100%;
+}
+.glide--slideshow .heroCarousel__item {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform: translate3d(0px, 0px, 0px);
+}
+.glide--slideshow .heroCarousel__item.active {
+  z-index: 1;
+}

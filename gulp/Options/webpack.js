@@ -1,9 +1,15 @@
 import CommonsChunk from 'webpack/lib/optimize/CommonsChunkPlugin';
+import webpack from 'webpack';
 import path from 'path';
 
 module.exports = {
   devtool: 'source-map',
-  plugins: [ new CommonsChunk('common.js')],
+  plugins: [
+    new CommonsChunk('common.js'),
+    new webpack.ProvidePlugin({
+      jQuery: 'jquery'
+    })
+    ],
   resolve: {
     root: [path.join(__dirname, 'node_modules')],
   },
@@ -13,7 +19,7 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader"}
+      { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" }
     ]
   }
 }

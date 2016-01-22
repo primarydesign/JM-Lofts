@@ -1,12 +1,14 @@
-const Headroom = require('headroom.js');
-const state = require('./library/state.js');
-const velocity = require('./library/velocity.js');
+import Headroom from 'headroom.js';
+import state from './library/state.js';
+import velocity from './library/velocity.js';
+import './library/glide.js';
 
 const page = document.querySelector('.page');
 const navigation = document.querySelector('.navbar');
 const overlay = document.querySelector('.page__overlay');
 const toggle = document.querySelector('.navbar__toggle');
 const menu = document.querySelector('.navMenu');
+const heroCarousel = document.querySelector('.heroCarousel');
 
 const pageState = state(page);
 const overlayState = state(overlay);
@@ -36,5 +38,17 @@ window.addEventListener('resize', function(e) {
     toggleState.set('active', false);
     menuState.set('active', false);
     pageState.set('locked', false);
+  }
+});
+
+
+jQuery(heroCarousel).glide({
+  type: 'carousel',
+  autoplay: false,
+  classes: {
+    base: 'heroCarousel',
+    wrapper: 'heroCarousel__frame',
+    track: 'heroCarousel__track',
+    slide: 'heroCarousel__item'
   }
 });

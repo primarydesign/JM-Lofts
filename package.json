@@ -59,6 +59,8 @@
     "yargs": "^3.31.0"
   },
   "dependencies": {
-    "headroom.js": "^0.7.1"
+    "headroom.js": "^0.7.1",
+    "jquery": "^2.2.0",
+    "lory.js": "^2.0.0"
   }
 }

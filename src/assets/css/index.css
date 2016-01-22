@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Fanwood+Text:400,400italic|Libre+Baskerville:400,400italic);
 
+@import './vendors/*.css';
 @import './library/*.css';
 @import './theme/*.css';
 @import './modules/*.css';
