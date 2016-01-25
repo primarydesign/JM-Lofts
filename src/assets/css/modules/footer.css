@@ -31,6 +31,7 @@
   }
 }
 .footer__item {
+  @include hoverInk;
   @include bordersAll;
   display: block;
   position: relative;
@@ -41,7 +42,7 @@
     height: 50%;
   }
 }
-.footer__item:before {
+.footer__item:after {
   content: '';
   display: inline-block;
   position: relative;
@@ -55,6 +56,7 @@
   @media (width >= 800px) {
     height: 100%;
   }
+  &:before { display: none; }
 }
 .footer__text {
   display: inline-block;
