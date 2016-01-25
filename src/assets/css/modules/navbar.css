@@ -17,7 +17,12 @@
   size: 100%;
   z-index: auto;
   background-color: $black;
-  border: $border-thick solid $black;
+  @media (width < 700px) {
+    border: $border-thick solid $black;
+  }
+  @media (width >= 700px) {
+    border-bottom: $border-thick solid $black;
+  }
 }
 
 .navbar__column {
