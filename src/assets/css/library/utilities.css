@@ -22,6 +22,11 @@
   padding-bottom: calc(100% * ($ratio)) !important;
 }
 
+@mixin hoverInkSelf {
+  &:hover, &:focus {
+    background: url(../img/rolled_ink.png) center / 100% 95% no-repeat;
+  }
+}
 @mixin hoverInk {
   position: relative;
   &:before {

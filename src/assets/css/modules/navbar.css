@@ -98,14 +98,12 @@
 }
 
 .navMenu__item {
-  @include hoverInk;
   @include bordersAll;
   display: block;
   text-align: center;
   border: 1px solid $black;
   @media (width < 700px) {
     height: auto;
-    padding: 4vw 0;
   }
   @media (width >= 700px) {
     height: 100%;
@@ -121,6 +119,19 @@
   background-color: $sable;
   border: 1px solid $black;
 }
+
+.navMenu__link {
+  @include hoverInkSelf;
+  display: inline-block;
+  @media (width < 700px) {
+    padding: 4vw 0;
+    size: 100% auto;
+  }
+  @media (width >= 700px) {
+    size: 100%;
+  }
+}
+
 .navMenu__lines {
   display: block;
   size: 100%;

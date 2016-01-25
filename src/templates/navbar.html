@@ -1,27 +1,29 @@
 <header class="navbar">
   <div class="navbar__wrapper">
-    <a class="navbar__column navbar__brandLogo"></a>
+    <a href="/" class="navbar__column navbar__brandLogo"></a>
   	<nav class="navbar__column navbar__menu navMenu" role="navigation">
   		<ul class="navMenu__column">
-  			<li class="navMenu__item sh--1n3"><a class="navMenu__text" data-content="Floor Plans">Floor Plans</a></li>
-  			<li class="navMenu__item sh--1n3"><a class="navMenu__text" data-content="Features">Features</a></li>
-  			<li class="navMenu__item sh--1n3"><a class="navMenu__text" data-content="Contact Us">Contact Us</a></li>
+  			<li class="navMenu__item sh--1n3"><a href="{{ fn.app('/floor-plans/') }}" class="navMenu__link"><span class="navMenu__text" data-content="Floor Plans">Floor Plans</span></a></li>
+  			<li class="navMenu__item sh--1n3"><a href="{{ fn.app('/features/') }}" class="navMenu__link"><span class="navMenu__text" data-content="Features">Features</span></a></li>
+  			<li class="navMenu__item sh--1n3"><a href="{{ fn.app('/contact-us/') }}" class="navMenu__link"><span class="navMenu__text" data-content="Contact Us">Contact Us</span></a></li>
   		</ul>
   		<ul class="navMenu__column">
   			<li class="navMenu__item">
-          <a class="navMenu__lines">
-            <p class="navMenu__line sh--1n3"><span class="navMenu__text navMenu__text--line" data-content="Check Out">Check Out</span></p>
-            <p class="navMenu__line sh--1n3"><span class="navMenu__text navMenu__text--line" data-content="Downtown">Downtown</span></p>
-            <p class="navMenu__line sh--1n3"><span class="navMenu__text navMenu__text--line" data-content="Haverhill">Haverhill</span></p>
-          </a>
+          <a href="{{ fn.app('/haverhill/') }}" class="navMenu__link"><p class="navMenu__lines">
+            <span class="navMenu__line sh--1n3"><span class="navMenu__text navMenu__text--line" data-content="Check Out">Check Out</span></span>
+            <span class="navMenu__line sh--1n3"><span class="navMenu__text navMenu__text--line" data-content="Downtown">Downtown</span></span>
+            <span class="navMenu__line sh--1n3"><span class="navMenu__text navMenu__text--line" data-content="Haverhill">Haverhill</span></span>
+          </p></a>
         </li>
   		</ul>
   		<ul class="navMenu__column">
-  			<li class="navMenu__item sh--3n8"><a class="navMenu__text" data-content="J.M. Blog">J.M. Blog</a></li>
+  			<li class="navMenu__item sh--3n8"><a href="{{ fn.app('/blog/') }}" class="navMenu__link"><span class="navMenu__text" data-content="J.M. Blog">J.M. Blog</span></a></li>
   			<li class="navMenu__item sh--5n8">
-          <a class="navMenu__lines">
-            <p class="navMenu__line sh--1n2"><span class="navMenu__text navMenu__text--line" data-content="Just for Our">Just For Our</span></p>
-            <p class="navMenu__line sh--1n2"><span class="navMenu__text navMenu__text--line" data-content="Residents">Residents</span></p>
+          <a href="/" class="navMenu__link">
+            <p class="navMenu__lines">
+              <span class="navMenu__line sh--1n2"><span class="navMenu__text navMenu__text--line" data-content="Just for Our">Just For Our</span></span>
+              <span class="navMenu__line sh--1n2"><span class="navMenu__text navMenu__text--line" data-content="Residents">Residents</span></span>
+            </p>
           </a>
         </li>
   		</ul>
