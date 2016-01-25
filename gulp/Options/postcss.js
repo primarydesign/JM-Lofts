@@ -17,7 +17,7 @@ import media_minmax from 'postcss-media-minmax';
 import size from 'postcss-short-size';
 import spacing from 'postcss-short-spacing';
 /* interpolating */
-import mixins from 'postcss-mixins';
+import mixins from 'postcss-sassy-mixins';
 import variables from 'postcss-simple-vars';
 import functions from 'postcss-functions';
 import nested from 'postcss-nested';

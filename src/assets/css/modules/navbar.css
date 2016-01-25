@@ -1,34 +1,157 @@
 .navbar {
   position: fixed;
-  size: 100% calc($navHeight);
+  size: 100% calc($navHeight + $border-thick);
   top: 0;left: 0;
   z-index: 20;
+  border: $border-thick solid $black;
 }
 .navbar.is-pinned { transform: translateY(-100%); }
 .navbar.not-pinned { transform: translateY(0); }
 
 .navbar__wrapper {
+  font-size: 0;
+  position: relative;
   size: 100%;
 }
 
-.navbar__column {}
+.navbar__column {
+  @media (width < 700px) {}
+  @media (width >= 700px) {
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+.navbar__brandLogo {
+  @include scaleW(2.4/16.5);
+  height: 100%;
+  background-color: red;
+}
+.navbar__brandImage {
+  @include scaleW(1.6/16.5);
+  height: 100%;
+  background-color: blue;
+}
 
-.navbar__brandLogo {}
-.navbar__brandImage {}
-
-.navbar__menu {}
+.navbar__menu {
+  @include scaleW(12.5/16.5);
+  height: 100%;
+}
 .navbar__menu.is-active {}
 .navbar__menu.not-active {}
 
-.navMenu__column {}
-.navMenu__column:nth-child(1) {}
-.navMenu__column:nth-child(2) {}
-.navMenu__column:nth-child(3) {}
+.navMenu__column {
+  @media (width < 700px) {}
+  @media (width >= 700px) {
+    display: inline-block;
+    height: 100%;
+    vertical-align: top;
+  }
+}
+.navMenu__column:nth-child(1) {
+  @media (width >= 700px) {
+    width: 42%;
+  }
+}
+.navMenu__column:nth-child(2) {
+  @media (width >= 700px) {
+    width: 33%;
+  }
+}
+.navMenu__column:nth-child(3) {
+  @media (width >= 700px) {
+    width: 25%;
+  }
+}
 
-.navMenu__item {}
-.navMenu__lines {}
-.navMenu__line {}
-.navMenu__text {}
+.navMenu__item {
+  display: block;
+  height: 100%;
+  background-color: $sable;
+  text-align: center;
+  border: 1px solid black;
+}
+.navMenu__lines {
+  display: block;
+  size: 100%;
+}
+.navMenu__line {
+  display: block;
+  text-align: center;
+}
+.navMenu__text {
+  display: inline-block;
+  height: 100%;
+  font-family: $gotham;
+  text-transform: uppercase;
+}
+
+.navMenu__text[data-content="Floor Plans"] {
+  margin-left: 1.4vw;
+  line-height: calc($navHeight/3);
+  font-size: 1.8vw;
+  letter-spacing: 1.2vw;
+  word-spacing: 0.5vw;
+}
+.navMenu__text[data-content="Features"] {
+  margin-left: 2.0vw;
+  line-height: calc($navHeight/3);
+  font-size: 2.4vw;
+  letter-spacing: 1.9vw;
+  word-spacing: 0.5vw;
+}
+.navMenu__text[data-content="Contact Us"] {
+  margin-left: 1.4vw;
+  line-height: calc($navHeight/3);
+  font-size: 2.0vw;
+  letter-spacing: 1.4vw;
+  word-spacing: 0vw;
+}
+.navMenu__text[data-content="Check Out"] {
+  margin-left: 0.8vw;
+  margin-top: 0.3vw;
+  line-height: calc($navHeight/3);
+  font-size: 2.0vw;
+  letter-spacing: 1.0vw;
+  word-spacing: 0.2vw;
+}
+.navMenu__text[data-content="Downtown"] {
+  margin-left: 0.8vw;
+  line-height: calc($navHeight/3);
+  font-size: 2.0vw;
+  letter-spacing: 1.0vw;
+  word-spacing: 1.0vw;
+}
+.navMenu__text[data-content="Haverhill"] {
+  margin-left: 0.8vw;
+  margin-top: -0.3vw;
+  line-height: calc($navHeight/3);
+  font-size: 2.0vw;
+  letter-spacing: 1.1vw;
+  word-spacing: 1.0vw;
+}
+.navMenu__text[data-content="J.M. Blog"] {
+  margin-left: 0.2vw;
+  line-height: calc($navHeight * (3/8));
+  font-size: 2.0vw;
+  letter-spacing: 0.4vw;
+  word-spacing: 1.0vw;
+}
+.navMenu__text[data-content="Just for Our"] {
+  margin-left: 0.0vw;
+  margin-top: 0.3vw;
+  line-height: calc($navHeight * (5/16));
+  font-size: 1.6vw;
+  letter-spacing: 0.25vw;
+  word-spacing: 0.5vw;
+}
+.navMenu__text[data-content="Residents"] {
+  margin-left: 0.6vw;
+  margin-top: -0.3vw;
+  line-height: calc($navHeight * (5/16));
+  font-size: 1.6vw;
+  letter-spacing: 0.8vw;
+  word-spacing: 0.0vw;
+}
 
 .navbar__toggle {}
 .navbar__toggle.is-active {}
