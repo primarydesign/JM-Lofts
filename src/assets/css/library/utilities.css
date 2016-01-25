@@ -24,18 +24,19 @@
 
 @mixin hoverInk {
   position: relative;
-  background-color: rgba($sable,1) !important;
-  transition: background-color 300ms easeInOutQuad;
-  &:hover, &:focus {
-    background-color: rgba(0,0,0,0) !important;
-  }
   &:before {
+    box-sizing: border-box;
     content: '';
     position: absolute;
     size: 100%;
     top: 0;left: 0;
     z-index: -1;
     background: url(../img/rolled_ink.png) center / 100% 95% no-repeat;
-    background-color: $sable;
+    /*background-color: $sable;*/
+    opacity: 0;
+    transition: opacity 300ms easeInOutQuad;
+  }
+  &:hover:before, &:focus:before {
+    opacity: 1;
   }
 }
