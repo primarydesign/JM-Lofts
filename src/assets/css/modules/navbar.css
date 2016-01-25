@@ -24,12 +24,14 @@
 .navbar__brandLogo {
   @include scaleW(2.4/16.5);
   height: 100%;
-  background-color: red;
+  background: url(../img/brand-logo.svg) center / 85% auto no-repeat;
+  background-color: $black;
 }
 .navbar__brandImage {
   @include scaleW(1.6/16.5);
   height: 100%;
-  background-color: blue;
+  background: url(../img/brand-image.svg) center bottom / auto 101% no-repeat;
+  background-color: $sable;
 }
 
 .navbar__menu {
@@ -64,6 +66,7 @@
 }
 
 .navMenu__item {
+  @include hoverInk;
   display: block;
   height: 100%;
   background-color: $sable;
@@ -73,6 +76,7 @@
 .navMenu__lines {
   display: block;
   size: 100%;
+  z-index: 1;
 }
 .navMenu__line {
   display: block;

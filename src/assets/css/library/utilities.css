@@ -21,3 +21,20 @@
   height: 0 !important;
   padding-bottom: calc(100% * ($ratio)) !important;
 }
+
+@mixin hoverInk {
+  position: relative;
+  background-color: rgba($sable,1) !important;
+  transition: background-color 300ms easeInOutQuad;
+  &:hover, &:focus {
+    background-color: rgba(0,0,0,0) !important;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    size: 100%;
+    top: 0;left: 0;
+    z-index: -1;
+    background: url(../img/rolled_ink.png) center / 100% 95% no-repeat;
+  }
+}
