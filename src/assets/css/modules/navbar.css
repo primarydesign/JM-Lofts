@@ -1,11 +1,15 @@
 .navbar {
-  position: fixed;
   size: 100% calc($navHeight + $border-thick);
-  top: 0;left: 0;
   z-index: 20;
+  transition: transform 300ms easeOutQuad;
+  @media (width < 700px) {
+    position: fixed;
+    top: 0;left: 0;
+  }
+  @media (width >= 700px) {}
 }
-.navbar.is-pinned { transform: translateY(-100%); }
-.navbar.not-pinned { transform: translateY(0); }
+.navbar.is-pinned { transform: translateY(0%); }
+.navbar.not-pinned { transform: translateY(-100%); }
 
 .navbar__wrapper {
   font-size: 0;

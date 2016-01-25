@@ -35,7 +35,6 @@
 
 .heroSlide__block--caption {
   background-color: $black;
-  background-image: url(../img/type-downtown_haverhill.png) !important;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -46,10 +45,12 @@
 }
 .heroSlide__block--image:nth-child(1) {
   background-color: green;
+  background: url(../img/slide-building_facade.jpg) no-repeat 22% 90% / auto 125%;
   float: left;
 }
 .heroSlide__block--image:nth-child(2) {
   background-color: red;
+  background: url(../img/slide-workspace.jpg) no-repeat 100% 90% / 260% 100%;
   float: right;
 }
 

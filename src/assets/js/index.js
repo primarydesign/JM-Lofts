@@ -1,4 +1,3 @@
-import Headroom from 'headroom.js';
 import state from './library/state.js';
 import velocity from './library/velocity.js';
 import './library/glide.js';
@@ -16,11 +15,6 @@ const overlayState = state(overlay);
 const toggleState = state(toggle);
 const linesState = state(lines);
 const menuState = state(menu);
-
-const navHeadroom = new Headroom(navigation, {
-  offset: ((2 * window.innerWidth)/16.5) * 2
-});
-navHeadroom.init();
 
 toggle.addEventListener('click', function(e) {
   overlayState.toggle('active');
