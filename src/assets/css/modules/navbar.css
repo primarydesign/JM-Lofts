@@ -28,9 +28,9 @@
   background-color: $black;
 }
 .navbar__brandImage {
+  @include bordersImage(../img/brand-image.svg, center bottom, auto 101%);
   @include scaleW(1.6/16.5);
   height: 100%;
-  background: url(../img/brand-image.svg) center bottom / auto 101% no-repeat;
   background-color: $sable;
 }
 
@@ -67,6 +67,7 @@
 
 .navMenu__item {
   @include hoverInk;
+  @include bordersAll;
   display: block;
   height: 100%;
   background-color: $sable;

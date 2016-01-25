@@ -36,5 +36,6 @@
     top: 0;left: 0;
     z-index: -1;
     background: url(../img/rolled_ink.png) center / 100% 95% no-repeat;
+    background-color: $sable;
   }
 }

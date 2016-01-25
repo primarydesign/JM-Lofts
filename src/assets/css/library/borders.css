@@ -1,65 +1,72 @@
-@define-mixin borders--all {
+@mixin bordersAll {
   background-image: url(../img/border-vertical.svg), url(../img/border-vertical.svg), url(../img/border-horizontal.svg), url(../img/border-horizontal.svg);
   background-origin: border-box;
   background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
   background-position: left calc(000% - 6px), left calc(100% + 6px), calc(000% - 6px) center, calc(100% + 7px) center;
   background-size: auto 10px, auto 10px, 10px auto, 10px auto;
 }
-@define-mixin borders--top {
+@mixin bordersTop {
   background-image: url(../img/border-vertical.svg);
   background-origin: border-box;
   background-repeat: repeat-x;
   background-position: calc(000% - 6px) left;
   background-size: auto 10px;
 }
-@define-mixin borders--bottom {
+@mixin bordersBottom {
   background-image: url(../img/border-vertical.svg);
   background-origin: border-box;
   background-repeat: repeat-x;
   background-position: calc(100% + 6px) left;
   background-size: auto 10px;
 }
-@define-mixin borders--left {
+@mixin bordersLeft {
   background-image: url(../img/border-horizontal.svg);
   background-origin: border-box;
   background-repeat: repeat-y;
   background-position: calc(000% - 6px) center;
   background-size: 10px auto;
 }
-@define-mixin borders--right {
+@mixin bordersRight {
   background-image: url(../img/border-horizontal.svg);
   background-origin: border-box;
   background-repeat: repeat-y;
   background-position: calc(100% + 6px) center;
   background-size: 10px auto;
 }
-@define-mixin borders--vertical {
+@mixin bordersVertical {
   background-image: url(../img/border-vertical.svg), url(../img/border-vertical.svg);
   background-origin: border-box;
   background-repeat: repeat-x, repeat-x;
   background-position: left calc(000% - 6px), left calc(100% + 6px);
   background-size: auto 10px, auto 10px;
 }
-@define-mixin borders--horizontal {
+@mixin bordersHorizontal {
   background-image: url(../img/border-horizontal.svg), url(../img/border-horizontal.svg);
   background-origin: border-box;
   background-repeat: repeat-y, repeat-y;
   background-position: calc(000% - 6px) center, calc(100% + 7px) center;
   background-size: 10px auto, 10px auto;
 }
-@define-mixin borders--horizontal-bottom {
+@mixin bordersHorizontalBottom {
   background-image: url(../img/border-vertical.svg), url(../img/border-horizontal.svg), url(../img/border-horizontal.svg);
   background-origin: border-box;
   background-repeat: repeat-x, repeat-y, repeat-y;
   background-position: left calc(100% + 6px), calc(000% - 6px) center, calc(100% + 7px) center;
   background-size: auto 10px, 10px auto, 10px auto;
 }
+@mixin bordersImage($image, $position, $size) {
+  background-image: url(../img/border-vertical.svg), url(../img/border-vertical.svg), url(../img/border-horizontal.svg), url(../img/border-horizontal.svg), url($image);
+  background-origin: border-box;
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y, no-repeat;
+  background-position: left calc(000% - 6px), left calc(100% + 6px), calc(000% - 6px) center, calc(100% + 7px) center, $position;
+  background-size: auto 10px, auto 10px, 10px auto, 10px auto, $size;
+}
 
-.borders--all { @mixin borders--all; }
-.borders--top { @mixin borders--top; }
-.borders--bottom { @mixin borders--bottom; }
-.borders--left { @mixin borders--left; }
-.borders--right { @mixin borders--right; }
-.borders--vertical { @mixin borders--vertical; }
-.borders--horizontal { @mixin borders--horizontal; }
-.borders--horizontal-bottom { @mixin borders--horizontal-bottom; }
+.bordersAll { @include bordersAll; }
+.bordersTop { @include bordersTop; }
+.bordersBottom { @include bordersBottom; }
+.bordersLeft { @include bordersLeft; }
+.bordersRight { @include bordersRight; }
+.bordersVertical { @include bordersVertical; }
+.bordersHorizontal { @include bordersHorizontal; }
+.bordersHorizontal-bottom { @include bordersHorizontalBottom; }
