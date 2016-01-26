@@ -1,0 +1,30 @@
+.romanceVenue {
+  height: calc(550vw/8);
+  width: 100%;
+  background: $black;
+  font-size: 0;
+  white-space: nowrap;
+}
+
+.romanceVenue__panel {
+  display: inline-block;
+  size: calc(100%/3) 100%;
+  vertical-align: top;
+}
+
+.romanceVenue__panel--image {
+  background-color: $black;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.romanceVenue__panel--image:nth-child(1) {
+  background-image: url(../img/slide-building_facade.jpg);
+  background-position: 95% 18%;
+  background-size: auto 125%;
+}
+.romanceVenue__panel--image:nth-child(3) {
+  background-image: url(../img/slide-workspace.jpg);
+  background-position: 100% 100%;
+  background-size: auto 100%;
+}
