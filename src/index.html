@@ -1,28 +1,22 @@
-{% extends 'base.html' %}
-
-{% block content %}
-  <section class="heroCarousel">
-    <div class="heroCarousel__frame">
-      <ul class="heroCarousel__track">
-        <li class="heroCarousel__item heroSlide">
-          <div class="heroSlide__block heroSlide__block--image" style=""></div>
-          <div class="heroSlide__block heroSlide__block--image" style=""></div>
-          <div class="heroSlide__block heroSlide__block--caption" style="background-image: url({{ fn.app('assets/img/type-downtown_haverhill.png') }});"></div>
-        </li>
-        <li class="heroCarousel__item heroSlide">
-          <div class="heroSlide__block heroSlide__block--image" style=""></div>
-          <div class="heroSlide__block heroSlide__block--image" style=""></div>
-          <div class="heroSlide__block heroSlide__block--caption" style="background-image: url({{ fn.app('assets/img/type-bedrooms.png') }});"></div>
-        </li>
-        <li class="heroCarousel__item heroSlide">
-          <div class="heroSlide__block heroSlide__block--image" style=""></div>
-          <div class="heroSlide__block heroSlide__block--image" style=""></div>
-          <div class="heroSlide__block heroSlide__block--caption" style="background-image: url({{ fn.app('assets/img/type-charm_living.png') }});"></div>
-        </li>
-      </ul>
-    </div>
-  </section>
-  <section class="romanceText">
-    <p class="romanceText__paragraph">In molestie est vitae fermentum gravida. Quisque porta velit non tempus malesuada. Fusce vulputate congue enim, nec interdum dolor sodales et. Fusce congue mattis iaculis. Morbi tincidunt, leo id auctor varius, dui nulla sodales nibh, imperdiet tristique nisi orci nec est. Etiam tortor metus, fringilla eget risus sed, consequat faucibus nibh. Proin tempor nunc eu imperdiet tristique. Curabitur mattis tincidunt mi, vitae egestas orci euismod at.</p>
-  </section>
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>J.M. Lofts</title>
+  <meta name="viewport" content="maximum-scale=1,width=device-width,initial-scale=1,user-scalable=0">
+  <link rel="stylesheet" href="assets/css/index.css">
+  <script src="assets/js/index.js" async></script>
+</head>
+<body class="page">
+  {% include 'navbar.html' %}
+  <main class="page__content" role="main">
+    <section class="page__section" id="welcome">{% include 'sect-welcome.html' %}</section>
+    <section class="page__section" id="floorplans">{% include 'sect-floorplans.html' %}</section>
+    <section class="page__section" id="features">{% include 'sect-features.html' %}</section>
+    <section class="page__section" id="downtown">{% include 'sect-downtown.html' %}</section>
+    <section class="page__section" id="contact">{% include 'sect-contact.html' %}</section>
+  </main>
+  {% include 'footer.html' %}
+  <div class="page__overlay"></div>
+</body>
+</html>
