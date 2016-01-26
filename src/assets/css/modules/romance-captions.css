@@ -1,18 +1,24 @@
-.romanceCaptions {}
+.romanceCaptions {
+  touch-action: none;
+}
 
-.romanceCaptions__wrapper {
+.romanceCaptions__frame {
   overflow: hidden;
+  position: relative;
   size: 100%;
 }
 
 .romanceCaptions__track {
-  display: block;
+  display: inline-block;
   size: 100%;
+  position: relative;
   font-size: 0;
   white-space: nowrap;
 }
 
 .romanceCaptions__caption {
+  display: inline-block;
+  position: relative;
   size: 100%;
   background-position: center center;
   background-repeat: no-repeat;

@@ -1,12 +1,12 @@
-.heroCarousel {
+.romanceCaptions {
   position: relative;
   width: 100%;
   height: 100%;
 }
-.heroCarousel__frame {
+.romanceCaptions__frame {
   overflow: hidden;
 }
-.heroCarousel__track {
+.romanceCaptions__track {
   position: relative;
   width: 100%;
   height: 100%;
@@ -17,8 +17,9 @@
           transform-style: preserve-3d;
   -ms-touch-action: pan-Y;
       touch-action: pan-Y;
+  overflow: hidden;
 }
-.heroCarousel__track.dragging {
+.romanceCaptions__track.dragging {
   cursor: -webkit-grabbing;
   cursor: grabbing;
   -webkit-user-select: none;
@@ -26,9 +27,7 @@
       -ms-user-select: none;
           user-select: none;
 }
-.heroCarousel__item {
-  -webkit-perspective: 1000;
-          perspective: 1000;
+.romanceCaptions__caption {
   width: 100%;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -37,38 +36,47 @@
   -webkit-touch-callout: none;
   -webkit-tap-highlight-color: transparent;
 }
-.heroCarousel__arrows {
+.romanceCaptions__caption a {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.romanceCaptions__arrows {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }
-.heroCarousel__arrow {
+.romanceCaptions__arrow {
   cursor: pointer;
 }
-.heroCarousel__bullets {
+.romanceCaptions__bullets {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }
-.heroCarousel__bullets li {
-  cursor: pointer;
-}
-.glide--slider .heroCarousel__item {
+.romanceCaptions--slider .romanceCaptions__caption {
   float: left;
   clear: none;
 }
-.glide--carousel .heroCarousel__item {
+.romanceCaptions--carousel.romanceCaptions--vertical .romanceCaptions__track {
+  overflow: visible;
+}
+.romanceCaptions--carousel .romanceCaptions__caption {
   float: left;
   clear: none;
 }
-.glide--slideshow .heroCarousel__frame {
+.romanceCaptions--slideshow .romanceCaptions__frame {
   height: 100%;
 }
-.glide--slideshow .heroCarousel__item {
+.romanceCaptions--slideshow .romanceCaptions__caption {
   height: 100%;
   position: absolute;
   top: 0;
@@ -77,6 +85,6 @@
   -webkit-transform-style: preserve-3d;
   -webkit-transform: translate3d(0px, 0px, 0px);
 }
-.glide--slideshow .heroCarousel__item.active {
+.romanceCaptions--slideshow .romanceCaptions__caption.active {
   z-index: 1;
 }

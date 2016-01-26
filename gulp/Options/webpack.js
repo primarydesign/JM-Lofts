@@ -5,7 +5,6 @@ import path from 'path';
 module.exports = {
   devtool: 'source-map',
   plugins: [
-    new CommonsChunk('common.js'),
     new webpack.ProvidePlugin({
       jQuery: 'jquery'
     })
