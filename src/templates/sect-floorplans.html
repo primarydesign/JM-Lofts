@@ -5,42 +5,38 @@
   <div class="unitTables__column">
     <figure class="unitTable">
       <figcaption class="unitTable__captions">
-        <div class="unitTable__caption">One Bed</div>
-        <div class="unitTable__caption">One Bath</div>
+        <span class="unitTable__caption">One Bed</span>
+        <span class="unitTable__caption">One Bath</span>
       </figcaption>
       <table class="unitTable__table">
-        <tr class="unitTable__row">
-          <td class="unitTable__cell unitTable__cell--ID">201</td>
-          <td class="unitTable__cell unitTable__cell--SQ">750</td>
-          <td class="unitTable__cell unitTable__cell--PR">1400</td>
-        </tr>
+        <tbody class="unitTable__body">
+          {% for unit in units %}{% if unit.br == 1 %}
+            <tr class="unitTable__row" data-unit-un="{{ unit.un }}" data-unit-br="{{ unit.br }}" data-unit-ba="1" data-unit-sq="{{ unit.pr | replace('\B(?=(\d{3})+(?!\d))', ',', 'g') }}">
+              <td class="unitTable__cell unitTable__cell--ID">{{ unit.un }}</td>
+              <td class="unitTable__cell unitTable__cell--SF">{{ unit.sf | replace('\B(?=(\d{3})+(?!\d))', ',', 'g') }}</td>
+              <td class="unitTable__cell unitTable__cell--PR">{{ unit.pr | replace('\B(?=(\d{3})+(?!\d))', ',', 'g') }}</td>
+            </tr>
+          {% endif %}{% endfor %}
+        </tbody>
       </table>
     </figure>
+  </div>
   <div class="unitTables__column">
     <figure class="unitTable">
       <figcaption class="unitTable__captions">
-        <div class="unitTable__caption">One Bed</div>
-        <div class="unitTable__caption">One Bath</div>
+        <span class="unitTable__caption">Two Bed</span>
+        <span class="unitTable__caption">One Bath</span>
       </figcaption>
       <table class="unitTable__table">
-        <tr class="unitTable__row">
-          <td class="unitTable__cell unitTable__cell--ID">201</td>
-          <td class="unitTable__cell unitTable__cell--SQ">750</td>
-          <td class="unitTable__cell unitTable__cell--PR">1400</td>
-        </tr>
-      </table>
-    </figure>
-    <figure class="unitTable">
-      <figcaption class="unitTable__captions">
-        <div class="unitTable__caption">One Bed</div>
-        <div class="unitTable__caption">One Bath</div>
-      </figcaption>
-      <table class="unitTable__table">
-        <tr class="unitTable__row">
-          <td class="unitTable__cell unitTable__cell--ID">201</td>
-          <td class="unitTable__cell unitTable__cell--SQ">750</td>
-          <td class="unitTable__cell unitTable__cell--PR">1400</td>
-        </tr>
+        <tbody class="unitTable__body">
+          {% for unit in units %}{% if unit.br == 2 %}
+            <tr class="unitTable__row" data-unit-un="{{ unit.un }}" data-unit-br="{{ unit.br }}" data-unit-ba="1" data-unit-sq="{{ unit.pr | replace('\B(?=(\d{3})+(?!\d))', ',', 'g') }}">
+              <td class="unitTable__cell unitTable__cell--ID">{{ unit.un }}</td>
+              <td class="unitTable__cell unitTable__cell--SF">{{ unit.sf | replace('\B(?=(\d{3})+(?!\d))', ',', 'g') }}</td>
+              <td class="unitTable__cell unitTable__cell--PR">{{ unit.pr | replace('\B(?=(\d{3})+(?!\d))', ',', 'g') }}</td>
+            </tr>
+          {% endif %}{% endfor %}
+        </tbody>
       </table>
     </figure>
   </div>

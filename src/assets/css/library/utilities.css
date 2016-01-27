@@ -36,12 +36,16 @@
     size: 100%;
     top: 0;left: 0;
     z-index: -1;
-    background: url(../img/rolled_ink.png) center / 100% 95% no-repeat;
-    /*background-color: $sable;*/
+    background: url(../img/rolled_ink.png) center / 100% 80% no-repeat;
     opacity: 0;
     transition: opacity 300ms easeInOutQuad;
   }
   &:hover:before, &:focus:before {
     opacity: 1;
+  }
+}
+@mixin hoverPaint {
+  &:hover, &:focus {
+    background: url(../img/rolled_ink.png) center center / 100% 80% no-repeat;
   }
 }

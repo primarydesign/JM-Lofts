@@ -1,0 +1,127 @@
+.unitTables {
+  margin: 0 auto;
+  width: 80%;
+  font-size: 0;
+  @media (width >= 700px) {
+    padding-bottom: 5vw;
+  }
+}
+.unitTables__column {
+  display: inline-block;
+  vertical-align: top;
+  width: 45%;
+  @media (width < 700px) {
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 10vw;
+    width: 100%;
+  }
+  @media (width >= 700px) {
+    font-size: 1.50vw;
+  }
+}
+.unitTables__column:nth-child(1) {
+  margin-right: 10%;
+}
+
+.unitTable {
+  width: 100%;
+  font-size: 1rem;
+}
+.unitTable:not(:last-child) {
+  margin-bottom: 4vw;
+}
+
+.unitTable__captions {
+  position: relative;
+  width: 100%;
+  background: $black;
+  font-size: 0;
+}
+.unitTable__captions:after {
+  content: '';
+  height: 50%;
+  min-width: 1px;
+  position: absolute;
+  top: 50%;left: 50%;
+  z-index: 1;
+  background-color: $sable;
+  transform: translate(-50%,-50%);
+  @media (width < 700px) {
+    width: 1px;
+  }
+  @media (width >= 700px) {
+    width: 0.45%;
+  }
+}
+.unitTable__caption {
+  display: inline-block;
+  padding: 1.25vw 0;
+  width: 50%;
+  color: $sable;
+  font-family: $baskerville;
+  text-align: center;
+  text-transform: uppercase;
+  @media (width < 700px) {
+    font-size: 3.00vw;
+  }
+  @media (width >= 700px) {
+    font-size: 1.50vw;
+  }
+}
+
+.unitTable__table {
+  display: block;
+  width: 100%;
+}
+.unitTable__body {
+  display: block;
+  width: 100%;
+}
+.unitTable__row {
+  @include hoverPaint;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  border-bottom: 0.10vw solid $black;
+  @media (width < 700px) {
+    padding: 1.5vw 2%;
+  }
+  @media (width >= 700px) {
+    padding: 1.00vw 2%;
+  }
+}
+.unitTable__cell {
+  display: inline-block;
+  width: calc(100%/3);
+  font-family: $gotham;
+  font-size: 1.50vw;
+  text-align: center;
+  text-transform: uppercase;
+  &:before, &:after {
+    display: inline-block;
+    position: relative;
+  }
+  @media (width < 700px) {
+    font-size: 3.00vw;
+  }
+  @media (width >= 700px) {
+    font-size: 1.50vw;
+  }
+}
+
+
+.unitTable__cell--ID:before {
+  content: 'Unit';
+  margin-right: 0.6vw;
+}
+.unitTable__cell--SF:after {
+  content: 'Sq. Ft.';
+  margin-left: 0.6vw;
+}
+.unitTable__cell--PR:before {
+  content: '$';
+}
+
+
+.clear { clear: both; }
