@@ -12,34 +12,10 @@
   background-color: $sable;
 }
 .page__overlay {
+  display: none;
   position: fixed;
   size: 100vw 200vh;
   top: 0;left: 0;
   background-color: rgba($black, 0.75);
-  transition: opacity 300ms ease;
-  opacity: 0;
-  z-index: -1;
-}
-.page__overlay.is-active {
-  opacity: 1;
   z-index: 10;
-}
-.page__overlay.not-active {
-  animation-name: overlayFadeOut;
-  animation-duration: 300ms;
-  animation-fill-mode: forwards;
-}
-
-@keyframes overlayFadeOut {
-  0% {
-    opacity: 1;
-    z-index: 10;
-  }
-  99% {
-    z-index: 10;
-  }
-  100% {
-    opacity: 0;
-    z-index: -1;
-  }
 }
