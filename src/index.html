@@ -10,11 +10,12 @@
 <body class="page">
   {% include 'navbar.html' %}
   <main class="page__content" role="main">
-    <section class="page__section" id="welcome">{% include 'sect-welcome.html' %}</section>
-    <section class="page__section" id="floorplans">{% include 'sect-floorplans.html' %}</section>
-    <section class="page__section" id="features">{% include 'sect-features.html' %}</section>
-    <section class="page__section" id="downtown">{% include 'sect-downtown.html' %}</section>
-    <section class="page__section" id="contact">{% include 'sect-contact.html' %}</section>
+    <section class="page__section" id="section--welcome">{% include 'sect-welcome.html' %}</section>
+    <section class="page__section" id="section--floorplans">{% include 'sect-floorplans.html' %}</section>
+    <section class="page__section" id="section--features">{% include 'sect-features.html' %}</section>
+    <section class="page__section" id="section--downtown">{% include 'sect-downtown.html' %}</section>
+    <section class="page__section" id="section--contact">{% include 'sect-contact.html' %}</section>
+    {% include 'unit-modal.html' %}
   </main>
   {% include 'footer.html' %}
   <div class="page__overlay"></div>
