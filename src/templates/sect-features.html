@@ -1,7 +1,7 @@
 <section class="featureList">
   <ul class="featureList__items">
     {% for feature in features %}
-      <li class="featureList__item">{{ feature }}</li>
+      <li class="featureList__item" data-feature="{{ feature | strip }}">{{ feature }}</li>
     {% endfor %}
   </ul>
 </section>
