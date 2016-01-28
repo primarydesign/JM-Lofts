@@ -19,12 +19,12 @@
   background-size: cover;
 }
 .romanceVenue__panel--image:nth-child(1) {
-  /*background-image: url(../img/slide-building_facade.jpg);*/
+  background-image: url(../img/slide-building_facade.jpg);
   background-position: 95% 18%;
   background-size: auto 125%;
 }
 .romanceVenue__panel--image:nth-child(3) {
-  /*background-image: url(../img/slide-workspace.jpg);*/
+  background-image: url(../img/slide-workspace.jpg);
   background-position: 100% 100%;
   background-size: auto 100%;
 }
