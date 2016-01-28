@@ -1,0 +1,53 @@
+.mapUI {
+  background: $sable;
+  @media (width >= 800px) {
+    display: inline-block;
+    size: 20% 100%;
+  }
+  @media (width < 800px) {}
+}
+
+.mapUI__categories {
+  max-height: 100%;
+  size: auto 100%;
+}
+.mapUI__category {
+  size: 100% calc(40vw/7);
+}
+
+.mapUI__button {
+  size: 100% calc(40vw/7);
+  box-shadow: none;
+  outline: none;
+  text-align: left;
+}
+.mapUI__button:after {
+  content: '';
+  display: inline-block;
+  size: 0 100%;
+  vertical-align: middle;
+}
+
+.mapUI__button.is-active,
+.mapUI__button:hover,
+.mapUI__button:focus {
+  background: url(../img/rolled_ink.png) center / 100% 100%;
+}
+
+.mapUI__buttonLabel {
+  display: inline-block;
+  vertical-align: middle;
+  color: $black;
+  font-family: $gotham;
+  font-size: 1.00vw;
+  text-transform: uppercase;
+}
+
+.mapUI__locations {}
+
+.mapUI__location {}
+.mapUI__location.is-active,
+.mapUI__location:hover,
+.mapUI__location:focus {}
+
+.mapUI__locationLabel {}

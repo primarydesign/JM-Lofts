@@ -1,0 +1,13 @@
+.locationsMap {
+  position: relative;
+  size: 100% 40vw;
+  font-size: 0;
+}
+.locationsMap__ui {
+  display: inline-block;
+  vertical-align: top;
+}
+.locationsMap__map {
+  size: 80% 100%;
+  background: url(../img/brand-pattern.svg) top / auto 40px;
+}
