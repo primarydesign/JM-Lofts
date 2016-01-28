@@ -1,6 +1,7 @@
 import '../vendors/glide.js';
 
 const carousel = document.querySelector('.romanceCaptions');
+console.log(jQuery);
 
 jQuery(carousel).glide({
   type: 'carousel',
