@@ -1,3 +1,4 @@
+.page { overflow: hidden; }
 .unitModal__overlay {
   position: fixed;
   size: 100%;
@@ -13,32 +14,104 @@
   position: relative;
   size: 0 100%;
   vertical-align: middle;
+  @media (width < 800px) {}
+  @media (width >= 800px) {}
+}
+.unitModal__overlay:after {
+  content: '';
+  position: absolute;
+  size: 100% 25%;
+  top: 100%;left:0;
+  background: rgba($black, 0.50);
 }
 
 .unitModal {
-  background: red;
   display: inline-block;
+  max-height: 100vh;
   max-width: 800px;
+  overflow-y: auto;
   position: relative;
   size: 100% auto;
-  vertical-align: middle;
   z-index: 20;
+  background: $sable;
+  @media (width < 800px) {
+    vertical-align: top;
+  }
+  @media (width >= 800px) {
+    vertical-align: middle;
+  }
 }
 .unitModal.is-active {}
 .unitModal.not-active {}
 
 .unitModal__details {}
 
-.unitModal__detail {}
-.unitModal__detail--tabule {}
-.unitModal__detail--square {}
+.unitModal__detail {
+  display: inline-block;
+  vertical-align: top;
+  background: $black;
+  color: $sable;
+  font-family: $gotham;
+  text-align: center;
+  text-transform: uppercase;
+  @media (width < 800px) {
+    padding: 2vw 0;
+    font-size: 4.5vw;
+    letter-spacing: 0.20em;
+    text-indent: 0.10em;
+  }
+  &:before, &:after {
+    display: block;
+    position: relative;
+    width: auto;
+    font-size: 0.65em;
+    text-align: center;
+    word-spacing: 0em;
+  }
+}
+.unitModal__detail--tabule {
+  margin-right: 1%;
+  width: calc(25%);
+}
+.unitModal__detail--square {
+  width: calc(25% - 3%);
+}
 
-.unitModal__detail--unitBR:after {}
-.unitModal__detail--unitBA:after {}
-.unitModal__detail--unitSF:after {}
-.unitModal__detail--unitUN:before {}
+.unitModal__detail--unitBR:after { content: 'Bed'; }
+.unitModal__detail--unitBA:after { content: 'Bath'; }
+.unitModal__detail--unitSF:after { content: 'Sq.Ft.'; }
+.unitModal__detail--unitUN:before { content: 'Unit'; }
 
-.unitModal__figure {}
-.unitModal__plan {}
-.unitModal__link {}
-.unitModal__disclaimer {}
+.unitModal__figure {
+  size: 100% auto;
+}
+.unitModal__plan {
+  size: 100% 0;
+  background: url(../img/brand-pattern.svg) top / auto 10%;
+  @media (width < 800px) {
+    padding-bottom: 80%;
+  }
+}
+.unitModal__link {
+  cursor: pointer;
+  display: inline-block;
+  color: $sable;
+  font-family: $gotham;
+  text-transform: uppercase;
+  background: url(../img/rolled_ink.png) center center / 150%;
+  @media (width < 800px) {
+    margin: 5vw 0;
+    padding: 1vw 4vw;
+    font-size: 4.00vw;
+  }
+}
+.unitModal__disclaimer {
+  margin: 0 auto;
+  width: 80%;
+  @media (width < 800px) {
+    padding-bottom: 5vw;
+    font-family: $gotham;
+    font-size: 2.50vw;
+    text-align: justify;
+  }
+}
