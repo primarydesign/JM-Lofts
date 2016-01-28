@@ -11,6 +11,9 @@
   margin: 0 auto;
   background-color: $sable;
 }
+.page__section {
+  position: relative;
+}
 .page__overlay {
   position: fixed;
   size: 100vw 200vh;

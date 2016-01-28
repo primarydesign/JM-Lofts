@@ -1,19 +1,19 @@
-<section class="featureList">
-  <ul class="featureList__items">
-    {% for feature in features %}
-      <li class="featureList__item" data-feature="{{ feature | strip }}">{{ feature }}</li>
-    {% endfor %}
-  </ul>
-</section>
 <section class="featuresCarousel">
+  <section class="featureList">
+    <ul class="featureList__items">
+      {% for feature in features %}
+        <li class="featureList__item" data-feature="{{ feature | strip }}">{{ feature }}</li><br/>
+      {% endfor %}
+    </ul>
+  </section>
   <div class="featuresCarousel__frame">
     <ul class="featuresCarousel__track">
-      <li class="featuresCarousel__item" style="background-image: url(../img/features/pet-friendly.jpg);"></li>
-      <li class="featuresCarousel__item" style="background-image: url(../img/features/pet-friendly.jpg);"></li>
-      <li class="featuresCarousel__item" style="background-image: url(../img/features/pet-friendly.jpg);"></li>
-      <li class="featuresCarousel__item" style="background-image: url(../img/features/pet-friendly.jpg);"></li>
-      <li class="featuresCarousel__item" style="background-image: url(../img/features/pet-friendly.jpg);"></li>
-      <li class="featuresCarousel__item" style="background-image: url(../img/features/pet-friendly.jpg);"></li>
+      <li class="featuresCarousel__item" style="background-image: url(assets/img/features/pet-friendly.jpg);"></li>
+      <li class="featuresCarousel__item" style="background-image: url(assets/img/features/pet-friendly.jpg);"></li>
+      <li class="featuresCarousel__item" style="background-image: url(assets/img/features/pet-friendly.jpg);"></li>
+      <li class="featuresCarousel__item" style="background-image: url(assets/img/features/pet-friendly.jpg);"></li>
+      <li class="featuresCarousel__item" style="background-image: url(assets/img/features/pet-friendly.jpg);"></li>
+      <li class="featuresCarousel__item" style="background-image: url(assets/img/features/pet-friendly.jpg);"></li>
     </ul>
   </div>
   <div class="featuresCarousel__bullets"></div>
