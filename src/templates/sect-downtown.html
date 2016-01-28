@@ -1,0 +1,17 @@
+<section class="locationsMap">
+  <nav class="mapUI">
+    <ul class="mapUI__categories">
+      {% for category in locations | values('category') %}
+        <li class="mapUI__category">
+          <button class="mapUI__button" data-category="{{ category }}"><span class="mapUI__buttonLabel">{{ category | replace('/', ' &amp; ') }}</span></button>
+          <ul class="mapUI__locations">
+          {% for location in locations | filter('category', category, 'equals') %}
+            <li class="mapUI__location"><span class="mapUI__locationLabel">{{ location.name }}</span></li>
+          {% endfor %}
+          </ul>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+  <div class="locationsMap__map"></div>
+</section>

@@ -1,3 +1,5 @@
-import './modules/navbar.js';
-import './modules/romance-captions.js';
-import './modules/ft-carousel.js';
+import './modules/navbar';
+import './modules/romance-captions';
+import './modules/ft-carousel';
+import './modules/downtown-map';
+
