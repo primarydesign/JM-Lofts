@@ -3,7 +3,12 @@
     <ul class="mapUI__categories">
       {% for category in locations | values('category') %}
         <li class="mapUI__category">
-          <div class="mapUI__button" data-category="{{ category }}"><span class="mapUI__buttonLabel">{{ category | replace('/', ' &amp; ') }}</span></div>
+          <button class="mapUI__button" data-category="{{ category }}">
+            <div class="mapUI__buttonIcon">
+              <img class="mapUI__buttonSVG" src="assets/img/map_icons/icon-{{ category | strip }}.svg">
+            </div>
+            <span class="mapUI__buttonLabel">{{ category | replace('/', ' &amp; ') }}</span>
+          </button>
           <ul class="mapUI__locations">
           {% for location in locations | filter('category', category, 'equals') %}
             <li class="mapUI__location"><span class="mapUI__locationLabel">{{ location.name }}</span></li>

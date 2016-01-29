@@ -2,7 +2,7 @@
   background: $sable;
   @media (width >= 800px) {
     display: inline-block;
-    size: 20% 100%;
+    size: 25% 100%;
   }
   @media (width < 800px) {}
 }
@@ -16,7 +16,10 @@
 }
 
 .mapUI__button {
+  /*padding-left: 10%;*/
   size: 100% calc(40vw/7);
+  background: none;
+  border: none;
   box-shadow: none;
   outline: none;
   text-align: left;
@@ -31,9 +34,20 @@
 .mapUI__button.is-active,
 .mapUI__button:hover,
 .mapUI__button:focus {
-  background: url(../img/rolled_ink.png) center / 100% 100%;
+  background: url(../img/rolled_ink.png) no-repeat center / 100% 100%;
 }
-
+.mapUI__buttonIcon {
+  display: inline-block;
+  position: relative;
+  size: 25% 35%;
+  vertical-align: middle;
+}
+.mapUI__buttonSVG {
+  display: block;
+  margin: 0 auto;
+  size: auto 100%;
+  /** { fill: $black; }*/
+}
 .mapUI__buttonLabel {
   display: inline-block;
   vertical-align: middle;

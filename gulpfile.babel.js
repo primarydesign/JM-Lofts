@@ -12,6 +12,7 @@ import cached from 'gulp-cached';
 import imagemin from 'gulp-imagemin';
 import bsync from 'browser-sync';
 import pretty from 'gulp-pretty-url';
+import inline from 'gulp-inline';
 
 var Uppsta = direque('./gulp' ,{recurse: true});
 var Library = Uppsta.Library;
@@ -23,7 +24,7 @@ gulp.task('pages', function() {
   return gulp.src($.pages.globs)
   .pipe(data(_.data))
   .pipe(swig(_.swig()))
-  .pipe(pretty())
+  .pipe(inline(_.inline))
   .pipe(htmlmin(_.htmlmin))
   .pipe(gulp.dest($.pages.dest))
   .pipe(Browser.stream());
