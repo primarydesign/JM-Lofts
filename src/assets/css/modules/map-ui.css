@@ -30,14 +30,15 @@
 }
 
 .mapUI__button {
-  cursor: pointer;
   size: 100% calc(40vw/7);
   background: none;
   border: none;
   box-shadow: none;
   outline: none;
   text-align: left;
+  user-select: none;
   @media (width >= 800px) {
+    cursor: pointer;
     size: 100% calc(40vw/7);
   }
   @media (width < 800px) {
@@ -72,7 +73,7 @@
   vertical-align: middle;
   color: $black;
   font-family: $gotham;
-
+  user-select: none;
   text-transform: uppercase;
   @media (width >= 800px) {
     font-size: 1.00vw;
