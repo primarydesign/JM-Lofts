@@ -59,6 +59,7 @@
     "postcss-simple-vars": "^1.2.0",
     "postcss-time-machine": "^1.2.0",
     "require-dir": "^0.3.0",
+    "scriptjs": "^2.5.8",
     "vinyl-named": "^1.1.0",
     "yargs": "^3.31.0"
   },
