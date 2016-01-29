@@ -4,6 +4,7 @@ class Tillstand {
   }
   instate(name, activator, negator) {
     this[name] = this[name] || new TillstandState(name, this.context, activator, negator);
+    return this.context;
   }
 }
 
@@ -16,6 +17,7 @@ class TillstandGroup {
       this.elements[i].tillstand = this.elements[i].tillstand || this.elements[i].tillstand(this.elements[i]);
       if (!this.elements[i].tillstand[state]) { this.elements[i].tillstand.instate(state, activator, negator); }
     }
+    return this.elements;
   }
   freeze(state) {
     for(let i = 0; i < this.elements.length; i++) {
@@ -66,7 +68,7 @@ class TillstandState {
     this.frozen = false;
     this.affirmClass = `is-${name}`;
     this.negateClass = `not-${name}`;
-    if (this.activator) {
+    if (activator) {
       this.activator = activator;
       this.negator = negator || activator;
     }

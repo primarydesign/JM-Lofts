@@ -2,14 +2,14 @@
   <nav class="locationsMap__ui mapUI">
     <ul class="mapUI__categories">
       {% for category in locations | values('category') %}
-        <li class="mapUI__category">
+        <li class="mapUI__category" data-category="{{ category }}">
           <button class="mapUI__button" data-category="{{ category }}">
             <div class="mapUI__buttonIcon">
               <img class="mapUI__buttonSVG" src="assets/img/map_icons/icon-{{ category | strip }}.svg">
             </div>
             <span class="mapUI__buttonLabel">{{ category | replace('/', ' &amp; ') }}</span>
           </button>
-          <ul class="mapUI__locations">
+          <ul class="mapUI__locations" data-category="{{ category }}">
           {% for location in locations | filter('category', category, 'equals') %}
             <li class="mapUI__location"><span class="mapUI__locationLabel">{{ location.name }}</span></li>
           {% endfor %}

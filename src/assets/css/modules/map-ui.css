@@ -1,4 +1,5 @@
 .mapUI {
+  overflow: hidden;
   background: $sable;
   @media (width >= 800px) {
     display: inline-block;
@@ -12,11 +13,16 @@
   size: auto 100%;
 }
 .mapUI__category {
+  overflow: hidden;
   size: 100% calc(40vw/7);
+  transition: height 300ms easeOutQuad;
+}
+.mapUI__category.is-active {
+  height: 100%;
 }
 
 .mapUI__button {
-  /*padding-left: 10%;*/
+  cursor: pointer;
   size: 100% calc(40vw/7);
   background: none;
   border: none;
@@ -32,10 +38,10 @@
 }
 
 .mapUI__button.is-active,
-.mapUI__button:hover,
-.mapUI__button:focus {
+.mapUI__button:hover {
   background: url(../img/rolled_ink.png) no-repeat center / 100% 100%;
 }
+
 .mapUI__buttonIcon {
   display: inline-block;
   position: relative;
@@ -46,7 +52,6 @@
   display: block;
   margin: 0 auto;
   size: auto 100%;
-  /** { fill: $black; }*/
 }
 .mapUI__buttonLabel {
   display: inline-block;
@@ -57,11 +62,42 @@
   text-transform: uppercase;
 }
 
-.mapUI__locations {}
+.mapUI__locations {
+  max-height: 0;
+  overflow: hidden;
+  size: 100% calc(40vw - (40vw/7) + 1px);
+  transition: max-height 300ms easeOutQuad;
+}
+.mapUI__locations.is-active {
+  max-height: calc(40vw - (40vw/7) + 1px);
+}
 
-.mapUI__location {}
+.mapUI__location {
+  cursor: pointer;
+  size: 100% calc(3vw);
+  border-top: 1px solid $black;
+  font-size: 0;
+}
+.mapUI__location:last-child {
+  border-bottom: 1px solid $black;
+}
+.mapUI__location:after {
+  content: '';
+  display: inline-block;
+  size: 0 100%;
+  vertical-align: middle;
+}
 .mapUI__location.is-active,
 .mapUI__location:hover,
-.mapUI__location:focus {}
+.mapUI__location:focus {
+  background: url(../img/rolled_ink.png) no-repeat center / 100% 100%;
+}
 
-.mapUI__locationLabel {}
+.mapUI__locationLabel {
+  display: inline-block;
+  margin-left: 10%;
+  vertical-align: middle;
+  color: $black;
+  font-family: $gotham;
+  font-size: 1.00vw;
+}
