@@ -3,9 +3,12 @@
   background: $sable;
   @media (width >= 800px) {
     display: inline-block;
-    size: 25% 100%;
+    size: 25% 40vw;
   }
-  @media (width < 800px) {}
+  @media (width < 800px) {
+    display: block;
+    height: 80vw;
+  }
 }
 
 .mapUI__categories {
@@ -14,8 +17,13 @@
 }
 .mapUI__category {
   overflow: hidden;
-  size: 100% calc(40vw/7);
   transition: height 300ms easeOutQuad;
+  @media (width >= 800px) {
+    size: 100% calc(40vw/7);
+  }
+  @media (width < 800px) {
+    size: 100% calc(80vw/7);
+  }
 }
 .mapUI__category.is-active {
   height: 100%;
@@ -29,6 +37,12 @@
   box-shadow: none;
   outline: none;
   text-align: left;
+  @media (width >= 800px) {
+    size: 100% calc(40vw/7);
+  }
+  @media (width < 800px) {
+    size: 100% calc(80vw/7);
+  }
 }
 .mapUI__button:after {
   content: '';
@@ -45,21 +59,27 @@
 .mapUI__buttonIcon {
   display: inline-block;
   position: relative;
-  size: 25% 35%;
+  size: 25% 50%;
   vertical-align: middle;
 }
 .mapUI__buttonSVG {
   display: block;
   margin: 0 auto;
-  size: auto 100%;
+  size: auto calc(80%);
 }
 .mapUI__buttonLabel {
   display: inline-block;
   vertical-align: middle;
   color: $black;
   font-family: $gotham;
-  font-size: 1.00vw;
+
   text-transform: uppercase;
+  @media (width >= 800px) {
+    font-size: 1.00vw;
+  }
+  @media (width < 800px) {
+    font-size: 4.00vw;
+  }
 }
 
 .mapUI__locations {
@@ -67,16 +87,32 @@
   overflow: hidden;
   size: 100% calc(40vw - (40vw/7) + 1px);
   transition: max-height 300ms easeOutQuad;
+  @media (width >= 800px) {
+    size: 100% calc(40vw - (40vw/7) + 1px);
+  }
+  @media (width < 800px) {
+    size: 100% calc(80vw - (80vw/7) + 1px);
+  }
 }
 .mapUI__locations.is-active {
-  max-height: calc(40vw - (40vw/7) + 1px);
+  @media (width >= 800px) {
+    max-height: calc(40vw - (40vw/7) + 1px);
+  }
+  @media (width < 800px) {
+    max-height: calc(80vw - (80vw/7) + 1px);
+  }
 }
 
 .mapUI__location {
   cursor: pointer;
-  size: 100% calc(3vw);
   border-top: 1px solid $black;
   font-size: 0;
+  @media (width >= 800px) {
+    size: 100% 3vw;
+  }
+  @media (width < 800px) {
+    size: 100% 10vw;
+  }
 }
 .mapUI__location:last-child {
   border-bottom: 1px solid $black;
@@ -99,5 +135,10 @@
   vertical-align: middle;
   color: $black;
   font-family: $gotham;
-  font-size: 1.00vw;
+  @media (width >= 800px) {
+    font-size: 1.00vw;
+  }
+  @media (width < 800px) {
+    font-size: 3.00vw;
+  }
 }
