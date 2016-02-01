@@ -1,0 +1,6 @@
+.contactInformation {}
+.contactInformation__availability {}
+.contactInformation__company {}
+.contactInformation__contacts {}
+.contactInformation__contact {}
+.contactInformation__contact:nth-last-child(-n + 1) {}

@@ -51,3 +51,7 @@
   height: 40vw;
   background: url(../img/washington_by_night.jpg) no-repeat center 90% / cover;
 }
+#section--contact {
+  padding-top: 5vw;
+  background: url(../img/corridor.jpg) no-repeat center / cover;
+}

@@ -1,9 +1,9 @@
 <form class="contactForm" novalidate>
-  <input type="text" class="contactForm__field" name="fname" id="contactForm--fname">
-  <input type="text" class="contactForm__field" name="lname" id="contactForm--lname">
-  <input type="email" class="contactForm__field" name="email" id="contactForm--email">
-  <input type="phone" class="contactForm__field" name="phone" id="contactForm--phone">
-  <textarea name="message" id="contactForm--message"></textarea>
+  <input type="text" class="contactForm__field contactForm__field--inline" name="fname" id="contactForm--fname" placeholder="First Name*">
+  <input type="text" class="contactForm__field contactForm__field--inline" name="lname" id="contactForm--lname" placeholder="Last Name*">
+  <input type="email" class="contactForm__field" name="email" id="contactForm--email" placeholder="Email*">
+  <input type="phone" class="contactForm__field" name="phone" id="contactForm--phone" placeholder="Phone">
+  <textarea name="message" class="contactForm__field contactForm__field--textarea" id="contactForm--message" placeholder="Message"></textarea>
   <input type="submit" class="contactForm__submit" value="submit">
   <span class="contactForm__hint">*required fields</span>
 </form>
