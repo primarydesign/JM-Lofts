@@ -22,10 +22,11 @@ var _ = Uppsta.Options;
 
 gulp.task('pages', function() {
   return gulp.src($.pages.globs)
-  .pipe(data(_.data))
+  .pipe(_.filter)
   .pipe(swig(_.swig()))
   .pipe(inline(_.inline))
   .pipe(htmlmin(_.htmlmin))
+  .pipe(_.filter.restore)
   .pipe(gulp.dest($.pages.dest))
   .pipe(Browser.stream());
 });
