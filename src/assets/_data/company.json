@@ -8,5 +8,11 @@
     "city": "Haverhill",
     "state": "MA"
   },
+  "hq": {
+    "name": "Traggorth Companies",
+    "address": "50 Summer St. Boston, MA",
+    "phone": "617-542-6500",
+    "url": "traggorthcompanies.com"
+    },
   "disclaimer": "Renderings and images represent the apartment living concept and are subject to change."
 }

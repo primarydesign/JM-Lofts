@@ -9,10 +9,10 @@
 </form>
 <div class="contactInformation">
   <h3 class="contactInformation__availability">Open by Appointment</h3>
-  <p class="contactInformation__company">Traggorth Companies</p>
+  <p class="contactInformation__company">{{ company.hq.name }}</p>
   <ul class="contactInformation__contacts">
     <li class="contactInformation__contact"><address>{{ company.hq.address }}</address></li>
     <li class="contactInformation__contact"><a href="tel:{{ company.hq.phone }}">{{ company.hq.phone }}</a></li>
-    <li class="contactInformation__contact"><a href="mailto:{{ company.hq.email }}">{{ company.hq.email }}</a></li>
+    <li class="contactInformation__contact"><a href="mailto:{{ company.hq.url }}">{{ company.hq.url }}</a></li>
   </ul>
 </div>
