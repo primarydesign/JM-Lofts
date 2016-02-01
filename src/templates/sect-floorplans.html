@@ -11,10 +11,9 @@
       <table class="unitTable__table">
         <tbody class="unitTable__body">
           {% for unit in units %}{% if unit.br == 1 %}
-            <tr class="unitTable__row" data-unit-un="{{ unit.un }}" data-unit-br="{{ unit.br }}" data-unit-ba="1" data-unit-sq="{{ unit.pr | replace('\B(?=(\d{3})+(?!\d))', ',', 'g') }}">
+            <tr class="unitTable__row" data-unit-un="{{ unit.un }}" data-unit-br="{{ unit.br }}" data-unit-ba="1" data-unit-sf="{{ unit.sf }}">
               <td class="unitTable__cell unitTable__cell--ID">{{ unit.un }}</td>
               <td class="unitTable__cell unitTable__cell--SF">{{ unit.sf | replace('\B(?=(\d{3})+(?!\d))', ',', 'g') }}</td>
-              <td class="unitTable__cell unitTable__cell--PR">{{ unit.pr | replace('\B(?=(\d{3})+(?!\d))', ',', 'g') }}</td>
             </tr>
           {% endif %}{% endfor %}
         </tbody>
@@ -30,10 +29,9 @@
       <table class="unitTable__table">
         <tbody class="unitTable__body">
           {% for unit in units %}{% if unit.br == 2 %}
-            <tr class="unitTable__row" data-unit-un="{{ unit.un }}" data-unit-br="{{ unit.br }}" data-unit-ba="1" data-unit-sq="{{ unit.pr | replace('\B(?=(\d{3})+(?!\d))', ',', 'g') }}">
+            <tr class="unitTable__row" data-unit-un="{{ unit.un }}" data-unit-br="{{ unit.br }}" data-unit-ba="1" data-unit-sf="{{ unit.sf }}">
               <td class="unitTable__cell unitTable__cell--ID">{{ unit.un }}</td>
               <td class="unitTable__cell unitTable__cell--SF">{{ unit.sf | replace('\B(?=(\d{3})+(?!\d))', ',', 'g') }}</td>
-              <td class="unitTable__cell unitTable__cell--PR">{{ unit.pr | replace('\B(?=(\d{3})+(?!\d))', ',', 'g') }}</td>
             </tr>
           {% endif %}{% endfor %}
         </tbody>
