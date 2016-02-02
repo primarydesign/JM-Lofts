@@ -1,12 +1,28 @@
-<form class="contactForm" novalidate>
-  <input type="text" class="contactForm__field contactForm__field--inline" name="fname" id="contactForm--fname" placeholder="First Name*">
-  <input type="text" class="contactForm__field contactForm__field--inline" name="lname" id="contactForm--lname" placeholder="Last Name*">
-  <input type="email" class="contactForm__field" name="email" id="contactForm--email" placeholder="Email*">
-  <input type="phone" class="contactForm__field" name="phone" id="contactForm--phone" placeholder="Phone">
-  <textarea name="message" class="contactForm__field contactForm__field--textarea" id="contactForm--message" placeholder="Message"></textarea>
-  <input type="submit" class="contactForm__submit" value="submit">
-  <span class="contactForm__hint">*required fields</span>
-</form>
+<div class="contactForm">
+  <form class="contactForm__form" novalidate>
+    <label class="contactForm__field contactForm__field--inline">
+      <input type="text" class="contactForm__input" name="fname" id="contactForm--fname" placeholder="First Name*" required>
+    </label>
+    <label class="contactForm__field contactForm__field--inline">
+      <input type="text" class="contactForm__input" name="lname" id="contactForm--lname" placeholder="Last Name*" required>
+    </label>
+    <label class="contactForm__field">
+      <input type="email" class="contactForm__input" name="email" id="contactForm--email" placeholder="Email*" data-pattern="email" required>
+    </label>
+    <label class="contactForm__field">
+      <input type="tel" class="contactForm__input" name="phone" id="contactForm--phone" placeholder="Phone" data-pattern="phone">
+    </label>
+    <label class="contactForm__field">
+      <textarea name="message" class="contactForm__input contactForm__input--textarea" id="contactForm--message" placeholder="Message"></textarea>
+    </label>
+    <input type="submit" class="contactForm__submit" value="submit">
+    <span class="contactForm__hint">*required fields</span>
+  </form>
+  <div class="contactForm__note">
+    <p class="contactForm__message">Thank you! Our leasing staff will be in touch shortly.</p>
+  </div>
+</div>
+
 <div class="contactInformation">
   <h3 class="contactInformation__availability">Open by Appointment</h3>
   <p class="contactInformation__company">{{ company.hq.name }}</p>

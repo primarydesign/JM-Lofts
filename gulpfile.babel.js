@@ -20,13 +20,16 @@ var Browser = bsync.create();
 var $ = Uppsta.configure.paths;
 var _ = Uppsta.Options;
 
+gulp.task('assets', function() {
+  return gulp.src($.assets.globs)
+  .pipe(gulp.dest($.assets.dest));
+});
+
 gulp.task('pages', function() {
   return gulp.src($.pages.globs)
-  .pipe(_.filter)
   .pipe(swig(_.swig()))
   .pipe(inline(_.inline))
   .pipe(htmlmin(_.htmlmin))
-  .pipe(_.filter.restore)
   .pipe(gulp.dest($.pages.dest))
   .pipe(Browser.stream());
 });
@@ -57,6 +60,7 @@ gulp.task('images', function() {
 
 gulp.task('watch', function() {
   Browser.init(_.browsersync);
+  gulp.watch($.assets.watch, ['assets']);
 	gulp.watch($.pages.watch, ['pages']);
   gulp.watch($.css.watch, ['styles']);
   gulp.watch($.js.watch, ['scripts']);

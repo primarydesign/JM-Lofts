@@ -4,6 +4,7 @@ import './modules/navbar';
 import './modules/romance-captions';
 import './modules/ft-carousel';
 import './modules/downtown-map';
+import './modules/contact-form';
 
 const scryTriggers = document.querySelectorAll('[data-scry]');
 for(let i = 0; i < scryTriggers.length; i++) {
