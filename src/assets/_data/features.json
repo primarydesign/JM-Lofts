@@ -1,11 +1,38 @@
 [
-  "Luxury hard surface flooring",
-  "Exposed brick and beam",
-  "Granite countertops and stainless appliances",
-  "In-unit W/D",
-  "Pet-friendly",
-  "Off street, garage parking",
-  "Extra storage space available",
-  "3,000 sq. ft. retail / restaurant space",
-  "1,000 sq. ft. live / work space on ground floor"
+  {
+    "content": "Luxury hard surface flooring",
+    "correlate": "dog"
+  },
+  {
+    "content": "Exposed brick and beam",
+    "correlate": "dog"
+  },
+  {
+    "content": "Granite countertops and stainless appliances",
+    "correlate": "dog"
+  },
+  {
+    "content": "In-unit W/D",
+    "correlate": "dog"
+  },
+  {
+    "content": "Pet-friendly",
+    "correlate": "dog"
+  },
+  {
+    "content": "Off street, garage parking",
+    "correlate": "dog"
+  },
+  {
+    "content": "Extra storage space available",
+    "correlate": "dog"
+  },
+  {
+    "content": "3,000 sq. ft. retail / restaurant space",
+    "correlate": "dog"
+  },
+  {
+    "content": "1,000 sq. ft. live / work space on ground floor",
+    "correlate": "dog"
+  }
 ]
