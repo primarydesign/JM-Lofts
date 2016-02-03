@@ -13,7 +13,7 @@ module.exports = function() {
   options.setup = function(swig) {
     swig.setDefaults({
       cache: false,
-      locals: _.assign(locals, {fn: custom.locals}),
+      locals: _.assign(locals, custom.locals),
       loader: swig.loaders.fs(Path.resolve($.pages.temp))
     });
     if (custom.filters) {
