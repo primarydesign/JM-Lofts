@@ -1,13 +1,14 @@
 .contactInformation {
+  position: relative;
   color: $sable;
   font-family: $gotham;
   text-align: center;
   text-transform: uppercase;
   @media (width >= 900px) {
-    margin-top: 12vw;
+    margin-top: 6vw;
   }
   @media (width < 900px) {
-    margin-top: 20vw;
+    margin-top: 12vw;
   }
 }
 .contactInformation__availability {
