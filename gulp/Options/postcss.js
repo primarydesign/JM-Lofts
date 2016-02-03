@@ -19,7 +19,6 @@ import spacing from 'postcss-short-spacing';
 /* interpolating */
 import mixins from 'postcss-sassy-mixins';
 import variables from 'postcss-simple-vars';
-import functions from 'postcss-functions';
 import nested from 'postcss-nested';
 import extend from 'postcss-extend';
 import lookup from 'postcss-property-lookup';
@@ -53,9 +52,6 @@ module.exports = [
   spacing,
   mixins,
   variables,
-  functions({
-    functions: direque('../postcss/')
-  }),
   nested,
   extend,
   lookup,
