@@ -14,3 +14,8 @@ for(let i = 0; i < scryTriggers.length; i++) {
   });
 }
 
+import Vex from './vendors/vex';
+Vex.open({
+  content: 'Hello',
+  className: 'vex-theme-plain'
+});
