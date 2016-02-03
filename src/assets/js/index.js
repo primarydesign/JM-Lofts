@@ -13,9 +13,3 @@ for(let i = 0; i < scryTriggers.length; i++) {
     scry(this);
   });
 }
-
-import Vex from './vendors/vex';
-Vex.open({
-  content: 'Hello',
-  className: 'vex-theme-plain'
-});
