@@ -2,18 +2,19 @@
   <section class="featureList">
     <ul class="featureList__items">
       {% for feature in features %}
-        <li class="featureList__item" data-feature="{{ feature.correlate }}">{{ feature.content }}</li><br/>
+        <li class="featureList__item">{{ feature.content }}</li><br/>
       {% endfor %}
     </ul>
   </section>
   <div class="featuresCarousel__frame">
     <ul class="featuresCarousel__track">
-      <li class="featuresCarousel__item" data-content="dog" style="background-image: url(assets/img/features/pet-friendly.jpg);"></li>
-      <li class="featuresCarousel__item" data-content="cat" style="background-image: url(assets/img/features/pet-friendly.jpg);"></li>
-      <li class="featuresCarousel__item" data-content="dog" style="background-image: url(assets/img/features/pet-friendly.jpg);"></li>
-      <li class="featuresCarousel__item" data-content="cat" style="background-image: url(assets/img/features/pet-friendly.jpg);"></li>
-      <li class="featuresCarousel__item" data-content="dog" style="background-image: url(assets/img/features/pet-friendly.jpg);"></li>
-      <li class="featuresCarousel__item" data-content="cat" style="background-image: url(assets/img/features/pet-friendly.jpg);"></li>
+      <li class="featuresCarousel__item" style="background-image: url(assets/img/features/kitchen.jpg);"></li>
+      <li class="featuresCarousel__item" style="background-image: url(assets/img/features/interior_1.jpg);"></li>
+      <li class="featuresCarousel__item" style="background-image: url(assets/img/features/corner_unit.jpg);"></li>
+      <li class="featuresCarousel__item" style="background-image: url(assets/img/features/interior_2.jpg);"></li>
+      <li class="featuresCarousel__item" style="background-image: url(assets/img/features/corridor.jpg);"></li>
+      <li class="featuresCarousel__item" style="background-image: url(assets/img/features/lobby.jpg);"></li>
+      <li class="featuresCarousel__item" style="background-image: url(assets/img/features/restaurant.jpg);"></li>
     </ul>
   </div>
   <div class="featuresCarousel__bullets"></div>
