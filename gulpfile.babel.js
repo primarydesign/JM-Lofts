@@ -1,7 +1,6 @@
 import gulp from 'gulp';
 import direque from 'require-dir';
 /* source processing */
-import data from 'gulp-data';
 import swig from 'gulp-swig';
 import named from 'vinyl-named';
 import webpack from 'gulp-webpack';
@@ -11,7 +10,6 @@ import htmlmin from 'gulp-htmlmin';
 import cached from 'gulp-cached';
 import imagemin from 'gulp-imagemin';
 import bsync from 'browser-sync';
-import pretty from 'gulp-pretty-url';
 import inline from 'gulp-inline';
 
 var Uppsta = direque('./gulp' ,{recurse: true});
