@@ -14,3 +14,16 @@
     font-size: 5vw;
   }
 }
+.romanceText__paragraph--minor {
+  font-size: 1.70vw;
+  text-align: left;
+  @media (width >= 1000px) {
+    margin-top: 2vw;
+  }
+  @media (700px < width < 1000px) {
+    margin-top: 4vw;
+  }
+  @media (width < 700px) {
+    margin-top: 6vw;
+  }
+}
