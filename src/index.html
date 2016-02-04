@@ -5,6 +5,42 @@
   <title>J.M. Lofts</title>
   <meta name="viewport" content="maximum-scale=1,width=device-width,initial-scale=1,user-scalable=0">
   <link rel="stylesheet" href="assets/css/index.css">
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.22"></script>
+  <script async>
+    window.JMLocations = [
+      {% for location in locations %}
+        {
+          position: { lat: {{ location.lat }}, lng: {{ location.lng }}},
+          name: "{{ location.name }}",
+          category: "{{ location.category }}",
+          link: "{{ location.url }}",
+          address: {
+            street: "{{ location.address }}",
+            city: "{{ location.city }}",
+            state: "{{ location.state }}"
+          },
+          icon: {
+            url: "assets/img/map_icons/marker.png",
+            size: new google.maps.Size(45, 45),
+            origin: new google.maps.Point(0, 0),
+            anchor: new google.maps.Point(0, 0)
+          },
+          content: (
+            `<div class="iw">` +
+              `<div class="iw__content">` +
+                `<h2 class="iw__title"><a href="{{ location.url }}">{{ location.name | escape }}</a></h2>` +
+                `<address class="iw__address">` +
+                  `<p>{{ location.address }}</p>` +
+                  `<p>{{ location.city }} {{ location.state }}</p>` +
+                `</address>` +
+              `</div>` +
+              `<div class="iw__bottom"></div>` +
+            `</div>`
+          )
+        }{% if not loop.last %},{% endif %}
+      {% endfor %}
+    ];
+  </script>
   <script src="assets/js/index.js" async></script>
 </head>
 <body class="page">
