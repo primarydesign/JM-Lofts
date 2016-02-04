@@ -1,115 +1,58 @@
 [
-    
   { "lat": "42.773403", "lng": "-71.083941", "category": "master", "name": "J.M. Lofts", "address": "45 Washington Street", "city": "Haverhill", "state": "MA" },
-
   { "lat": "42.773403", "lng": "-71.083941", "category": "master", "name": "Amtrak / MBTA Station", "address": "Washington St & Railroad Square", "city": "Haverhill", "state": "MA" },
-    
   { "lat": "42.7742588", "lng": "-71.0833812", "category": "restaurants/pubs", "name": "Wicked Big Cafe", "address": "19 Essex St", "city": "Haverhill", "state": "MA" },
-    
   { "lat": "42.7732361", "lng": "-71.0848598", "category": "restaurants/pubs", "name": "Barking Dog Ale House", "address": "77 Washington St", "city": "Haverhill", "state": "MA" },
-    
   { "lat": "42.7725244", "lng": "-71.0857956", "category": "restaurants/pubs", "name": "Blue Finn Grille", "address": "128 Washington St", "city": "Haverhill", "state": "MA" },
-
   { "lat": "42.7758293", "lng": "-71.0838378", "category": "restaurants/pubs", "name": "Krueger Flatbread", "address": "142 Essex St", "city": "Haverhill", "state": "MA" },
-    
   { "lat": "42.7737313", "lng": "-71.083037", "category": "restaurants/pubs", "name": "Casa Blanca Mexican Restaurant", "address": "2 Essex St", "city": "Haverhill", "state": "MA" },
-    
   { "lat": "42.7726539", "lng": "-71.0854204", "category": "restaurants/pubs", "name": "Hans Garden", "address": "114 Washington St", "city": "Haverhill", "state": "MA" },
-  
   { "lat": "42.773022", "lng": "-71.0855284", "category": "restaurants/pubs", "name": "Keon's", "address": "105 Washington St", "city": "Haverhill", "state": "MA" },
-
   { "lat": "42.7734142", "lng": "-71.0834382", "category": "restaurants/pubs", "name": "Artists Cafe", "address": "22 Washington St", "city": "Haverhill", "state": "MA" },
-
   { "lat": "42.7746329", "lng": "-71.0848048", "category": "restaurants/pubs", "name": "Maria's Family Restaurant", "address": "81 Essex St", "city": "Haverhill", "state": "MA" },
-    
   { "lat": "42.7727246", "lng": "-71.0852801", "category": "restaurants/pubs", "name": "The Tap Brewing Company", "address": "100 Washington St", "city": "Haverhill", "state": "MA" },
-
   { "lat": "42.7731306", "lng": "-71.0839529", "category": "restaurants/pubs", "name": "Wang's Table", "address": "46 Washington St", "city": "Haverhill", "state": "MA" },
-
   { "lat": "42.7759328", "lng": "-71.0748312", "category": "restaurants/pubs", "name": "Roma", "address": "29 Middlesex St", "city": "Haverhill", "state": "MA" },
-
   { "lat": "42.7745897", "lng": "-71.0796493", "category": "grocery/pharmacy", "name": "Haverhill Beef Co.", "address": "117 Merrimack St", "city": "Haverhill", "state": "MA" },
-
   { "lat": "42.7759367", "lng": "-71.0770252", "category": "grocery/pharmacy", "name": "Market Basket", "address": "2 Water St", "city": "Haverhill", "state": "MA" },
-
   { "lat": "42.7743629", "lng": "-71.1157209", "category": "grocery/pharmacy", "name": "Market Basket", "address": "400 Lowell Ave", "city": "Haverhill", "state": "MA" },
-    
   { "lat": "42.7637109", "lng": "-71.0393428", "category": "grocery/pharmacy", "name": "Market Basket", "address": "285 Lincoln Ave", "city": "Haverhill", "state": "MA" },
-    
   { "lat": "42.7863764", "lng": "-71.1191918", "category": "grocery/pharmacy", "name": "Target", "address": "35 Computer Dr", "city": "Haverhill", "state": "MA" },
-    
   { "lat": "42.7624824", "lng": "-71.1671394", "category": "grocery/pharmacy", "name": "BJs Wholesale Club", "address": "25 Shelley Rd", "city": "Haverhill", "state": "MA" },
-    
-  { "lat": "42.780268", "lng": "-71.0794994", "category": "grocery/pharmacy", "name": "CVS Pharmacy", "address": "259 Main St", "city": "Haverhill", "state": "MA" },   
-
+  { "lat": "42.780268", "lng": "-71.0794994", "category": "grocery/pharmacy", "name": "CVS Pharmacy", "address": "259 Main St", "city": "Haverhill", "state": "MA" },
   { "lat": "42.7736377", "lng": "-71.1187694", "category": "grocery/pharmacy", "name": "CVS Pharmacy", "address": "425 Lowell Ave", "city": "Haverhill", "state": "MA" },
-    
   { "lat": "42.7778865", "lng": "-71.0928367", "category": "grocery/pharmacy", "name": "CVS Pharmacy", "address": "150 Lafayette Square", "city": "Haverhill", "state": "MA" },
-    
   { "lat": "42.781472", "lng": "71.0804004", "category": "grocery/pharmacy", "name": "Walgreens", "address": "310 Main St", "city": "Haverhill", "state": "MA" },
-    
   { "lat": "42.7724349", "lng": "-71.119392", "category": "grocery/pharmacy", "name": "Walgreens", "address": "800 River St", "city": "Haverhill", "state": "MA" },
-
   { "lat": "42.7662953", "lng": "-71.0963555", "category": "shopping", "name": "Vintage View Inc.", "address": "371 River St", "city": "Haverhill", "state": "MA" },
-
   { "lat": "42.7748168", "lng": "71.0690599", "category": "shopping", "name": "Riverside Cycle", "address": "1 Ginty Blvd", "city": "Haverhill", "state": "MA" },
-
   { "lat": "42.773491", "lng": "-71.085831", "category": "shopping", "name": "The Color Mint", "address": "25 Railroad Square", "city": "Haverhill", "state": "MA" },
-    
   { "lat": "42.7679416", "lng": "-71.0760504", "category": "shopping", "name": "Kimball Tavern Antiques", "address": "2 Salem St", "city": "Haverhill", "state": "MA" },
-    
   { "lat": "42.7737785", "lng": "-71.0849586", "category": "shopping", "name": "Positive Images", "address": "61 Wingate St", "city": "Haverhill", "state": "MA" },
-    
   { "lat": "42.7741735", "lng": "71.0811124", "category": "shopping", "name": "In a Blue Moon Antiques", "address": "133 Merrimack St", "city": "Haverhill", "state": "MA" },
-    
   { "lat": "42.7730291", "lng": "-71.0854316", "category": "entertainment", "name": "Chit Chat Lounge", "address": "103 Washington S", "city": "Haverhill", "state": "MA" },
-
   { "lat": "-71.121035", "lng": "-71.121035", "category": "entertainment", "name": "Checkered Flag Indoor Carting", "address": "239 Neck Rd", "city": "Haverhill", "state": "MA" },
-    
   { "lat": "42.7753415", "lng": "-71.1167844", "category": "entertainment", "name": "Chunky's Cinema Pub", "address": "371 Lowell Ave", "city": "Haverhill", "state": "MA" },
-
   { "lat": "42.775376", "lng": "-71.1395992", "category": "entertainment", "name": "Willow Spring Vineyards", "address": "840 West Lowell Ave", "city": "Haverhill", "state": "MA" },
-    
   { "lat": "42.7740654", "lng": "-71.0835844", "category": "entertainment", "name": "Spotlight Playhouse", "address": "24 Essex St", "city": "Haverhill", "state": "MA" },
-    
   { "lat": "42.7776669", "lng": "-71.0792845", "category": "fitness/recreation", "name": "YMCA", "address": "81 Winter St", "city": "Haverhill", "state": "MA" },
-    
   { "lat": "42.7786246", "lng": "-71.0383782", "category": "fitness/recreation", "name": "Renaissance Golf Club", "address": "377 Kenoza St", "city": "Haverhill", "state": "MA" },
-
   { "lat": "42.7447273", "lng": "-71.0558152", "category": "fitness/recreation", "name": "Bradford Ski Area", "address": "60 South Cross Rd", "city": "Haverhill", "state": "MA" },
-
   { "lat": "42.8050322", "lng": "-71.1414504", "category": "fitness/recreation", "name": "Crystal Lake Golf Club", "address": "940 North Broadway", "city": "Haverhill", "state": "MA" },
-
   { "lat": "42.7956284", "lng": "-71.1101488", "category": "fitness/recreation", "name": "Garrison Golf Center", "address": "654 Hilldale Ave", "city": "Haverhill", "state": "MA" },
-
   { "lat": "42.8096642", "lng": "-71.0763639", "category": "fitness/recreation", "name": "Haverhill Country Club", "address": "58 Brickett Ln", "city": "Haverhill", "state": "MA" },
-
   { "lat": "42.7736309", "lng": "-71.0851982", "category": "fitness/recreation", "name": "Radiant Fitness", "address": "61 Wingate St", "city": "Haverhill", "state": "MA" },
-
   { "lat": "42.7727051", "lng": "-71.0850479", "category": "fitness/recreation", "name": "The Yoga Tree", "address": "90 Washington St", "city": "Haverhill", "state": "MA" },
-
   { "lat": "42.7615871", "lng": "-71.0449564", "category": "parks", "name": "Riverside Park", "address": "159 Lincoln Ave", "city": "Haverhill", "state": "MA" },
-    
   { "lat": "42.7832563", "lng": "-71.0596024", "category": "parks", "name": "Winnekkenni Park", "address": "347 Kenoza Ave", "city": "Haverhill", "state": "MA" },
-    
   { "lat": "42.776906", "lng": "-71.0779811", "category": "parks", "name": "Grand Army Park", "address": "108 Main St", "city": "Haverhill", "state": "MA" },
-    
   { "lat": "42.7853499", "lng": "-71.0711261", "category": "parks", "name": "Gale Park", "address": "193 Kenoza Ave", "city": "Haverhill", "state": "MA" },
-    
   { "lat": "42.7673387", "lng": "-71.0762695", "category": "parks", "name": "Bradford Common", "address": "85 Church St", "city": "Haverhill", "state": "MA" },
-
   { "lat": "42.7772019", "lng": "-71.0789071", "category": "institutions", "name": "Haverhill Public Library", "address": "99 Main St", "city": "Haverhill", "state": "MA" },
-
   { "lat": "42.772583", "lng": "-71.0684267", "category": "institutions", "name": "Haverhill Historical Society", "address": "240 Water St", "city": "Haverhill", "state": "MA" },
-    
   { "lat": "42.7726171", "lng": "-71.0837959", "category": "institutions", "name": "Haverhill Post Office", "address": "2 Washington Square", "city": "Haverhill", "state": "MA" },
-    
   { "lat": "42.7808532", "lng": "-71.0804523", "category": "institutions", "name": "MedExpress Urgent Care", "address": "296 Main St", "city": "Haverhill", "state": "MA" },
-    
   { "lat": "42.7751949", "lng": "-71.079293", "category": "institutions", "name": "Pentucket Bank", "address": "1 Merrimack St", "city": "Haverhill", "state": "MA" },
-    
   { "lat": "42.7748779", "lng": "-71.0797034", "category": "institutions", "name": "Bank of America", "address": "191 Merrimack St", "city": "Haverhill", "state": "MA" },
-
   { "lat": "42.7743355", "lng": "-71.0804316", "category": "institutions", "name": "TD Bank", "address": "153 Merrimack St", "city": "Haverhill", "state": "MA" }
-
 ]
