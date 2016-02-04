@@ -1,4 +1,4 @@
-export default function(google) {
+export default function(element, options, google) {
   /**
    * MARKERS CLASS
    * *
@@ -199,5 +199,5 @@ export default function(google) {
     overlay.setMap(this.map);
   }
 
-  return Mapster;
+  return new Mapster(element, options);
 }

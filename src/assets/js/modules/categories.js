@@ -43,13 +43,5 @@ class Controls {
     });
   }
 }
-var test = new Controls('.mapUI');
-test.buttons.forEach(function(button) {
-  button.addEventListener('click', function() {
-    if (this.tillstand.active.get()) {
-      test.close(this.getAttribute('data-category'));
-    } else {
-      test.open(this.getAttribute('data-category'));
-    }
-  });
-});
+
+export default Controls;
