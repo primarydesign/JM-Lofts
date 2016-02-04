@@ -49,3 +49,8 @@
     background: url(../img/rolled_ink.png) center center / 100% 80% no-repeat;
   }
 }
+
+@mixin smoothText {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
