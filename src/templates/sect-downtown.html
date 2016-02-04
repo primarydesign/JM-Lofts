@@ -2,7 +2,7 @@
 <section class="locationsMap">
   <nav class="locationsMap__ui mapUI">
     <ul class="mapUI__categories">
-      {% for category in locations | values('category') %}
+      {% for category in locations | values('category', ['master', 'transportation']) %}
         <li class="mapUI__category" data-category="{{ category }}">
           <button class="mapUI__button" data-category="{{ category }}">
             <div class="mapUI__buttonIcon">
@@ -12,7 +12,7 @@
           </button>
           <ul class="mapUI__locations" data-category="{{ category }}">
           {% for location in locations | filter('category', category, 'equals') %}
-            <li class="mapUI__location" data-name="{{location.name}}"><span class="mapUI__locationLabel">{{ location.name }}</span></li>
+            <li class="mapUI__location" data-category="{{ category }}" data-name="{{location.name}}"><span class="mapUI__locationLabel">{{ location.name }}</span></li>
           {% endfor %}
           </ul>
         </li>

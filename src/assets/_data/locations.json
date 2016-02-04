@@ -1,6 +1,6 @@
 [
-  { "lat": "42.773403", "lng": "-71.083941", "category": "master", "name": "J.M. Lofts", "address": "45 Washington Street", "city": "Haverhill", "state": "MA" },
-  { "lat": "42.773403", "lng": "-71.083941", "category": "master", "name": "Amtrak / MBTA Station", "address": "Washington St & Railroad Square", "city": "Haverhill", "state": "MA" },
+  { "lat": "42.773403", "lng": "-71.083941", "category": "master", "name": "J.M. Lofts", "address": "45 Washington Street", "city": "Haverhill", "state": "MA", "persistent": true },
+  { "lat": "42.7733309", "lng": "-71.0862865", "category": "transportation", "name": "Amtrak / MBTA Station", "address": "Washington St & Railroad Square", "city": "Haverhill", "state": "MA", "persistent": true },
   { "lat": "42.7742588", "lng": "-71.0833812", "category": "restaurants/pubs", "name": "Wicked Big Cafe", "address": "19 Essex St", "city": "Haverhill", "state": "MA" },
   { "lat": "42.7732361", "lng": "-71.0848598", "category": "restaurants/pubs", "name": "Barking Dog Ale House", "address": "77 Washington St", "city": "Haverhill", "state": "MA" },
   { "lat": "42.7725244", "lng": "-71.0857956", "category": "restaurants/pubs", "name": "Blue Finn Grille", "address": "128 Washington St", "city": "Haverhill", "state": "MA" },
