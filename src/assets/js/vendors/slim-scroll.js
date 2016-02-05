@@ -5,7 +5,7 @@
  * Version: 1.3.8
  *
  */
-(function($) {
+;(function($) {
 
   $.fn.extend({
     slimScroll: function(options) {

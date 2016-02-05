@@ -5,7 +5,7 @@ class Controls {
   constructor(selector) {
     this.mapUI = tillstand(document.querySelector('.mapUI')).tillstand.instate('active');
     this.categoryList = tillstand(document.querySelector('.mapUI__categories')).tillstand.instate('active');
-    this.locationList = tillstand(document.querySelector('.mapUI__locations')).tillstand.instate('active');
+    this.locationList = tillstand(document.querySelectorAll('.mapUI__locations')).tillstand.instate('active');
     this.categoryItems = tillstand(document.querySelectorAll('.mapUI__category')).tillstand.instate('active');
     this.locationItems = tillstand(document.querySelectorAll('.mapUI__location')).tillstand.instate('active');
     this.buttons = tillstand(document.querySelectorAll('.mapUI__button')).tillstand.instate('active');
