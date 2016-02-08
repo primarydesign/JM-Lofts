@@ -133,13 +133,28 @@
 .footer__disclaimer {
   font-size: 0;
   height: auto;
+  position: relative;
+}
+.footer__attribution {
+  bottom: 4%;left: 0;
+  position: absolute;
+  width: 100%;
+  font-family: $gotham;
+  text-align: center;
+  text-transform: uppercase;
+  @media (width >= 800px) {
+    font-size: 0.90vw;
+  }
+  @media (width < 800px) {
+    font-size: 2vw;
+  }
 }
 .footer__disclaimer:after {
   box-sizing: border-box;
   content: attr(data-content);
   display: inline-block;
 
-  padding: 4vw 4.5vw;
+  padding: 4vw 4.5vw 6vw;
   size: 100% auto;
   vertical-align: middle;
   font-family: $gotham;
