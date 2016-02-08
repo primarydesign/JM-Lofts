@@ -1,18 +1,23 @@
 <div class="contactForm">
   <form class="contactForm__form" novalidate>
     <label class="contactForm__field contactForm__field--inline">
+      <!--[if IE 9]><p class="contactForm__label">First Name*</p><![endif]-->
       <input type="text" class="contactForm__input" name="fname" id="contactForm--fname" placeholder="First Name*" required>
     </label>
     <label class="contactForm__field contactForm__field--inline">
+      <!--[if IE 9]><p class="contactForm__label">Last Name*</p><![endif]-->
       <input type="text" class="contactForm__input" name="lname" id="contactForm--lname" placeholder="Last Name*" required>
     </label>
     <label class="contactForm__field">
+      <!--[if IE 9]><p class="contactForm__label">Email</p><![endif]-->
       <input type="email" class="contactForm__input" name="email" id="contactForm--email" placeholder="Email*" data-pattern="email" required>
     </label>
     <label class="contactForm__field">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
       <input type="tel" class="contactForm__input" name="phone" id="contactForm--phone" placeholder="Phone" data-pattern="phone">
     </label>
     <label class="contactForm__field">
+      <!--[if IE 9]><p class="contactForm__label">Message</p><![endif]-->
       <textarea name="message" class="contactForm__input contactForm__input--textarea" id="contactForm--message" placeholder="Message"></textarea>
     </label>
     <input type="submit" class="contactForm__submit" value="submit">

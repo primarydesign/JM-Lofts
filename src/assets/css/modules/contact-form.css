@@ -34,7 +34,6 @@
   display: block;
   position: relative;
   width: 100%;
-  background-color: $sable;
   @media (width >= 1000px) {
     margin-bottom: 2.50vw;
   }
@@ -81,6 +80,25 @@
   }
 }
 
+.contactForm__label {
+  display: block;
+  color: $sable;
+  font-family: $gotham;
+  text-transform: uppercase;
+  @media (width >= 1000px) {
+    margin-bottom: 0.80vw;
+    font-size: 1.5vw;
+  }
+  @media (width < 1000px) {
+    margin-bottom: 1vw;
+    font-size: 2.25vw;
+  }
+  @media (width < 600px) {
+    margin-bottom: 2vw;
+    font-size: 3.50vw;
+  }
+}
+
 .contactForm__input::placeholder-shown,
 .contactForm__input::-webkit-input-placeholder,
 .contactForm__input::placeholder {
@@ -101,7 +119,7 @@
 
 .contactForm__input {
   width: 100%;
-  background: transparent;
+  background-color: $sable;
   border: none;
   box-shadow: none;
   outline: none;
