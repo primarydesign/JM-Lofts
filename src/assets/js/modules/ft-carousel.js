@@ -8,6 +8,8 @@ jQuery('.featuresCarousel').glide({
     base: 'featuresCarousel',
     wrapper: 'featuresCarousel__frame',
     track: 'featuresCarousel__track',
-    slide: 'featuresCarousel__item'
+    slide: 'featuresCarousel__item',
+    bullets: 'featuresCarousel__bullets',
+    bullet: 'featuresCarousel__bullet'
   }
 });

@@ -9,6 +9,7 @@
   <script async>
     window.JMLocations = [
       {% for location in locations %}
+        {% set random = Math.round(Math.random()*3) %}
         {
           position: { lat: {{ location.lat }}, lng: {{ location.lng }}},
           name: "{{ location.name }}",
@@ -23,10 +24,16 @@
           alwaysVisible: true,
           {% endif %}
           icon: {
-            url: "assets/img/map_icons/marker.png",
-            size: new google.maps.Size(25, 25),
-            origin: new google.maps.Point(0, 0),
-            anchor: new google.maps.Point(0, 0)
+            {% if random == 1 %}
+              url: "assets/img/map_icons/tack_1.png",
+              size: new google.maps.Size(12, 41)
+            {% elseif random == 2 %}
+              url: "assets/img/map_icons/tack_2.png",
+              size: new google.maps.Size(12, 39)
+            {% else %}
+              url: "assets/img/map_icons/tack_3.png",
+              size: new google.maps.Size(19, 39)
+            {% endif %}
           },
           content: (
             `<div class="iw">` +
