@@ -135,6 +135,13 @@
   height: auto;
   position: relative;
 }
+.footer__disclaimer:after {
+  content: '';
+  display: inline-block;
+  position: relative;
+  size: 0 100%;
+  vertical-align: middle;
+}
 .footer__attribution {
   bottom: 4%;left: 0;
   position: absolute;
@@ -149,25 +156,24 @@
     font-size: 2vw;
   }
 }
-.footer__disclaimer:after {
+.footer__disclaimerText {
   box-sizing: border-box;
-  content: attr(data-content);
   display: inline-block;
-
-  padding: 4vw 4.5vw 6vw;
+  position: relative;
   size: 100% auto;
   vertical-align: middle;
   font-family: $gotham;
-  font-size: 2.75vw;
   font-style: normal;
-  letter-spacing: 0.25vw;
   text-align: left;
   @media (width >= 800px) {
     padding: 0 1.5vw;
-    top: 50%;
-    transform: translateY(-50%);
     font-size: 1.0vw;
     letter-spacing: 0.12vw;
+  }
+  @media (width < 800px) {
+    padding: 4vw 4.5vw 6vw;
+    font-size: 2.75vw;
+    letter-spacing: 0.25vw;
   }
 }
 .footer__signature {}
