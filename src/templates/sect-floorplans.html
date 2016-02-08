@@ -11,16 +11,16 @@
         <span class="unitTable__caption">One Bed</span>
         <span class="unitTable__caption">One Bath</span>
       </figcaption>
-      <table class="unitTable__table">
-        <tbody class="unitTable__body">
+      <div class="unitTable__table">
+        <div class="unitTable__body">
           {% for unit in units %}{% if unit.br == 1 %}
-            <tr class="unitTable__row" data-unit-un="{{ unit.un }}" data-unit-br="{{ unit.br }}" data-unit-ba="1" data-unit-sf="{{ unit.sf }}" data-unit-image="{{ plans[unit.un] }}">
-              <td class="unitTable__cell unitTable__cell--ID">{{ unit.un }}</td>
-              <td class="unitTable__cell unitTable__cell--SF">{{ unit.sf | replace('\B(?=(\d{3})+(?!\d))', ',', 'g') }}</td>
-            </tr>
+            <div class="unitTable__row" data-unit-un="{{ unit.un }}" data-unit-br="{{ unit.br }}" data-unit-ba="1" data-unit-sf="{{ unit.sf }}" data-unit-image="{{ plans[unit.un] }}">
+              <div class="unitTable__cell unitTable__cell--ID">{{ unit.un }}</div>
+              <div class="unitTable__cell unitTable__cell--SF">{{ unit.sf | replace('\B(?=(\d{3})+(?!\d))', ',', 'g') }}</div>
+            </div>
           {% endif %}{% endfor %}
-        </tbody>
-      </table>
+        </div>
+      </div>
     </figure>
   </div>
   <div class="unitTables__column">
@@ -29,16 +29,16 @@
         <span class="unitTable__caption">Two Bed</span>
         <span class="unitTable__caption">One Bath</span>
       </figcaption>
-      <table class="unitTable__table">
-        <tbody class="unitTable__body">
+      <div class="unitTable__table">
+        <div class="unitTable__body">
           {% for unit in units %}{% if unit.br == 2 %}
-            <tr class="unitTable__row" data-unit-un="{{ unit.un }}" data-unit-br="{{ unit.br }}" data-unit-ba="1" data-unit-sf="{{ unit.sf }}" data-unit-image="{{ plans[unit.un] }}">
-              <td class="unitTable__cell unitTable__cell--ID">{{ unit.un }}</td>
-              <td class="unitTable__cell unitTable__cell--SF">{{ unit.sf | replace('\B(?=(\d{3})+(?!\d))', ',', 'g') }}</td>
-            </tr>
+            <div class="unitTable__row" data-unit-un="{{ unit.un }}" data-unit-br="{{ unit.br }}" data-unit-ba="1" data-unit-sf="{{ unit.sf }}" data-unit-image="{{ plans[unit.un] }}">
+              <div class="unitTable__cell unitTable__cell--ID">{{ unit.un }}</div>
+              <div class="unitTable__cell unitTable__cell--SF">{{ unit.sf | replace('\B(?=(\d{3})+(?!\d))', ',', 'g') }}</div>
+            </div>
           {% endif %}{% endfor %}
-        </tbody>
-      </table>
+        </div>
+      </div>
     </figure>
   </div>
 </section>
