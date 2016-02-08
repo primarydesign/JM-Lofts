@@ -2,6 +2,7 @@
   position: relative;
   width: 100%;
   font-size: 0;
+  border-bottom: 1px solid $black;
 }
 .locationsMap__ui {
   @media (width >= 800px) {

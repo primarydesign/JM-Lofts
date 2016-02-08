@@ -1,3 +1,4 @@
+import scry from '../library/scry';
 import tillstand from '../library/tillstand';
 
 const toggle = document.querySelector('.navbar__toggle');
@@ -18,12 +19,12 @@ toggle.addEventListener('click', function(e) {
   page.tillstand.locked.toggle();
 });
 
-overlay.addEventListener('click', function(e) {
-  toggles.tillstand.set('active', false);
-  overlay.tillstand.active.set(false);
-  navMenu.tillstand.active.set(false);
-  page.tillstand.locked.set(false);
-});
+// overlay.addEventListener('click', function(e) {
+//   toggles.tillstand.set('active', false);
+//   overlay.tillstand.active.set(false);
+//   navMenu.tillstand.active.set(false);
+//   page.tillstand.locked.set(false);
+// });
 
 window.addEventListener('resize', function(e) {
   if (window.innerWidth >= 700 && navMenu.tillstand.active.get()) {
@@ -33,3 +34,11 @@ window.addEventListener('resize', function(e) {
     page.tillstand.locked.set(false);
   }
 });
+
+const scryTriggers = document.querySelectorAll('[data-scry]');
+for(let i = 0; i < scryTriggers.length; i++) {
+  scryTriggers[i].addEventListener('click', function(event) {
+    event.preventDefault();
+    scry(this);
+  });
+}
