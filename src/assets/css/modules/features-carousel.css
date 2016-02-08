@@ -21,6 +21,7 @@
   background: no-repeat center center / cover;
 }
 .featuresCarousel__bullets {
+  margin-bottom: 10px;
   position: absolute;
   size: 100% auto;
   bottom: 0.25vw;left: 0%;
@@ -39,7 +40,6 @@
 .featuresCarousel__bullet:nth-last-child(n+2) {
   margin-right: 0.80vw;
   @media (width < 800px) {
-    margin-bottom: 10px;
     margin-right: 10px;
   }
 }
