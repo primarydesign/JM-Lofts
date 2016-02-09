@@ -11,8 +11,12 @@
             <span class="mapUI__buttonLabel">{{ category | replace('/', ' &amp; ') }}</span>
           </button>
           <ul class="mapUI__locations" data-category="{{ category }}">
+          {% set store = [] %}
           {% for location in locations | filter('category', category, 'equals') %}
-            <li class="mapUI__location" data-category="{{ category }}" data-name="{{location.name | safe}}"><span class="mapUI__locationLabel">{{ location.name }}</span></li>
+            {% if store.indexOf(location.name) == -1 %}
+              <li class="mapUI__location" data-category="{{ category }}" data-name="{{location.name | safe}}"><span class="mapUI__locationLabel">{{ location.name }}</span></li>
+            {% endif %}
+            {{ store.push(location.name) }}
           {% endfor %}
           </ul>
         </li>

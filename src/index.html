@@ -23,6 +23,7 @@
           {% if location.persistent %}
           alwaysVisible: true,
           {% endif %}
+          multiple: {{ Boolean(location.multiple) }},
           {% if location.category == 'master' %}
           zIndex: 500,
           {% endif %}

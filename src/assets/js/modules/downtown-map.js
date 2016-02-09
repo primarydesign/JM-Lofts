@@ -4,8 +4,9 @@ import Controls from './categories';
 import '../vendors/slim-scroll';
 
 const Interface = new Controls('.mapUI');
+const JMLCenter = { "lat": 42.773403, "lng": -71.083941 };
 const Downtown = new Mapster('.locationsMap__map', {
-  center: { "lat": 42.773403, "lng": -71.083941 },
+  center: JMLCenter,
   mapTypeControl: false,
   maxZoom: 18,
   minZoom: 3,
@@ -96,8 +97,13 @@ function toggleByLocation(element) {
   let name = element.getAttribute('data-name');
   Downtown.markers.list.map(function(marker) {
     if (marker.name === name) {
-      Downtown.zoom(16);
-      Downtown.center(marker.position);
+      if (marker.multiple) {
+        Downtown.zoom(13);
+        Downtown.center(JMLCenter);
+      } else {
+        Downtown.zoom(16);
+        Downtown.center(marker.position);
+      }
       marker.setVisible(true);
     } else if (!marker.alwaysVisible) {
       marker.setVisible(false);
