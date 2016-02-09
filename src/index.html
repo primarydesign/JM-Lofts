@@ -23,8 +23,14 @@
           {% if location.persistent %}
           alwaysVisible: true,
           {% endif %}
+          {% if location.category == 'master' %}
+          zIndex: 500,
+          {% endif %}
           icon: {
-            {% if random == 1 %}
+            {% if location.category == 'master' or location.category == 'transportation' %}
+              url: "assets/img/map_icons/marker-{{ location.category }}.png",
+              size: new google.maps.Size(40, 40)
+            {% elseif random == 1 %}
               url: "assets/img/map_icons/tack_1.png",
               size: new google.maps.Size(12, 41)
             {% elseif random == 2 %}
