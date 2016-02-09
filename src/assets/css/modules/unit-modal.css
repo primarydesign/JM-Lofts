@@ -1,14 +1,17 @@
 /* unit modal */
 .vex.vex-theme-plain {
+  overflow: hidden;
   padding-top: 2%;
   @media (width < 640px) {
     padding-top: 13%;
   }
 }
 .vex-overlay {
+  max-height: 100vh;
   background: rgba(214, 209, 186,.8);
 }
 .vex-content {
+  /*height: 100%;*/
   width: 75% !important;
   max-width: 960px !important;
   padding: 0 !important;
@@ -26,7 +29,7 @@
     right: 25px;
   @media (width < 640px) {
      right: 10px;
-  }    
+  }
 }
 .vex.vex-theme-plain .vex-close::before, .vex.vex-theme-plain .vex-close:hover::before {
     color: #fff;
@@ -34,6 +37,9 @@
 }
 .unitModal {
   @include bordersHorizontalBottom;
+  /*height: 100%;*/
+  /*overflow-y: auto;*/
+  /*overflow-x: hidden;*/
 }
 .unitModal__details {
   width: 104%;
@@ -110,11 +116,12 @@
     padding: 1.75em 0;
   }
 }
-.unitModal__image {  
+.unitModal__image {
   text-align: center;
 }
- .unitModal__image img {
-  width: 80%;
+.unitModal__image img {
+  height: 60vmin;
+  height: 60vm;
   @media (width < 640px) {
     width:100%;
   }
