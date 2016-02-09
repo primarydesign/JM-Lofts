@@ -146,17 +146,17 @@ Mapster.prototype._setInfoWindow = function set_info_window(marker) {
 /**
  *
  */
-Mapster.prototype.closeIW = function close_iw(marker) {
-  marker.infoWindow.close();
-  marker.iwOpen = false;
+Mapster.prototype.closeIW = function close_iw() {
+  if (this.activeIW) this.activeIW.close();
+  this.activeIW = false;
 }
 /**
  *
  */
 Mapster.prototype.openIW = function open_iw(marker) {
-  this.markers.list.map(this.closeIW);
-  marker.infoWindow.open(this.map, marker);
-  marker.iwOpen = true;
+  if (this.activeIW) this.activeIW.close();
+  this.activeIW = marker.infoWindow;
+  this.activeIW.open(this.map, marker);
 }
 Mapster.prototype.animateMarker = function animate_marker(marker, animation, duration) {
   if (animation === null) {
