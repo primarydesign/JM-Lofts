@@ -60,13 +60,13 @@
 .mapUI__buttonIcon {
   display: inline-block;
   position: relative;
-  size: 25% 50%;
+  size: 25% 65%;
   vertical-align: middle;
 }
 .mapUI__buttonSVG {
   display: block;
   margin: 0 auto;
-  size: auto calc(80%);
+  size: auto 100%;
 }
 .mapUI__buttonLabel {
   display: inline-block;

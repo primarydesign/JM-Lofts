@@ -6,7 +6,7 @@
         <li class="mapUI__category" data-category="{{ category }}">
           <button class="mapUI__button" data-category="{{ category }}">
             <div class="mapUI__buttonIcon">
-              <img class="mapUI__buttonSVG" src="assets/img/map_icons/icon-{{ category | strip }}.svg">
+              <object class="mapUI__buttonSVG" type="image/svg+xml" data="assets/img/map_icons/categories.sprites.svg#{{ category | replace('/', '-') | lower }}"></object>
             </div>
             <span class="mapUI__buttonLabel">{{ category | replace('/', ' &amp; ') }}</span>
           </button>

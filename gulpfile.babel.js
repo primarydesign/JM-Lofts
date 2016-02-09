@@ -51,7 +51,9 @@ gulp.task('scripts', function() {
 gulp.task('images', function() {
   return gulp.src($.img.globs)
   .pipe(cached())
+  .pipe(Library.sprites)
   .pipe(imagemin())
+  .pipe(Library.sprites.restore)
   .pipe(gulp.dest($.img.dest))
   .pipe(Browser.stream());
 });
