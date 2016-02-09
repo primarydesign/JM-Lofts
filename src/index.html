@@ -12,7 +12,7 @@
         {% set random = Math.round(Math.random()*3) %}
         {
           position: { lat: {{ location.lat }}, lng: {{ location.lng }}},
-          name: "{{ location.name }}",
+          name: "{{ location.name | safe }}",
           category: "{{ location.category }}",
           link: "{{ location.url }}",
           address: {

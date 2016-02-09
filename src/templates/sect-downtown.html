@@ -12,7 +12,7 @@
           </button>
           <ul class="mapUI__locations" data-category="{{ category }}">
           {% for location in locations | filter('category', category, 'equals') %}
-            <li class="mapUI__location" data-category="{{ category }}" data-name="{{location.name}}"><span class="mapUI__locationLabel">{{ location.name }}</span></li>
+            <li class="mapUI__location" data-category="{{ category }}" data-name="{{location.name | safe}}"><span class="mapUI__locationLabel">{{ location.name }}</span></li>
           {% endfor %}
           </ul>
         </li>
