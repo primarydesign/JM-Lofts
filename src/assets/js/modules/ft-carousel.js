@@ -2,7 +2,7 @@ import '../vendors/glide.js';
 
 jQuery('.featuresCarousel').glide({
   type: 'carousel',
-  autoplay: false,
+  autoplay: 3000,
   animationDuration: 400,
   classes: {
     base: 'featuresCarousel',

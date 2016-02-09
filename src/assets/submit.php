@@ -10,7 +10,7 @@
 
     $comment = trim(preg_replace('/\s+/', ' ', $comment));
 
-    $address = "msssssssssssssssfragala@gmail.com";
+    $address = "mitchell@primarydesign.com";
     $subject = "New Inquiry from JM Lofts";
     $message = "There is a new inquiry from the J.M. Lofts website. Please see the details below:\n";
     $message .= "Name: $fname $lname\n";

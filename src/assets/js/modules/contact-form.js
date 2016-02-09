@@ -38,7 +38,7 @@ function submission(form) {
       note.className += ' is-active';
       contactForm.className += ' is-invisible';
     },
-    error: function() {
+    error: function(response, status, error) {
       submit.disabled = false;
     }
   });
