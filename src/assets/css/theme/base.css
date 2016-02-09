@@ -1,8 +1,6 @@
 .page {
   border: $border-thick solid $black;
-  /*@media (width < 700px) {*/
-    padding: calc($navHeight - 0.5px) 0 0 !important;
-  /*}*/
+  padding: calc($navHeight - 0.5px) 0 0 !important;
 }
 .page.is-locked {
   overflow-y: hidden;

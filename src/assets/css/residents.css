@@ -1,0 +1,38 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Fanwood+Text:400,400italic|Libre+Baskerville:400,400italic);
+
+@import './library/*.css';
+@import './theme/*.css';
+@import './modules/navbar.css';
+@import './modules/footer.css';
+
+html {
+}
+.page {
+  padding: 0 !important;
+  size: 100vw 100vh;
+}
+.page__content {
+  display: inline-block;
+  size: 100%;
+  background-color: $sable;
+  font-size: 0;
+  text-align: center;
+}
+.page__content:before {
+  content: '';
+  display: inline-block;
+  position: relative;
+  size: 0 100%;
+  vertical-align: middle;
+}
+.page__disclaimer {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 50px;
+  font-family: $gotham;
+  text-transform: uppercase;
+}
+.footer {
+  position: fixed;
+  bottom:0;left:0;
+}
