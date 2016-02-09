@@ -45,7 +45,7 @@
           content: (
             '<div class="iw">' +
               '<div class="iw__content">' +
-                '<h2 class="iw__title"><a href="{{ location.url }}" target="_blank">{{ location.name | escape }}</a></h2>' +
+                '<h2 class="iw__title"><a {% if location.url %}href="{{ location.url }}" target="_blank"{% endif %}>{{ location.name | escape }}</a></h2>' +
                 '<address class="iw__address">' +
                   '<p>{{ location.address }}</p>' +
                   '<p>{{ location.city }} {{ location.state }}</p>' +
