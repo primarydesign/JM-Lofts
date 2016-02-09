@@ -1,11 +1,22 @@
+import Headroom from 'headroom.js';
 import scry from '../library/scry';
 import tillstand from '../library/tillstand';
 
+const navbar = document.querySelector('.navbar');
 const toggle = document.querySelector('.navbar__toggle');
 const toggles = tillstand('.navbar__toggleLine');
 const overlay = tillstand('.page__overlay');
 const navMenu = tillstand('.navMenu');
 const page = tillstand('.page');
+
+const headroom = new Headroom(navbar, {
+  offset: navbar.offsetHeight,
+  classes: {
+    initial: 'is-initial',
+    pinned: 'is-pinned',
+    unpinned: 'not-pinned'
+  }
+});headroom.init();
 
 page.tillstand.instate('locked');
 overlay.tillstand.instate('active');
@@ -19,12 +30,12 @@ toggle.addEventListener('click', function(e) {
   page.tillstand.locked.toggle();
 });
 
-// overlay.addEventListener('click', function(e) {
-//   toggles.tillstand.set('active', false);
-//   overlay.tillstand.active.set(false);
-//   navMenu.tillstand.active.set(false);
-//   page.tillstand.locked.set(false);
-// });
+overlay.addEventListener('click', function(e) {
+  toggles.tillstand.set('active', false);
+  overlay.tillstand.active.set(false);
+  navMenu.tillstand.active.set(false);
+  page.tillstand.locked.set(false);
+});
 
 window.addEventListener('resize', function(e) {
   if (window.innerWidth >= 700 && navMenu.tillstand.active.get()) {

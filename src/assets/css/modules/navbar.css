@@ -1,12 +1,10 @@
 .navbar {
+  position: fixed;
+  top: 0;left: 0;
   size: 100% calc($navHeight + $border-thick);
   z-index: 20;
+  border-top: $border-thick solid $black;
   transition: transform 300ms easeOutQuad;
-  @media (width < 700px) {
-    position: fixed;
-    top: 0;left: 0;
-  }
-  @media (width >= 700px) {}
 }
 .navbar.is-pinned { transform: translateY(0%); }
 .navbar.not-pinned { transform: translateY(-100%); }
