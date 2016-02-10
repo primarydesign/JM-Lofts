@@ -1,9 +1,9 @@
 $black: rgb(35, 31, 32);
 $sable: rgb(244, 238, 229);
 
-$scala: 'IM Fell Great Primer SC', serif;
 $gotham: 'Montserrat', arial, sans-serif;
-$baskerville: 'Libre Baskerville', serif;
+$scala: 'IM Fell Great Primer SC', serif !important;
+$baskerville: 'Libre Baskerville', serif !important;
 
 $border-thick: 0.65vw;
 $navHeight: (100vw * (2/16.5));

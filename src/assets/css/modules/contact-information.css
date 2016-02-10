@@ -1,7 +1,7 @@
 .contactInformation {
   position: relative;
   color: $sable;
-  font-family: $gotham;
+  /*font-family: $gotham;*/
   text-align: center;
   text-transform: uppercase;
   @media (width >= 900px) {

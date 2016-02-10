@@ -61,7 +61,7 @@
 .footer__text {
   display: inline-block;
   vertical-align: middle;
-  font-family: $gotham;
+  /*font-family: $gotham;*/
   font-size: 1rem;
   font-style: normal;
   text-transform: uppercase;
@@ -146,7 +146,7 @@
   bottom: 4%;left: 0;
   position: absolute;
   width: 100%;
-  font-family: $gotham;
+  /*font-family: $gotham;*/
   text-align: center;
   text-transform: uppercase;
   @media (width >= 800px) {
@@ -162,7 +162,7 @@
   position: relative;
   size: 100% auto;
   vertical-align: middle;
-  font-family: $gotham;
+  /*font-family: $gotham;*/
   font-style: normal;
   text-align: left;
   @media (width >= 800px) {

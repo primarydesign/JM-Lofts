@@ -1,6 +1,7 @@
 .page {
   border: $border-thick solid $black;
   padding: calc($navHeight - 0.5px) 0 0 !important;
+  font-family: $gotham;
 }
 .page.is-locked {
   overflow-y: hidden;
@@ -67,7 +68,7 @@
   display: inline-block;
   margin: 6vw auto;
   color: $sable;
-  font-family: $gotham;
+  /*font-family: $gotham*/;
   letter-spacing: 0.35vw;
   text-transform: uppercase;
   background: url(../img/rolled_ink.png) no-repeat center center / 100% 100%;

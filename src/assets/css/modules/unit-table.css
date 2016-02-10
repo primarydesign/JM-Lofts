@@ -94,7 +94,7 @@
 .unitTable__cell {
   display: inline-block;
   width: calc(100%/2);
-  font-family: $gotham;
+  /*font-family: $gotham;*/
   font-size: 1.50vw;
   text-align: center;
   text-transform: uppercase;

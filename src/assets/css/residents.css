@@ -1,12 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Fanwood+Text:400,400italic|Libre+Baskerville:400,400italic);
-
 @import './library/*.css';
 @import './theme/*.css';
-@import './modules/navbar.css';
-@import './modules/footer.css';
 
-html {
-}
 .page {
   padding: 0 !important;
   size: 100vw 100vh;
@@ -29,7 +23,7 @@ html {
   display: inline-block;
   vertical-align: middle;
   font-size: 50px;
-  font-family: $gotham;
+  /*font-family: $gotham;*/
   text-transform: uppercase;
 }
 .footer {

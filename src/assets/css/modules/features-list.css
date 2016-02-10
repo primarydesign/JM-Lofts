@@ -38,12 +38,12 @@
     padding-top: 1%;
     padding-bottom: 1%;
     padding-right: 5%;
-    margin: 0.25vw 0;
-    font-size: 2.00vw;
+    margin: 0.35vw 0;
+    font-size: 1.80vw;
   }
   @media (width < 800px) {
-    padding: 2vw;
-    font-size: 4.50vw;
+    padding: 2.00vw;
+    font-size: 4.30vw;
   }
   &:first-child { margin-top: 0; }
   &:last-child { margin-bottom: 0; }

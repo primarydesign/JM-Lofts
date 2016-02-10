@@ -67,7 +67,7 @@
   top: 100%;left: 0;
   color: $sable;
   font-size: 1vw;
-  font-family: $gotham;
+  /*font-family: $gotham;*/
   text-shadow: 0vw 0vw 0.50vw rgba($black, 0.50);
   @media (width >= 1000px) {
     font-size: 1vw;
@@ -83,7 +83,7 @@
 .contactForm__label {
   display: block;
   color: $sable;
-  font-family: $gotham;
+  /*font-family: $gotham;*/
   text-transform: uppercase;
   @media (width >= 1000px) {
     margin-bottom: 0.80vw;
@@ -103,7 +103,7 @@
 .contactForm__input::-webkit-input-placeholder,
 .contactForm__input::placeholder {
   color: $black;
-  font-family: $gotham;
+  /*font-family: $gotham;*/
   font-size: 1vw;
   text-transform: uppercase;
   @media (width >= 1000px) {
@@ -124,7 +124,7 @@
   box-shadow: none;
   outline: none;
   color: $black;
-  font-family: $gotham;
+  /*font-family: $gotham;*/
   font-size: 1vw;
   @media (width >= 1000px) {
     padding: 0.75vw 0.5vw;
@@ -157,7 +157,7 @@
   display: block;
   margin: 0 auto;
   color: $sable;
-  font-family: $gotham;
+  /*font-family: $gotham;*/
   text-transform: uppercase;
   background: url(../img/rolled_ink.png) no-repeat center center / 100% 100%;
   border: none;
@@ -175,7 +175,7 @@
   display: block;
   text-align: center;
   color: $sable;
-  font-family: $gotham;
+  /*font-family: $gotham;*/
   text-shadow: 0vw 0vw 0.50vw rgba($black, 0.50);
   text-transform: uppercase;
   @media (width >= 800px) {

@@ -142,7 +142,7 @@
 .navMenu__text {
   display: inline-block;
   height: 100%;
-  font-family: $gotham;
+  /*font-family: $gotham;*/
   text-transform: uppercase;
   @media (width < 700px) {
     height: 5vw;
