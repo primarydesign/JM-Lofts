@@ -5,8 +5,20 @@
   <title>J.M. Lofts</title>
   <meta name="viewport" content="maximum-scale=1,width=device-width,initial-scale=1,user-scalable=0">
   <link rel="stylesheet" href="assets/css/index.css">
+</head>
+<body class="page">
+  {% include 'navbar.html' %}
+  <main class="page__content">
+    <div class="page__section" id="section--welcome">{% include 'sect-welcome.html' %}</div>
+    <div class="page__section" id="section--floorplans">{% include 'sect-floorplans.html' %}</div>
+    <div class="page__section" id="section--features">{% include 'sect-features.html' %}</div>
+    <div class="page__section" id="section--downtown">{% include 'sect-downtown.html' %}</div>
+    <div class="page__section" id="section--contact">{% include 'sect-contact.html' %}</div>
+  </main>
+  {% include 'footer.html' %}
+  <div class="page__overlay"></div>
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3"></script>
-  <script async>
+  <script>
     window.JMLocations = [
       {% for location in locations %}
         {% set random = Math.round(Math.random()*3) %}
@@ -30,16 +42,16 @@
           icon: {
             {% if location.category == 'master' or location.category == 'transportation' %}
               url: "assets/img/map_icons/marker-{{ location.category }}.png",
-              size: new google.maps.Size(40, 40)
+              size: {width: 40, height: 40}
             {% elseif random == 1 %}
               url: "assets/img/map_icons/tack_1.png",
-              size: new google.maps.Size(12, 41)
+              size: {width: 12, height: 41}
             {% elseif random == 2 %}
               url: "assets/img/map_icons/tack_2.png",
-              size: new google.maps.Size(12, 39)
+              size: {width: 12, height: 39}
             {% else %}
               url: "assets/img/map_icons/tack_3.png",
-              size: new google.maps.Size(19, 39)
+              size: {width: 19, height: 39}
             {% endif %}
           },
           content: (
@@ -58,18 +70,6 @@
       {% endfor %}
     ];
   </script>
-  <script src="assets/js/index.js" async></script>
-</head>
-<body class="page">
-  {% include 'navbar.html' %}
-  <main class="page__content" role="main">
-    <section class="page__section" id="section--welcome">{% include 'sect-welcome.html' %}</section>
-    <section class="page__section" id="section--floorplans">{% include 'sect-floorplans.html' %}</section>
-    <section class="page__section" id="section--features">{% include 'sect-features.html' %}</section>
-    <section class="page__section" id="section--downtown">{% include 'sect-downtown.html' %}</section>
-    <section class="page__section" id="section--contact">{% include 'sect-contact.html' %}</section>
-  </main>
-  {% include 'footer.html' %}
-  <div class="page__overlay"></div>
+  <script src="assets/js/index.js"></script>
 </body>
 </html>
