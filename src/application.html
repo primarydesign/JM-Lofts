@@ -8,6 +8,414 @@
   <link rel="stylesheet" href="../assets/css/application.css">
 </head>
 <body class="page">
+{% include 'navbar.html' %}
+<h2 class="contactForm--headline">JM Lofts Rental Application</h2>
+<span class="contactForm--required-hint">*required fields</span>
+<div class="contactForm">
+  <form class="contactForm__form" novalidate>
+    <ul class="form--group-label">Personal Information</ul>
+    <label class="contactForm__field contactForm__field--inline">
+      <!--[if IE 9]><p class="contactForm__label">First Name*</p><![endif]-->
+      <input type="text" class="contactForm__input" name="fname" id="contactForm--fname" placeholder="First Name*" required>
+    </label>
+    <label class="contactForm__field contactForm__field--inline">
+      <!--[if IE 9]><p class="contactForm__label">Last Name*</p><![endif]-->
+      <input type="text" class="contactForm__input" name="lname" id="contactForm--lname" placeholder="Last Name*" required>
+    </label>
+    <label class="contactForm__field contactForm__field--inline">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="ssn" id="contactForm--ssn" placeholder="Last 4 of Social Security #" data-pattern="ssn">
+    </label>
+    <label class="contactForm__field contactForm__field--inline" style="float:right">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="date" class="contactForm__input" name="dob" id="contactForm--dob" placeholder="Date of Birth" data-pattern="dob">  
+    </label>
+    <label class="contactForm__field contactForm__field--inline">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="dln" id="contactForm--dln" placeholder="Drivers License #" data-pattern="dln">
+    </label>
+    <label class="contactForm__field contactForm__field--inline" style="float:right">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="dls" id="contactForm--dls" placeholder="Drivers License State" data-pattern="dls">
+    </label>  
+    <label class="contactForm__field contactForm__field--inline">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="tel" class="contactForm__input" name="phone" id="contactForm--phone" placeholder="Phone" data-pattern="phone">
+    </label>    
+    <label class="contactForm__field contactForm__field--inline" style="float:right">
+      <!--[if IE 9]><p class="contactForm__label">Email</p><![endif]-->
+      <input type="email" class="contactForm__input" name="email" id="contactForm--email" placeholder="Email*" data-pattern="email" required>
+    </label>
+    <label class="contactForm__field contactForm__field--inline">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="occupation" id="contactForm--occupation" placeholder="Occupation" data-pattern="occupation">
+    </label> 
+    <label class="contactForm__field contactForm__field--inline" style="float:right">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="income" id="contactForm--income" placeholder="Gross Annual Income" data-pattern="income">
+    </label>
+    <ul class="form--group-label">Desired Apartment Information</ul>
+    <fieldset id="apttype" style="border:none;padding:15px 0;">
+         <label>
+           <input type="checkbox" name="1Bedroom" id="apt-type-1br" value="1br" class="field" style="display:inline">
+           <a class="checkbox--label">1 Bedroom</a>
+         </label>
+         <label>
+           <input type="checkbox" name="2Bedroom" id="apt-type-2br" value="2br" class="field">
+           <a class="checkbox--label">2 Bedroom</a>
+         </label>
+    </fieldset> 
+    <label class="contactForm__field">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="units" id="contactForm--units" placeholder="Specific unit(s) your are applying for?" data-pattern="units">
+    </label>
+    <label class="contactForm__field">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="roommate1" id="contactForm--roommate1" placeholder="Roommate 1" data-pattern="roommate1">
+    </label>
+    <label class="contactForm__field">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="roommate2" id="contactForm--roommate2" placeholder="Roommate 2" data-pattern="roommate">
+    </label>
+    <ul class="form--group-label">Current Address</ul>
+    <label class="contactForm__field contactForm__field--inline">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="street" id="contactForm--street" placeholder="Street" data-pattern="street">
+    </label>
+    <label class="contactForm__field contactForm__field--inline" style="float:right" >
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="apt" id="contactForm--apt" placeholder="Apt. #" data-pattern="apt">
+    </label>
+    <label class="contactForm__field contactForm__field--inline">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="city" id="contactForm--city" placeholder="City" data-pattern="city">
+    </label>
+    <label class="contactForm__field contactForm__field--inline" style="float:right">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="state" id="contactForm--state" placeholder="State" data-pattern="state">
+    </label>    
+    <label class="contactForm__field contactForm__field--inline">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="zip" id="contactForm--zip" placeholder="Zip Code" data-pattern="zip">
+    </label>
+    <label class="contactForm__field contactForm__field--inline" style="float:right">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="rent-own" id="contactForm--rent-own" placeholder="Rent or Own?" data-pattern="rent-own">
+    </label>
+    <label class="contactForm__field contactForm__field--inline">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="dates" id="contactForm--dates" placeholder="Dates" data-pattern="dates">
+    </label>
+    <label class="contactForm__field contactForm__field--inline" style="float:right">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="rent" id="contactForm--rent" placeholder="Monthly Payment" data-pattern="rent">
+    </label>
+    <ul class="form--group-label">Current Landlord</ul>
+    <label class="contactForm__field">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="street" id="contactForm--ll" placeholder="Landlord/Lender" data-pattern="ll">
+    </label>
+    <label class="contactForm__field contactForm__field--inline">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="ll-street" id="contactForm--ll-street" placeholder="Street" data-pattern="ll-street">
+    </label>
+    <label class="contactForm__field contactForm__field--inline" style="float:right">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="ll-city" id="contactForm--ll-city" placeholder="City" data-pattern="ll-city">
+    </label>
+    <label class="contactForm__field contactForm__field--inline">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="ll-state" id="contactForm--ll-state" placeholder="State" data-pattern="ll-state">
+    </label>    
+    <label class="contactForm__field contactForm__field--inline" style="float:right">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="ll-phone" id="contactForm--ll-phone" placeholder="Phone" data-pattern="ll-phone">
+    </label>
+    <ul class="form--group-label">Previous Address</ul>
+    <label class="contactForm__field contactForm__field--inline">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="prev-street" id="contactForm--prev-street" placeholder="Street" data-pattern="prev-street">
+    </label>
+    <label class="contactForm__field contactForm__field--inline" style="float:right" >
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="prev-apt" id="contactForm--prev-apt" placeholder="Apt. #" data-pattern="prev-apt">
+    </label>
+    <label class="contactForm__field contactForm__field--inline">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="prev-city" id="contactForm--prev-city" placeholder="City" data-pattern="prev-city">
+    </label>
+    <label class="contactForm__field contactForm__field--inline" style="float:right">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="prev-state" id="contactForm--prev-state" placeholder="State" data-pattern="prev-state">
+    </label>    
+    <label class="contactForm__field contactForm__field--inline">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="prev-zip" id="contactForm--prev-zip" placeholder="Zip Code" data-pattern="prev-zip">
+    </label>
+    <label class="contactForm__field contactForm__field--inline" style="float:right">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="prev-rent-own" id="contactForm--prev-rent-own" placeholder="Rent or Own?" data-pattern="prev-rent-own">
+    </label>
+    <label class="contactForm__field contactForm__field--inline">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="prev-dates" id="contactForm--prev-dates" placeholder="Dates" data-pattern="prev-dates">
+    </label>
+    <label class="contactForm__field contactForm__field--inline" style="float:right">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="prev-rent" id="contactForm--prev-rent" placeholder="Monthly Payment" data-pattern="prev-rent">
+    </label>
+    <ul class="form--group-label">Previous Landlord</ul>
+    <label class="contactForm__field">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="prev-ll" id="contactForm--prev-ll" placeholder="Landlord/Lender" data-pattern="prev-ll">
+    </label>
+    <label class="contactForm__field contactForm__field--inline">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="prev-ll-street" id="contactForm--prev-ll-street" placeholder="Street" data-pattern="prev-ll-street">
+    </label>
+    <label class="contactForm__field contactForm__field--inline" style="float:right">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="prev-ll-city" id="contactForm--prev-ll-city" placeholder="City" data-pattern="prev-ll-city">
+    </label>
+    <label class="contactForm__field contactForm__field--inline">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="prev-ll-state" id="contactForm--prev-ll-state" placeholder="State" data-pattern="prev-ll-state">
+    </label>    
+    <label class="contactForm__field contactForm__field--inline" style="float:right">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="prev-ll-phone" id="contactForm--prev-ll-phone" placeholder="Phone" data-pattern="prev-ll-phone">
+    </label>
+    <ul class="form--group-label">2nd Previous Address</ul>
+    <label class="contactForm__field contactForm__field--inline">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="prev-street2" id="contactForm--prev-street2" placeholder="Street" data-pattern="prev-street2">
+    </label>
+    <label class="contactForm__field contactForm__field--inline" style="float:right" >
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="prev-apt2" id="contactForm--prev-apt2" placeholder="Apt. #" data-pattern="prev-apt2">
+    </label>
+    <label class="contactForm__field contactForm__field--inline">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="prev-city2" id="contactForm--prev-city2" placeholder="City" data-pattern="prev-city2">
+    </label>
+    <label class="contactForm__field contactForm__field--inline" style="float:right">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="prev-state2" id="contactForm--prev-state2" placeholder="State" data-pattern="prev-state2">
+    </label>    
+    <label class="contactForm__field contactForm__field--inline">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="prev-zip2" id="contactForm--prev-zip2" placeholder="Zip Code" data-pattern="prev-zip2">
+    </label>
+    <label class="contactForm__field contactForm__field--inline" style="float:right">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="prev-rent-own2" id="contactForm--prev-rent-own2" placeholder="Rent or Own?" data-pattern="prev-rent-own2">
+    </label>
+    <label class="contactForm__field contactForm__field--inline">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="prev-dates2" id="contactForm--prev-dates2" placeholder="Dates" data-pattern="prev-dates2">
+    </label>
+    <label class="contactForm__field contactForm__field--inline" style="float:right">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="prev-rent2" id="contactForm--prev-rent2" placeholder="Monthly Payment" data-pattern="prev-rent2">
+    </label>
+    <ul class="form--group-label">2nd Previous Landlord</ul>
+    <label class="contactForm__field">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="prev-ll2" id="contactForm--prev-ll2" placeholder="Landlord/Lender" data-pattern="prev-ll2">
+    </label>
+    <label class="contactForm__field contactForm__field--inline">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="prev-ll-street2" id="contactForm--prev-ll-street2" placeholder="Street" data-pattern="prev-ll-street2">
+    </label>
+    <label class="contactForm__field contactForm__field--inline" style="float:right">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="prev-ll-city2" id="contactForm--prev-ll-city2" placeholder="City" data-pattern="prev-ll-city2">
+    </label>
+    <label class="contactForm__field contactForm__field--inline">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="prev-ll-state2" id="contactForm--prev-ll-state2" placeholder="State" data-pattern="prev-ll-state2">
+    </label>    
+    <label class="contactForm__field contactForm__field--inline" style="float:right">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="prev-ll-phone2" id="contactForm--prev-ll-phone2" placeholder="Phone" data-pattern="prev-ll-phone2">
+    </label>
+<ul class="form--group-label">Current Employer / Income Source</ul>
+    <label class="contactForm__field contactForm__field--inline">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="employer" id="contactForm--employer" placeholder="Company/Employer Name" data-pattern="employer">
+    </label>
+    <label class="contactForm__field contactForm__field--inline" style="float:right">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="position" id="contactForm--position" placeholder="Position" data-pattern="position">
+    </label> 
+    <label class="contactForm__field contactForm__field--inline">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="employer-doh" id="contactForm--doh" placeholder="Employment Date" data-pattern="doh">
+    </label>
+    <label class="contactForm__field contactForm__field--inline" style="float:right">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="salary" id="contactForm--salary" placeholder="Salary" data-pattern="salary">
+    </label>
+    <label class="contactForm__field contactForm__field--inline">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="employer-street" id="contactForm--employer-street" placeholder="Street" data-pattern="employer-street">
+    </label>
+    <label class="contactForm__field contactForm__field--inline" style="float:right">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="employer-city" id="contactForm--employer-city" placeholder="City" data-pattern="employer-city">
+    </label>
+    <label class="contactForm__field contactForm__field--inline">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="employer-state" id="contactForm--employer-state" placeholder="State" data-pattern="employer-state">
+    </label>    
+    <label class="contactForm__field contactForm__field--inline" style="float:right">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="employer-phone" id="contactForm--employer-phone" placeholder="Phone" data-pattern="employer-phone">
+    </label>
+    <ul class="form--group-label">Current Employer Contact / Supervisor</ul>
+    <label class="contactForm__field">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="supervisor" id="contactForm--supervisor" placeholder="Name" data-pattern="supervisor">
+    </label>
+    <label class="contactForm__field contactForm__field--inline">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="supervisor-phone" id="contactForm--supervisor-phone" placeholder="Phone" data-pattern="supervisor-phone">
+    </label>
+    <label class="contactForm__field contactForm__field--inline" style="float:right">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="supervisor-email" id="contactForm--supervisor-email" placeholder="Email" data-pattern="supervisor-email">
+    </label>
+<ul class="form--group-label">Previous Employer / Income Source</ul>
+        <label class="contactForm__field contactForm__field--inline">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="prev-employer" id="contactForm--prev-employer" placeholder="Company/Employer Name" data-pattern="prev-employer">
+    </label>
+    <label class="contactForm__field contactForm__field--inline" style="float:right">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="prev-position" id="contactForm--prev-position" placeholder="Position" data-pattern="prev-position">
+    </label> 
+    <label class="contactForm__field contactForm__field--inline">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="employer-prev-doh" id="contactForm--prev-doh" placeholder="Employment Date" data-pattern="prev-doh">
+    </label>
+    <label class="contactForm__field contactForm__field--inline" style="float:right">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="prev-salary" id="contactForm--prev-salary" placeholder="Salary" data-pattern="prev-salary">
+    </label>
+    <label class="contactForm__field contactForm__field--inline">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="prev-employer-street" id="contactForm--prev-employer-street" placeholder="Street" data-pattern="prev-employer-street">
+    </label>
+    <label class="contactForm__field contactForm__field--inline" style="float:right">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="prev-employer-city" id="contactForm--prev-employer-city" placeholder="City" data-pattern="prev-employer-city">
+    </label>
+    <label class="contactForm__field contactForm__field--inline">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="prev-employer-state" id="contactForm--prev-employer-state" placeholder="State" data-pattern="prev-employer-state">
+    </label>    
+    <label class="contactForm__field contactForm__field--inline" style="float:right">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="prev-employer-phone" id="contactForm--prev-employer-phone" placeholder="Phone" data-pattern="prev-employer-phone">
+    </label>
+    <ul class="form--group-label">Previous Employer Contact / Supervisor</ul>
+    <label class="contactForm__field">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="prev-supervisor" id="contactForm--prev-supervisor" placeholder="Name" data-pattern="prev-supervisor">
+    </label>
+    <label class="contactForm__field contactForm__field--inline">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="prev-supervisor-phone" id="contactForm--prev-supervisor-phone" placeholder="Phone" data-pattern="prev-supervisor-phone">
+    </label>
+    <label class="contactForm__field contactForm__field--inline" style="float:right">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="prev-supervisor-email" id="contactForm--prev-supervisor-email" placeholder="Email" data-pattern="prev-supervisor-email">
+    </label>
+    <ul class="form--group-label">Other Sources of Income</ul>
+    <label class="contactForm__field" style="float:right">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="other-income" id="contactForm--other-income" placeholder="Type of Income" data-pattern="other-income">
+    </label>
+    <label class="contactForm__field contactForm__field--inline">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="other-income-source" id="contactForm--other-income-source" placeholder="Source/Bank" data-pattern="other-income-source">
+    </label>
+    <label class="contactForm__field contactForm__field--inline" style="float:right">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="other-income-amount" id="contactForm--other-income-amount" placeholder="Gross Annual Amount" data-pattern="other-income-amount">
+    </label>
+    <label class="contactForm__field" style="float:right">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="other-income2" id="contactForm--other-income2" placeholder="Type of Income" data-pattern="other-income2">
+    </label>
+    <label class="contactForm__field contactForm__field--inline">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="other-income-source2" id="contactForm--other-income-source2" placeholder="Source/Bank" data-pattern="other-income-source2">
+    </label>
+    <label class="contactForm__field contactForm__field--inline" style="float:right">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="other-income-amount2" id="contactForm--other-income-amount2" placeholder="Gross Annual Amount" data-pattern="other-income-amount2">
+    </label>
+    <ul class="form--group-label">Bank References</ul>
+    <label class="contactForm__field">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="bank-name-address" id="contactForm--bank-name-address" placeholder="Bank Name/Address" data-pattern="bank-name-address">
+    </label>
+    <label class="contactForm__field contactForm__field--inline">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="bank-account" id="contactForm--bank-account" placeholder="Bank Account #/Type" data-pattern="bank-account">
+    </label>
+    <label class="contactForm__field contactForm__field--inline" style="float:right">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="bank-balance" id="contactForm--bank-balance" placeholder="Balance $" data-pattern="bank-balance">
+    </label>
+    <label class="contactForm__field">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="bank-name-address" id="contactForm--bank-name-address2" placeholder="Bank Name/Address" data-pattern="bank-name-address2">
+    </label>
+    <label class="contactForm__field contactForm__field--inline">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="bank-account2" id="contactForm--bank-account2" placeholder="Bank Account #/Type" data-pattern="bank-account2">
+    </label>
+    <label class="contactForm__field contactForm__field--inline" style="float:right">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="bank-balance2" id="contactForm--bank-balance2" placeholder="Balance $" data-pattern="bank-balance2">
+    </label>
+    <ul class="form--group-label">Credit References</ul>
+    <label class="contactForm__field">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="credit-name" id="contactForm--credit-name" placeholder="Bank Name" data-pattern="credit-name">
+    </label>
+    <label class="contactForm__field contactForm__field--inline">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="credit-type" id="contactForm--credit-type" placeholder="Account Type" data-pattern="credit-type">
+    </label>
+    <label class="contactForm__field contactForm__field--inline" style="float:right">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="bank-balance" id="contactForm--bank-balance" placeholder="Balance $" data-pattern="bank-balance">
+    </label>
+    <label class="contactForm__field">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="bank-name-address" id="contactForm--bank-name-address2" placeholder="Bank Name/Address" data-pattern="bank-name-address2">
+    </label>
+    <label class="contactForm__field contactForm__field--inline">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="bank-account2" id="contactForm--bank-account2" placeholder="Account Type" data-pattern="bank-account2">
+    </label>
+    <label class="contactForm__field contactForm__field--inline" style="float:right">
+      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
+      <input type="text" class="contactForm__input" name="bank-balance2" id="contactForm--bank-balance2" placeholder="Balance $" data-pattern="bank-balance2">
+    </label>    
+
+      
+    <input type="submit" class="contactForm__submit" value="submit">
+    
+  </form>
+  <div class="contactForm__note">
+    <p class="contactForm__message">Thank you!<br/> The final step is to submit your application fee <a>here</a>. Once completed, our leasing staff will be in touch shortly.</p>
+  </div>
+</div>    
+ {% include 'footer.html' %}
   <script src="../assets/js/application.js"></script>
 </body>
 </html>

@@ -1,18 +1,56 @@
 .romanceText {
   margin: 0 auto;
-  padding: 4vw 0 6vw;
+  padding: 4vw 5vw 6vw;
   width: 80%;
-  @media (width >= 700px) { padding: 4vw 0 6vw; }
+  @media (width >= 700px) { padding: 4vw 5vw 6vw; }
   @media (width < 700px) { padding: 10vw 0 14vw; }
 }
+
+.romanceText__headline {
+  @include smoothText;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.5em;
+  font-size: 1.5vw;
+  @media (width < 1280px) {
+    font-size: 3vw;
+  }
+}
+
+.romanceText__divider {
+  width:20%;
+  margin:auto;
+  margin:30px auto 0;
+}
+
+.romanceText__subhead {
+  display: block;
+  text-align: center;
+  font-family: $scala;
+  line-height: 1.5em;
+  font-size: 1.5vw;
+  padding-top: 30px;
+  @media (width < 1280px) {
+    font-size: 3.25vw;
+      &:br {
+          display: none;
+      }
+  }
+}
+
 .romanceText__paragraph {
   font-family: $scala;
   font-size: 2.0vw;
   /*font-variant: small-caps;*/
   text-align: justify;
   text-indent: 2em;
+  padding-top: 2vw;
   @media (width < 700px) {
     font-size: 5vw;
+    line-height: 6vw;
+    text-align: left;
+    text-indent: 0;
   }
 }
 .romanceText__paragraph--minor {

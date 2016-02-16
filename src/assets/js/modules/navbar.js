@@ -10,11 +10,15 @@ const navMenu = tillstand('.navMenu');
 const page = tillstand('.page');
 
 const headroom = new Headroom(navbar, {
-  offset: navbar.offsetHeight,
+  tolerance : {
+    up : 30,
+    down : 15
+  }, 
+  offset: navbar.offsetHeight,   
   classes: {
     initial: 'is-initial',
     pinned: 'is-pinned',
-    unpinned: 'not-pinned'
+    unpinned: 'not-pinned',  
   }
 });headroom.init();
 

@@ -1,18 +1,18 @@
 <div class="romanceText">
-  <p class="romanceText__paragraph">Find the floor plan that fits your lifestyle. J.M. Lofts offers uniquely designed one- and two- bedroom apartment homes for rent.</p>
-  <p class="romanceText__paragraph romanceText__paragraph--minor">One-Bedroom Apartments starting at $1,425*</p>
-  <p class="romanceText__paragraph romanceText__paragraph--minor">Two-Bedroom Apartments starting at $1,600*</p>
-  <p class="romanceText__paragraph romanceText__paragraph--minor">* Rents subject to change. Apartments are ADA compliant. Equal housing opportunity.</p>
+  <h2 class="romanceText__headline">Find the floor plan<br>that fits your lifestyle</h2>
+  <hr class="romanceText__divider" size="2" color="#231F20">  
+  <p class="romanceText__subhead">J.M. Lofts offers uniquely designed<br>one- and two-bedroom apartment homes for rent.</p>
 </div>
 <div class="unitTables">
   <div class="unitTables__column">
     <figure class="unitTable">
       <figcaption class="unitTable__captions">
-        <span class="unitTable__caption">One Bed</span>
-        <span class="unitTable__caption">One Bath</span>
+        <span class="unitTable__caption">One-Bedroom Apartments</span>
+        <span class="unitTable__sub-caption">starting at $1,425*</span>
       </figcaption>
       <div class="unitTable__table">
-        <div class="unitTable__body">
+          <span class="unitTable__type">one bed <span class="small-char">&amp;</span> one bath</span>
+          <div class="unitTable__body">
           {% for unit in units %}{% if unit.br == 1 %}
             <div class="unitTable__row" data-unit-un="{{ unit.un }}" data-unit-br="{{ unit.br }}" data-unit-ba="1" data-unit-sf="{{ unit.sf }}" data-unit-image="{{ plans[unit.un] }}">
               <div class="unitTable__cell unitTable__cell--ID">{{ unit.un }}</div>
@@ -26,10 +26,11 @@
   <div class="unitTables__column">
     <figure class="unitTable">
       <figcaption class="unitTable__captions">
-        <span class="unitTable__caption">Two Bed</span>
-        <span class="unitTable__caption">One Bath</span>
+        <span class="unitTable__caption">Two-Bedroom Apartments</span>
+        <span class="unitTable__sub-caption">starting at $1,600*</span>
       </figcaption>
       <div class="unitTable__table">
+        <span class="unitTable__type">two bed <span class="small-char">&amp;</span> one bath</span>
         <div class="unitTable__body">
           {% for unit in units %}{% if unit.br == 2 %}
             <div class="unitTable__row" data-unit-un="{{ unit.un }}" data-unit-br="{{ unit.br }}" data-unit-ba="1" data-unit-sf="{{ unit.sf }}" data-unit-image="{{ plans[unit.un] }}">
@@ -41,4 +42,5 @@
       </div>
     </figure>
   </div>
+  <p class="unitTable__disclaimer">* rents subject to change. equal housing opportunity.</p>
 </div>

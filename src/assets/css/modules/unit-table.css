@@ -37,29 +37,15 @@
   width: 100%;
   background: $black;
   font-size: 0;
+  padding: 15px;
 }
-.unitTable__captions:after {
-  content: '';
-  height: 50%;
-  min-width: 1px;
-  position: absolute;
-  top: 50%;left: 50%;
-  z-index: 1;
-  background-color: $sable;
-  transform: translate(-50%,-50%);
-  @media (width < 800px) {
-    width: 1px;
-  }
-  @media (width >= 800px) {
-    width: 0.45%;
-  }
-}
+
 .unitTable__caption {
   display: inline-block;
-  padding: 1.25vw 0;
-  width: 50%;
+  padding: .25vw 0;
+  width: 100%;
   color: $sable;
-  font-family: $baskerville;
+  font-family: $gotham;
   text-align: center;
   text-transform: uppercase;
   @media (width < 800px) {
@@ -67,6 +53,33 @@
   }
   @media (width >= 800px) {
     font-size: 1.50vw;
+  }
+}
+
+.unitTable__sub-caption {
+  @extend .unitTable__caption;
+  @include smoothText;
+}
+
+.unitTable__type {
+  @extend .romanceText__subhead;
+  padding: 15px 0;
+  border-bottom: 1px solid;
+  @media (width < 800px) {
+    text-transform: uppercase;
+    font-variant: normal;
+  }
+}
+
+.small-char {
+  font-family: $scala;
+  text-transform: none;
+  font-size: 1vw;
+    @media (width < 1279px) {
+    font-size: 2vw;
+  }
+  @media (width < 800px) {
+      font-size: 3.2vw !important;
   }
 }
 
@@ -106,7 +119,7 @@
     font-size: 3.00vw;
   }
   @media (width >= 800px) {
-    font-size: 1.50vw;
+    font-size: 1.20vw;
   }
 }
 
@@ -118,4 +131,11 @@
 .unitTable__cell--SF:after {
   content: 'Sq. Ft.';
   margin-left: 1.0vw;
+}
+
+.unitTable__disclaimer {
+    @extend .romanceText__subhead;
+    font-size: 1rem;
+    padding: 30px 0;
+    line-height: 2.5vw;
 }

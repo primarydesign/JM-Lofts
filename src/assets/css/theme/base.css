@@ -1,3 +1,7 @@
+body {
+    background: $sable;
+}
+
 .page {
   border: $border-thick solid $black;
   padding: calc($navHeight - 0.5px) 0 0 !important;
