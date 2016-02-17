@@ -3,7 +3,9 @@
 @import './modules/contact-form.css';
 @import './modules/navbar.css';
 @import './modules/footer.css';
-
+.page {
+  border: none;
+}
 .navbar {
     position: absolute;
 }
@@ -11,26 +13,76 @@
   text-align:center;
   margin:60px auto;
   text-transform: uppercase;
-  font-weight: normal;
+  font-weight: 700;
+  letter-spacing: 1px;
+  @include smoothText;
+}
+.contactForm__input {
+   background: #ffffff;
+}
+.contactForm__input::placeholder {
+  text-transform: none;
+  color: #888687;
 }
 .contactForm--required-hint {
 display: block;
 font-size: 1em;
 text-align: center;
-position: relative;
-top: -40px;
+font-family: $scala;
 }
 .form--group-label {
-  font-size: 1.25vw;
+  font-size: 1vw;
   line-height: 5vw;
+  text-transform: uppercase;
+  z-index: -1;
   @media (width < 600px) {
     font-size: 4vw;
-    line-height: 10vw;
+    line-height: 5vw;
+    padding: 30px 0 15px;
   }
 }
-
+.contactForm__field {
+    margin-bottom: 25px !important;
+}
 .checkbox--label {
-    font-size:12px;
+    font-size:1vw;
     display:inline;
-    padding:0 10px
+    padding:0 15px;
+  @media (width < 600px) {
+    font-size: 3vw;
+  }
+}
+.fr {
+  float:right;
+}
+.contactForm {
+    p {
+        font-size: 1vw;
+        line-height: 2vw;
+    }   
+}
+.contactForm__submit {
+    margin: 60px auto 60px;
+}
+.contactForm__disclaimer {
+    font-size: 12px;
+    margin: 60px auto;
+    text-transform: uppercase;
+    p {
+        font-size: 12px;
+        line-height: 16px;
+        margin: 30px auto;
+    }
+}
+.disclaimer__mail-check {
+    list-style-type: none;
+    text-align: center;
+    font-size: 12px;
+}
+
+.contactForm__field[data-error]:after {
+    font-size: 1vw;
+    font-family: $scala;
+    color: #af614e;
+    text-shadow: none;
 }

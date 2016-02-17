@@ -3,6 +3,7 @@
   background-color: $black;
   border-top: 0.25vw solid $black;
   font-size: 0;
+  font-weight: 700;
   @media (width >= 800px) {
     height: 10vw;
     overflow: hidden;
@@ -53,6 +54,9 @@
   display: table-cell;
   vertical-align: top;
   width: 50%;
+  a {
+      font-weight: normal;
+    }
   @media (width >= 800px) {
     height: 100%;
   }
@@ -160,6 +164,7 @@
   box-sizing: border-box;
   display: inline-block;
   position: relative;
+  font-weight: normal;
   size: 100% auto;
   vertical-align: middle;
   /*font-family: $gotham;*/

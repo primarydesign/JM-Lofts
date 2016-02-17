@@ -5,6 +5,7 @@
   z-index: 20;
   border-top: $border-thick solid $black;
   transition: transform 300ms easeOutQuad;
+  font-weight: 700;
 }
 .navbar.is-pinned { transform: translateY(0%); }
 .navbar.not-pinned { transform: translateY(-100%); }
