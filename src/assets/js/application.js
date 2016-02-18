@@ -10,7 +10,7 @@ Errors['EMPTY_REQUISITE'] = 'This field is required';
 Errors['INVALID_EMAIL'] = 'Please enter a valid email address';
 Errors['INVALID_TEL'] = 'Please enter a valid phone number';
 Patterns['EMAIL'] = "[a-zA-Z0-9_.+\-]+@[a-zA-Z0-9-.]+$";
-Patterns['PHONE'] = "^\\(?([0-9]{3})\\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$";
+Patterns['TEL'] = "^\\(?([0-9]{3})\\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$";
 
 for(let i = 0; i < fields.length; i++) {
   fields[i].addEventListener('focusout', function(event) {
