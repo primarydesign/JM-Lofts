@@ -1,7 +1,7 @@
-const contactForm = document.querySelector('.contactForm__form');
-const fields = document.querySelectorAll('.contactForm__input');
-const submit = document.querySelector('.contactForm__submit');
-const note = document.querySelector('.contactForm__note');
+const contactForm = document.querySelector('.form');
+const fields = document.querySelectorAll('.form__input');
+const submit = document.querySelector('.form__submit');
+const note = document.querySelector('.form__note');
 const Patterns = {}, Errors = {};
 
 window.$ = jQuery;

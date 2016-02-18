@@ -8,483 +8,54 @@
   <link rel="stylesheet" href="../assets/css/application.css">
 </head>
 <body class="page">
-{% include 'navbar.html' %}
-<h2 class="contactForm--headline">JM Lofts Rental Application</h2>
-<span class="contactForm--required-hint">*indicates required field</span>
-<div class="contactForm">
-  <form class="contactForm__form" novalidate>
-    <ul class="form--group-label">Personal Information</ul>
-    <label class="contactForm__field contactForm__field--inline"  style="float:none">
-      <!--[if IE 9]><p class="contactForm__label">First Name*</p><![endif]-->
-      <input type="text" class="contactForm__input" name="fname" id="contactForm--fname" placeholder="First Name*" required>
-    </label>
-    <label class="contactForm__field contactForm__field--inline fr">
-      <!--[if IE 9]><p class="contactForm__label">Last Name*</p><![endif]-->
-      <input type="text" class="contactForm__input" name="lname" id="contactForm--lname" placeholder="Last Name*" required>
-    </label>
-    <label class="contactForm__field contactForm__field--inline">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="dob" id="contactForm--dob" placeholder="Date of Birth*" required>  
-    </label>
-    <label class="contactForm__field contactForm__field--inline fr">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="dln" id="contactForm--dln" placeholder="Drivers License #*" required>
-    </label>
-    <label class="contactForm__field contactForm__field--inline">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="dls" id="contactForm--dls" placeholder="Drivers License State*" required>
-    </label>
-    <label class="contactForm__field contactForm__field--inline fr">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="tel" class="contactForm__input" name="phone" id="contactForm--phone" placeholder="Phone*" data-pattern="phone" required>
-    </label>    
-    <label class="contactForm__field contactForm__field--inline">
-      <!--[if IE 9]><p class="contactForm__label">Email</p><![endif]-->
-      <input type="email" class="contactForm__input" name="email" id="contactForm--email" placeholder="Email*" data-pattern="email" required>
-    </label>
-
-    <label class="contactForm__field contactForm__field--inline fr">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="occupation" id="contactForm--occupation" placeholder="Occupation*" required>
-    </label> 
-    <label class="contactForm__field contactForm__field--inline">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="income" id="contactForm--income" placeholder="Gross Annual Income">
-    </label>
-    <ul class="form--group-label">Desired Apartment Information</ul>
-    <fieldset id="apttype" style="border:none;padding:15px 0;">
-         <label>
-           <input type="checkbox" name="1Bedroom" id="apt-type-1br" value="1br" class="field">
-           <a class="checkbox--label">1 Bedroom</a>
-         </label>
-         <label>
-           <input type="checkbox" name="2Bedroom" id="apt-type-2br" value="2br" class="field">
-           <a class="checkbox--label">2 Bedroom</a>
-         </label>
-    </fieldset> 
-    <label class="contactForm__field">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="units" id="contactForm--units" placeholder="Specific unit(s) your are applying for?">
-    </label>
-    <label class="contactForm__field">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="roommate1" id="contactForm--roommate1" placeholder="Roommate 1">
-    </label>
-    <label class="contactForm__field">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="roommate2" id="contactForm--roommate2" placeholder="Roommate 2">
-    </label>
-    <ul class="form--group-label">Current Address</ul>
-    <label class="contactForm__field contactForm__field--inline">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="street" id="contactForm--street" placeholder="Street*" required>
-    </label>
-    <label class="contactForm__field contactForm__field--inline fr">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="apt" id="contactForm--apt" placeholder="Apt. #">
-    </label>
-    <label class="contactForm__field contactForm__field--inline">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="city" id="contactForm--city" placeholder="City*" required>
-    </label>
-    <label class="contactForm__field contactForm__field--inline fr">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="state" id="contactForm--state" placeholder="State*" required>
-    </label>    
-    <label class="contactForm__field contactForm__field--inline">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="zip" id="contactForm--zip" placeholder="Zip Code">
-    </label>
-    <label class="contactForm__field contactForm__field--inline fr">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="rent-own" id="contactForm--rent-own" placeholder="Rent or Own?">
-    </label>
-    <label class="contactForm__field contactForm__field--inline">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="move-in-date" id="contactForm--move-in-date" placeholder="Move-In Date">
-    </label>
-    <label class="contactForm__field contactForm__field--inline fr">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="rent" id="contactForm--rent" placeholder="Monthly Payment">
-    </label>
-    <ul class="form--group-label">Current Landlord</ul>
-    <label class="contactForm__field">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="street" id="contactForm--ll" placeholder="Landlord/Lender">
-    </label>
-    <label class="contactForm__field contactForm__field--inline">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="ll-street" id="contactForm--ll-street" placeholder="Street">
-    </label>
-    <label class="contactForm__field contactForm__field--inline fr">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="ll-city" id="contactForm--ll-city" placeholder="City">
-    </label>
-    <label class="contactForm__field contactForm__field--inline">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="ll-state" id="contactForm--ll-state" placeholder="State">
-    </label>    
-    <label class="contactForm__field contactForm__field--inline fr">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="tel" class="contactForm__input" name="ll-phone" id="contactForm--ll-phone" placeholder="Phone" data-pattern="phone">
-    </label>
-    <ul class="form--group-label">Previous Address</ul>
-    <label class="contactForm__field contactForm__field--inline">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="tel" class="contactForm__input" name="prev-street" id="contactForm--prev-street" placeholder="Street">
-    </label>
-    <label class="contactForm__field contactForm__field--inline fr" >
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="prev-apt" id="contactForm--prev-apt" placeholder="Apt. #">
-    </label>
-    <label class="contactForm__field contactForm__field--inline">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="prev-city" id="contactForm--prev-city" placeholder="City">
-    </label>
-    <label class="contactForm__field contactForm__field--inline fr">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="prev-state" id="contactForm--prev-state" placeholder="State">
-    </label>    
-    <label class="contactForm__field contactForm__field--inline">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="prev-zip" id="contactForm--prev-zip" placeholder="Zip Code">
-    </label>
-    <label class="contactForm__field contactForm__field--inline fr">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="prev-rent-own" id="contactForm--prev-rent-own" placeholder="Rent or Own?">
-    </label>
-    <label class="contactForm__field contactForm__field--inline">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="prev-dates" id="contactForm--prev-dates" placeholder="Dates">
-    </label>
-    <label class="contactForm__field contactForm__field--inline fr">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="prev-rent" id="contactForm--prev-rent" placeholder="Monthly Payment">
-    </label>
-    <ul class="form--group-label">Previous Landlord</ul>
-    <label class="contactForm__field">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="prev-ll" id="contactForm--prev-ll" placeholder="Landlord/Lender">
-    </label>
-    <label class="contactForm__field contactForm__field--inline">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="prev-ll-street" id="contactForm--prev-ll-street" placeholder="Street">
-    </label>
-    <label class="contactForm__field contactForm__field--inline fr">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="prev-ll-city" id="contactForm--prev-ll-city" placeholder="City">
-    </label>
-    <label class="contactForm__field contactForm__field--inline">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="prev-ll-state" id="contactForm--prev-ll-state" placeholder="State">
-    </label>    
-    <label class="contactForm__field contactForm__field--inline fr">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="tel" class="contactForm__input" name="prev-ll-phone" id="contactForm--prev-ll-phone" placeholder="Phone" data-pattern="phone">
-    </label>
-    <ul class="form--group-label">2nd Previous Address</ul>
-    <label class="contactForm__field contactForm__field--inline">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="prev-street2" id="contactForm--prev-street2" placeholder="Street">
-    </label>
-    <label class="contactForm__field contactForm__field--inline fr" >
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="prev-apt2" id="contactForm--prev-apt2" placeholder="Apt. #">
-    </label>
-    <label class="contactForm__field contactForm__field--inline">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="prev-city2" id="contactForm--prev-city2" placeholder="City">
-    </label>
-    <label class="contactForm__field contactForm__field--inline fr">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="prev-state2" id="contactForm--prev-state2" placeholder="State">
-    </label>    
-    <label class="contactForm__field contactForm__field--inline">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="prev-zip2" id="contactForm--prev-zip2" placeholder="Zip Code">
-    </label>
-    <label class="contactForm__field contactForm__field--inline fr">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="prev-rent-own2" id="contactForm--prev-rent-own2" placeholder="Rent or Own?">
-    </label>
-    <label class="contactForm__field contactForm__field--inline">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="prev-dates2" id="contactForm--prev-dates2" placeholder="Dates">
-    </label>
-    <label class="contactForm__field contactForm__field--inline fr">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="prev-rent2" id="contactForm--prev-rent2" placeholder="Monthly Payment">
-    </label>
-    <ul class="form--group-label">2nd Previous Landlord</ul>
-    <label class="contactForm__field">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="prev-ll2" id="contactForm--prev-ll2" placeholder="Landlord/Lender">
-    </label>
-    <label class="contactForm__field contactForm__field--inline">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="prev-ll-street2" id="contactForm--prev-ll-street2" placeholder="Street">
-    </label>
-    <label class="contactForm__field contactForm__field--inline fr">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="prev-ll-city2" id="contactForm--prev-ll-city2" placeholder="City">
-    </label>
-    <label class="contactForm__field contactForm__field--inline">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="prev-ll-state2" id="contactForm--prev-ll-state2" placeholder="State">
-    </label>    
-    <label class="contactForm__field contactForm__field--inline fr">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="tel" class="contactForm__input" name="prev-ll-phone2" id="contactForm--prev-ll-phone2" placeholder="Phone" data-pattern="phone">
-    </label>
-<ul class="form--group-label">Current Employer / Income Source</ul>
-    <label class="contactForm__field contactForm__field--inline">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="employer" id="contactForm--employer" placeholder="Company/Employer Name*" required>
-    </label>
-    <label class="contactForm__field contactForm__field--inline fr">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="position" id="contactForm--position" placeholder="Position*" required>
-    </label> 
-    <label class="contactForm__field contactForm__field--inline">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="employer-doh" id="contactForm--doh" placeholder="Employment Date*" required>
-    </label>
-    <label class="contactForm__field contactForm__field--inline fr">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="salary" id="contactForm--salary" placeholder="Salary*" required>
-    </label>
-    <label class="contactForm__field contactForm__field--inline">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="employer-street" id="contactForm--employer-street" placeholder="Street*" required>
-    </label>
-    <label class="contactForm__field contactForm__field--inline fr">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="employer-city" id="contactForm--employer-city" placeholder="City*" required>
-    </label>
-    <label class="contactForm__field contactForm__field--inline">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="employer-state" id="contactForm--employer-state" placeholder="State*" required>
-    </label>    
-    <label class="contactForm__field contactForm__field--inline fr">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="tel" class="contactForm__input" name="employer-phone" id="contactForm--employer-phone" placeholder="Phone*" data-pattern="phone">
-    </label>
-    <ul class="form--group-label">Current Employer Contact / Supervisor</ul>
-    <label class="contactForm__field">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="supervisor" id="contactForm--supervisor" placeholder="Name*" required>
-    </label>
-    <label class="contactForm__field contactForm__field--inline">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="tel" class="contactForm__input" name="supervisor-phone" id="contactForm--supervisor-phone" placeholder="Phone*" data-pattern="phone" required>
-    </label>
-    <label class="contactForm__field contactForm__field--inline fr">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="email" class="contactForm__input" name="supervisor-email" id="contactForm--supervisor-email" placeholder="Email" data-pattern="email">
-    </label>
-<ul class="form--group-label">Previous Employer / Income Source</ul>
-        <label class="contactForm__field contactForm__field--inline">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="prev-employer" id="contactForm--prev-employer" placeholder="Company/Employer Name">
-    </label>
-    <label class="contactForm__field contactForm__field--inline fr">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="prev-position" id="contactForm--prev-position" placeholder="Position">
-    </label> 
-    <label class="contactForm__field contactForm__field--inline">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="employer-prev-doh" id="contactForm--prev-doh" placeholder="Employment Date">
-    </label>
-    <label class="contactForm__field contactForm__field--inline fr">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="prev-salary" id="contactForm--prev-salary" placeholder="Salary">
-    </label>
-    <label class="contactForm__field contactForm__field--inline">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="prev-employer-street" id="contactForm--prev-employer-street" placeholder="Street">
-    </label>
-    <label class="contactForm__field contactForm__field--inline fr">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="prev-employer-city" id="contactForm--prev-employer-city" placeholder="City">
-    </label>
-    <label class="contactForm__field contactForm__field--inline">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="prev-employer-state" id="contactForm--prev-employer-state" placeholder="State">
-    </label>    
-    <label class="contactForm__field contactForm__field--inline fr">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="tel" class="contactForm__input" name="prev-employer-phone" id="contactForm--prev-employer-phone" placeholder="Phone" data-pattern="phone">
-    </label>
-    <ul class="form--group-label">Previous Employer Contact / Supervisor</ul>
-    <label class="contactForm__field">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="prev-supervisor" id="contactForm--prev-supervisor" placeholder="Name">
-    </label>
-    <label class="contactForm__field contactForm__field--inline">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="tel" class="contactForm__input" name="prev-supervisor-phone" id="contactForm--prev-supervisor-phone" placeholder="Phone" data-pattern="phone">
-    </label>
-    <label class="contactForm__field contactForm__field--inline fr">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="email" class="contactForm__input" name="prev-supervisor-email" id="contactForm--prev-supervisor-email" placeholder="Email" data-pattern="email">
-    </label>
-    <ul class="form--group-label">Other Sources of Income</ul>
-    <label class="contactForm__field fr">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="other-income" id="contactForm--other-income" placeholder="Type of Income">
-    </label>
-    <label class="contactForm__field contactForm__field--inline">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="other-income-source" id="contactForm--other-income-source" placeholder="Source/Bank">
-    </label>
-    <label class="contactForm__field contactForm__field--inline fr">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="other-income-amount" id="contactForm--other-income-amount" placeholder="Gross Annual Amount">
-    </label>
-    <label class="contactForm__field fr">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="other-income2" id="contactForm--other-income2" placeholder="Type of Income">
-    </label>
-    <label class="contactForm__field contactForm__field--inline">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="other-income-source2" id="contactForm--other-income-source2" placeholder="Source/Bank">
-    </label>
-    <label class="contactForm__field contactForm__field--inline fr">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="other-income-amount2" id="contactForm--other-income-amount2" placeholder="Gross Annual Amount">
-    </label>
-    <ul class="form--group-label">Bank References</ul>
-    <label class="contactForm__field">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="bank-name-address" id="contactForm--bank-name-address" placeholder="Bank Name/Address*" required>
-    </label>
-    <label class="contactForm__field contactForm__field--inline">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="bank-account" id="contactForm--bank-account" placeholder="Bank Account #/Type*" required>
-    </label>
-    <label class="contactForm__field contactForm__field--inline fr">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="bank-balance" id="contactForm--bank-balance" placeholder="Balance $">
-    </label>
-    <label class="contactForm__field">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="bank-name-address" id="contactForm--bank-name-address2" placeholder="Bank Name/Address">
-    </label>
-    <label class="contactForm__field contactForm__field--inline">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="bank-account2" id="contactForm--bank-account2" placeholder="Bank Account #/Type">
-    </label>
-    <label class="contactForm__field contactForm__field--inline fr">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="bank-balance2" id="contactForm--bank-balance2" placeholder="Balance $">
-    </label>
-    <ul class="form--group-label">Credit References</ul>
-    <label class="contactForm__field">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="credit-name" id="contactForm--credit-name" placeholder="Bank Name">
-    </label>
-    <label class="contactForm__field contactForm__field--inline">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="credit-type" id="contactForm--credit-type" placeholder="Account Type">
-    </label>
-    <label class="contactForm__field contactForm__field--inline fr">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="bank-balance" id="contactForm--bank-balance" placeholder="Balance $">
-    </label>
-    <label class="contactForm__field">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="bank-name-address" id="contactForm--bank-name-address2" placeholder="Bank Name/Address">
-    </label>
-    <label class="contactForm__field contactForm__field--inline">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="bank-account2" id="contactForm--bank-account2" placeholder="Account Type">
-    </label>
-    <label class="contactForm__field contactForm__field--inline fr">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="bank-balance2" id="contactForm--bank-balance2" placeholder="Balance $">
-    </label>
-      <ul class="form--group-label">Have you ever been evicted from your home for any reason?</ul>
-      <label class="contactForm__field">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="textarea" class="contactForm__input" name="ever-evicted" id="contactForm--ever-evicted" placeholder=" If so, please give details.">
-    </label>
-    <ul class="form--group-label">Have you ever been arrested or convicted of any crime?</ul>
-      <label class="contactForm__field">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="textarea" class="contactForm__input" name="ever-arrested" id="contactForm--ever-arrested" placeholder=" If so, please give details.">
-    </label>
-    <ul class="form--group-label">Relative/Emergency Contacts (not residing with you)</ul>
-    <label class="contactForm__field">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="emergency-name" id="contactForm--emergency-name" placeholder="Full Name*" required>
-    </label>
-    <label class="contactForm__field contactForm__field--inline">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="emergency-relation" id="contactForm--emergency-relation" placeholder="Relation">
-    </label>
-    <label class="contactForm__field contactForm__field--inline fr">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-       <input type="tel" class="contactForm__input" name="emergency-phone" id="contactForm--emergency-phone" placeholder="Phone*" data-pattern="phone" required>
-    </label>    
-    <label class="contactForm__field">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-    <input type="text" class="contactForm__input" name="emergency-address" id="contactForm--emergency-address" placeholder="Address">
-    </label>
-    <label class="contactForm__field">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="emergency-name2" id="contactForm--emergency-name2" placeholder="Full Name*" required>
-    </label>
-    <label class="contactForm__field contactForm__field--inline">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="text" class="contactForm__input" name="emergency-relation2" id="contactForm--emergency-relation2" placeholder="Relation">
-    </label>
-    <label class="contactForm__field contactForm__field--inline fr">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-     <input type="tel" class="contactForm__input" name="emergency-phone2" id="contactForm--emergency-phone2" placeholder="Phone*" data-pattern="phone" required>
-    </label>
-    <label class="contactForm__field">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-    <input type="text" class="contactForm__input" name="emergency-address2" id="contactForm--emergency-address2" placeholder="Address">
-    </label>
-    <ul class="form--group-label">How did you hear about us?</ul>
-        <fieldset id="referral" style="border:none;padding:15px 0;">
-         <label>
-           <input type="checkbox" name="advert" id="referral-advert" value="advertisement" class="field">
-           <a class="checkbox--label">Advertisement</a>
-         </label>
-         <label>
-           <input type="checkbox" name="friend" id="referral-friend" value="friend" class="field">
-           <a class="checkbox--label">Friend, Family or Co-worker</a>
-         </label>
-         <label>
-           <input type="checkbox" name="other" id="referral-other" value="other" class="field">
-           <a class="checkbox--label">Other</a>
-         </label>
-    </fieldset>
-      <label class="contactForm__field">
-      <!--[if IE 9]><p class="contactForm__label">Phone</p><![endif]-->
-      <input type="textarea" class="contactForm__input" name="referral-name" id="contactForm--referral-name" placeholder="Referral Source Name">
-    </label>
-
-      
-    <input type="submit" class="contactForm__submit" value="submit">
-  </form>
-  <div class="contactForm__disclaimer">
-      <p>$100 application fee is due with application. Application fee is refundable if the application is not approved. It is non-refundable if application is approved, and will be credited towards 1 month security deposit, which is due at lease signing. First month’s rent is due at move-in.</p>
-      <p>If you would prefer to mail a check, please make it payable to: 37 Washington Street Redevelopment LLC. Please mail the check with your application to:</p>
-
- <ul class="disclaimer__mail-check">
-    <li>Traggorth Companies</li>
-    <li>60 Summer Street</li>
-    <li>Boston, MA 02110</li>
- </ul>
-      
-  </div>
-  <div class="contactForm__note">
-    <p class="contactForm__message">Thank you!<br/> The final step is to submit your application fee <a href="https://secure.squarespace.com/commerce/checkout?cartId=56c39e1ccf80a1bf7aad7bcb">here</a>. Once completed, our leasing staff will be in touch shortly.</p>
-  </div>
-</div>    
- {% include 'footer.html' %}
+  {% include 'navbar.html' %}
+  <section class="application">
+    <h1 class="application__headline">JM Lofts Rental Application</h1>
+    <span class="application__hint">*indicates required field</span>
+    <div class="application__container">
+      <form class="application__form form" novalidate>
+        {% for fieldset in application %}
+          <fieldset class="form__group">
+          {% set counter = 0 %}
+            {% if fieldset.legend %}<legend class="form__legend">{{ fieldset.legend }}</legend>{% endif %}
+            {% for field in fieldset.fields %}
+              {% if field.type == "checkbox" %}
+                <label class="form__field form__field--checkbox{% for mod in field.modifiers %} form__field--{{mod}}{% endfor %}">
+                  <input type="checkbox" class="form__input" name="{{ field.name }}" id="application--{{ field.name }}" value="{{ field.name }}">
+                  <a class="form__label form__label--check">{{ field.label }}</a>
+                </label>
+              {% else %}
+                {% if indexOf(field.modifiers, "full") > -1 %}
+                  {% set counter = 0 %}
+                {% else %}
+                  {% set counter += 1 %}
+                {% endif %}
+                <label class="form__field{% for mod in field.modifiers %} form__field--{{mod}}{% endfor %}{% if counter == 2 %} form__field--right{% endif %}">
+                  <!--[if IE 9]><p class="form__label">{{ field.label }}{% if field.required %}*{% endif %}</p><![endif]-->
+                  <input type="{{ field.type }}" class="form__input" name="{{ field.name }}" id="application--{{ field.name }}" placeholder="{{ field.label }}{% if field.required %}*{% endif %}" {% if field.pattern %}data-pattern="{{ field.pattern }}"{% endif %} {% if field.required %}required{% endif %}>
+                </label>
+                {% if counter == 2 %}{% set counter = 0 %}{% endif %}
+              {% endif %}
+            {% endfor %}
+          </fieldset>
+        {% endfor %}
+        <input type="submit" class="form__submit application__submit" value="submit">
+      </form>
+      <div class="application__disclaimer">
+        <p>$100 application fee is due with application. Application fee is refundable if the application is not approved. It is non-refundable if application is approved, and will be credited towards 1 month security deposit, which is due at lease signing. First month’s rent is due at move-in.</p>
+        <p>If you would prefer to mail a check, please make it payable to: 37 Washington Street Redevelopment LLC. Please mail the check with your application to:</p>
+        <address class="application__mailingAddress">
+          <p>Traggorth Companies</p>
+          <p>60 Summer Street</p>
+          <p>Boston, MA 02110</p>
+        </address>
+      </div>
+      <div class="form__note">
+        <p class="form__message">Thank you!<br/> The final step is to submit your application fee <a href="https://secure.squarespace.com/commerce/checkout?cartId=56c39e1ccf80a1bf7aad7bcb">here</a>. Once completed, our leasing staff will be in touch shortly.</p>
+      </div>
+    </div>
+  </section>
+  {% include 'footer.html' %}
   <script src="../assets/js/application.js"></script>
 </body>
 </html>
