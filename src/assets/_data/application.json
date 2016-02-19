@@ -100,9 +100,7 @@
     "modifiers": [
       "inline"
     ]
-  }]
-}, {
-  "fields": [{
+  }, {
     "label": "Specific unit(s) you are applying for?",
     "name": "dai_units",
     "type": "text",

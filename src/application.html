@@ -17,11 +17,14 @@
         {% for fieldset in application %}
           <fieldset class="form__group">
           {% set counter = 0 %}
+          {% set previous = "" %}
             {% if fieldset.legend %}<legend class="form__legend">{{ fieldset.legend }}</legend>{% endif %}
             {% for field in fieldset.fields %}
               {% if field.type == "checkbox" %}
+                {% if indexOf(field.modifiers, "inline") > -1 %}{% set previous = "inline checkbox" %}{% endif %}
                 <label class="form__field form__field--checkbox{% for mod in field.modifiers %} form__field--{{mod}}{% endfor %}">
-                  <input type="checkbox" class="form__input" name="{{ fieldset.legend}}[{{ field.label }}]" id="application--{{ field.name }}" value="YES">
+                  <input type="checkbox" class="form__input form__input--checkbox" name="{{ fieldset.legend}}[{{ field.label }}]" id="application--{{ field.name }}" value="Yes">
+                  <input type="hidden" name="{{ fieldset.legend}}[{{ field.label }}]" value="No">
                   <a class="form__label form__label--check">{{ field.label }}</a>
                 </label>
               {% else %}
@@ -30,6 +33,7 @@
                 {% else %}
                   {% set counter += 1 %}
                 {% endif %}
+                {% if previous == "inline checkbox" %}<br/>{% set previous = "" %}{% endif %}
                 <label class="form__field{% for mod in field.modifiers %} form__field--{{mod}}{% endfor %}{% if counter == 2 %} form__field--right{% endif %}">
                   <!--[if IE 9]><p class="form__label">{{ field.label }}{% if field.required %}*{% endif %}</p><![endif]-->
                   <input type="{{ field.type }}" class="form__input" name="{{ fieldset.legend}}[{{ field.label }}]" id="application--{{ field.name }}" placeholder="{{ field.label }}{% if field.required %}*{% endif %}" {% if field.pattern %}data-pattern="{{ field.pattern }}"{% endif %} {% if field.required %}required{% endif %}>

@@ -11,9 +11,16 @@ Patterns['EMAIL'] = "[a-zA-Z0-9_.+\-]+@[a-zA-Z0-9-.]+$";
 Patterns['TEL'] = "^\\(?([0-9]{3})\\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$";
 
 for(let i = 0; i < fields.length; i++) {
-  fields[i].addEventListener('focusout', function(event) {
+  fields[i].addEventListener('blur', function(event) {
     validateField(this);
   });
+  if (fields[i].getAttribute('type') === 'checkbox') {
+    let hidden = document.querySelector(`input[type="hidden"][name="${fields[i].getAttribute('name')}"]`);
+    fields[i].addEventListener('change', function(event) {
+      if (this.checked) hidden.disabled = true;
+      else hidden.disabled = false;
+    });
+  }
 }
 
 submit.addEventListener('click', function(event) {
