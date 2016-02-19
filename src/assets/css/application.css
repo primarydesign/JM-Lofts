@@ -99,11 +99,26 @@
   text-shadow: none;
   text-transform: lowercase;
 }
-.form__label--check {
+
+.form__label {
   color: $black;
+  text-transform: none;
+  @media (width >= 1000px) {
+    margin-bottom: 0.80vw;
+    font-size: 1.00vw;
+  }
+  @media (width < 1000px) {
+    margin-bottom: 1vw;
+    font-size: 2.25vw;
+  }
+  @media (width < 600px) {
+    margin-bottom: 2vw;
+    font-size: 3.50vw;
+  }
+}
+.form__label--check {
   display: inline;
   padding:0 15px;
-  text-transform: none;
   @media (width >= 1000px) {
     font-size: 1vw;
   }
