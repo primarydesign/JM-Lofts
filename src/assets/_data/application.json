@@ -699,7 +699,7 @@
   "legend": "Previous Employer Contact / Supervisor",
   "fields": [{
     "label": "Name",
-    "name": "employer_1_name",
+    "name": "employer_2_name",
     "type": "text",
     "required": false,
     "pattern": "",
@@ -708,7 +708,7 @@
     ]
   }, {
     "label": "Phone",
-    "name": "employer_1_phone",
+    "name": "employer_2_phone",
     "type": "tel",
     "required": false,
     "pattern": "tel",
@@ -717,7 +717,7 @@
     ]
   }, {
     "label": "Email",
-    "name": "employer_1_email",
+    "name": "employer_2_email",
     "type": "email",
     "required": false,
     "pattern": "email",
@@ -921,7 +921,7 @@
     ]
   }]
 }, {
-  "legend": "RELATIVE/EMERGENCY CONTACTS (NOT RESIDING WITH YOU)",
+  "legend": "Relative/Emergency Contacts (Not Residing With You)",
   "fields": [{
     "label": "Full Name",
     "name": "ec_1_name",
@@ -1025,7 +1025,7 @@
       "inline"
     ]
   }, {
-    "label": "Referrak Source Name",
+    "label": "Referral Source Name",
     "name": "referral_source",
     "type": "text",
     "required": false,
@@ -1037,7 +1037,7 @@
 }, {
   "legend": "Social Security Number",
   "fields": [{
-    "label": "000-00-0000",
+    "label": "SSN",
     "name": "prospect_ssn",
     "type": "text",
     "required": false,

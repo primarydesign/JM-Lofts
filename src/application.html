@@ -21,7 +21,7 @@
             {% for field in fieldset.fields %}
               {% if field.type == "checkbox" %}
                 <label class="form__field form__field--checkbox{% for mod in field.modifiers %} form__field--{{mod}}{% endfor %}">
-                  <input type="checkbox" class="form__input" name="{{ field.name }}" id="application--{{ field.name }}" value="{{ field.name }}">
+                  <input type="checkbox" class="form__input" name="{{ fieldset.legend}}[{{ field.label }}]" id="application--{{ field.name }}" value="YES">
                   <a class="form__label form__label--check">{{ field.label }}</a>
                 </label>
               {% else %}
@@ -32,7 +32,7 @@
                 {% endif %}
                 <label class="form__field{% for mod in field.modifiers %} form__field--{{mod}}{% endfor %}{% if counter == 2 %} form__field--right{% endif %}">
                   <!--[if IE 9]><p class="form__label">{{ field.label }}{% if field.required %}*{% endif %}</p><![endif]-->
-                  <input type="{{ field.type }}" class="form__input" name="{{ field.name }}" id="application--{{ field.name }}" placeholder="{{ field.label }}{% if field.required %}*{% endif %}" {% if field.pattern %}data-pattern="{{ field.pattern }}"{% endif %} {% if field.required %}required{% endif %}>
+                  <input type="{{ field.type }}" class="form__input" name="{{ fieldset.legend}}[{{ field.label }}]" id="application--{{ field.name }}" placeholder="{{ field.label }}{% if field.required %}*{% endif %}" {% if field.pattern %}data-pattern="{{ field.pattern }}"{% endif %} {% if field.required %}required{% endif %}>
                 </label>
                 {% if counter == 2 %}{% set counter = 0 %}{% endif %}
               {% endif %}
