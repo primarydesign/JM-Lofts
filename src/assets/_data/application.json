@@ -1057,7 +1057,7 @@
       "inline"
     ]
   },{
-    "label": "Provide SSN via phone",
+    "label": "Provide via phone",
     "name": "prospect_ssn_phone",
     "type": "checkbox",
     "modifiers": [
