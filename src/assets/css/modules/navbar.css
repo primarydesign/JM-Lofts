@@ -6,6 +6,9 @@
   border-top: $border-thick solid $black;
   transition: transform 300ms easeOutQuad;
   font-weight: 700;
+  @media (width < 700px) {
+    border: none;
+  }
 }
 .navbar.is-pinned { transform: translateY(0%); }
 .navbar.not-pinned { transform: translateY(-100%); }

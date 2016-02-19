@@ -1,7 +1,7 @@
+@import './vendors/*.css';
 @import './library/*.css';
 @import './theme/*.css';
-@import './modules/navbar.css';
-@import './modules/footer.css';
+@import './modules/*.css';
 
 .page {
   border: none;
