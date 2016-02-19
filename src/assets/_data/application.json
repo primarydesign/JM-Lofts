@@ -100,14 +100,25 @@
     "modifiers": [
       "inline"
     ]
-  }, {
+  }]
+}, {
+  "fields": [{
     "label": "Specific unit(s) you are applying for?",
     "name": "dai_units",
     "type": "text",
     "required": false,
     "pattern": "",
     "modifiers": [
-      "full"
+      "inline"
+    ]
+  }, {
+    "label": "# of Parking Spaces",
+    "name": "dai_parking",
+    "type": "text",
+    "required": false,
+    "pattern": "",
+    "modifiers": [
+      "inline"
     ]
   }, {
     "label": "Roommate 1",
@@ -1046,7 +1057,7 @@
       "inline"
     ]
   },{
-    "label": "Provide SSN via phone?",
+    "label": "Provide SSN via phone",
     "name": "prospect_ssn_phone",
     "type": "checkbox",
     "modifiers": [
