@@ -25,6 +25,11 @@ gulp.task('assets', function() {
 });
 
 gulp.task('pages', function() {
+  gulp.src(['./src/templates/{navbar,footer}.html'])
+  .pipe(swig(_.swig()))
+  .pipe(inline(_.inline))
+  .pipe(htmlmin(_.htmlmin))
+  .pipe(gulp.dest($.assets.dest));
   return gulp.src($.pages.globs)
   .pipe(swig(_.swig()))
   .pipe(inline(_.inline))
