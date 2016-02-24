@@ -4,7 +4,7 @@
 
     $submission = $_POST;
 
-    $address = "mitchell@primarydesign.com";
+    $address = "niko@primarydesign.com";
     $subject = "New Application from J.M. Lofts";
     $content = "There is a new application from the J.M. Lofts website. Please see the details below:</br>";
 

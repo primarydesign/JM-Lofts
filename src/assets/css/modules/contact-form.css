@@ -199,12 +199,13 @@
   transition: opacity 300ms easeOutQuad;
 }
 .contactForm__note.is-active {
+  position: relative;
   opacity: 1;
   z-index: 2;
 }
 .contactForm__message {
   color: $sable;
-  font-family: $baskerville;
+  font-family: $gotham;
   text-align: center;
   @media (width >= 1000px) {
     font-size: 2.50vw;

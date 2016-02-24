@@ -35,7 +35,7 @@ submit.addEventListener('click', function(event) {
 function submission(form) {
   jQuery.ajax({
     type: 'POST',
-    url: '/jm-lofts/app/assets/application.php',
+    url: '/jm-lofts/assets/application.php',
     data: jQuery(form).serialize(),
     beforeSend: function() {
       submit.disabled = true;
