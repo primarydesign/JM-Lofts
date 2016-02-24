@@ -122,9 +122,6 @@
 .unitModal__image img {
   height: 60vmin;
   height: 60vm;
-  @media (width < 640px) {
-    width:100%;
-  }
 }
 .unitModal__link {
   display: block;
