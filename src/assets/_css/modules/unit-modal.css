@@ -1,0 +1,153 @@
+/* unit modal */
+.vex.vex-theme-plain {
+  overflow: hidden;
+  padding-top: 2%;
+  @media (width < 640px) {
+    padding-top: 13%;
+  }
+}
+.vex-overlay {
+  max-height: 100vh;
+  background: rgba(214, 209, 186,.8);
+}
+.vex-content {
+  /*height: 100%;*/
+  width: 75% !important;
+  max-width: 960px !important;
+  padding: 0 !important;
+  border:15px solid $black;
+  border-top: none;
+  @media (width < 640px) {
+    width: 100% !important;
+    border: 5px solid $black;
+    border-top: none;
+  }
+}
+.vex.vex-theme-plain .vex-close {
+    position: fixed;
+    top: 5px;
+    right: 25px;
+  @media (width < 640px) {
+     right: 10px;
+  }
+}
+.vex.vex-theme-plain .vex-close::before, .vex.vex-theme-plain .vex-close:hover::before {
+    color: #fff;
+    background: $black;
+}
+.unitModal {
+  @include bordersHorizontalBottom;
+  /*height: 100%;*/
+  /*overflow-y: auto;*/
+  /*overflow-x: hidden;*/
+}
+.unitModal__details {
+  width: 104%;
+  position: relative;
+  top: -3px;
+  left: -2%;
+  text-align: center;
+}
+.unitModal__detail {
+  display: inline-block;
+  width: 24%;
+  padding: 1em;
+  margin: .25%;
+  background: $black;
+  /*font-family: $gotham;*/
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #fff !important;
+  @include smoothText;
+  vertical-align: top;
+  @media (width < 900px) {
+    font-size: .75em;
+    letter-spacing: 1px;
+  }
+  @media (width < 640px) {
+    font-size: .75em;
+    letter-spacing: 1px;
+    padding: 1em 0 1.75em;
+    background: $black;
+  }
+}
+#unitModal--br:after, #unitModal--ba:after, #unitModal--sf:after {
+  padding-left: 5%;
+  @media (width < 640px) {
+    display: block;
+    line-height: .5em;
+    padding-left: 0;
+  }
+}
+#unitModal--br:after {
+  content: "BED";
+}
+#unitModal--ba:after {
+  content: "BATH";
+}
+#unitModal--sf:after {
+  content: "SQ.FT.";
+}
+#unitModal--un {
+  @media (width < 640px) {
+    font-size: 1em;
+  }
+}
+#unitModal--un:before {
+  display: block;
+  content: "UNIT";
+  font-size: .7em;
+  @media (width < 900px) {
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+}
+.unitModal__detail--unit {
+  background: $black;
+  background-position: top;
+  font-size: 3em;
+  line-height: .85em;
+  padding: 2% 0 2.5%;
+  text-align: center;
+  @media (width < 900px) {
+    padding: 2.5em 0;
+  }
+  @media (width < 640px) {
+    padding: 1.75em 0;
+  }
+}
+.unitModal__image {
+  text-align: center;
+}
+.unitModal__image img {
+  height: 60vmin;
+  height: 60vm;
+  @media (width < 640px) {
+    width:100%;
+  }
+}
+.unitModal__link {
+  display: block;
+  width: 250px;
+  padding: 10px;
+  margin: auto;
+  text-align: center;
+  color: #fff;
+  /*font-family: $gotham;*/
+  text-transform: uppercase;
+  background: url(../img/rolled_ink.png) no-repeat center center;
+  background-size: cover;
+  @include smoothText;
+}
+.unitModal__disclaimer {
+  text-align: center;
+  /*font-family: $gotham;*/
+  font-size: .8em;
+  line-height: 1.25em;
+  padding: 30px 15% 30px;
+  @media (width < 900px) {
+    font-size: .7em;
+    text-align: left;
+    padding: 30px 8% 30px;
+  }
+}

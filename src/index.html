@@ -1,23 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>J.M. Lofts</title>
-  <meta name="viewport" content="maximum-scale=1,width=device-width,initial-scale=1,user-scalable=0">
-  <link href='https://fonts.googleapis.com/css?family=Montserrat:700,400|IM+Fell+Great+Primer+SC' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="assets/css/index.css">
-</head>
-<body class="page">
-  {% include 'navbar.html' %}
-  <main class="page__content">
-    <div class="page__section" id="section--welcome">{% include 'sect-welcome.html' %}</div>
-    <div class="page__section" id="section--floorplans">{% include 'sect-floorplans.html' %}</div>
-    <div class="page__section" id="section--features">{% include 'sect-features.html' %}</div>
-    <div class="page__section" id="section--downtown">{% include 'sect-downtown.html' %}</div>
-    <div class="page__section" id="section--contact">{% include 'sect-contact.html' %}</div>
-  </main>
-  {% include 'footer.html' %}
-  <div class="page__overlay"></div>
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="section" id="section--welcome">{% include 'sections/romance.html' %}</div>
+  <div class="section" id="section--floorplans">{% include 'sections/floorplans.html' %}</div>
+  <div class="section" id="section--features">{% include 'sections/features.html' %}</div>
+  <div class="section" id="section--downtown">{% include 'sections/downtown.html' %}</div>
+  <div class="section" id="section--contact">{% include 'sections/contact.html' %}</div>
+{% endblock %}
+{% block scripts %}
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3"></script>
   <script>
     window.JMLocations = [
@@ -71,6 +61,4 @@
       {% endfor %}
     ];
   </script>
-  <script src="assets/js/index.js"></script>
-</body>
-</html>
+{% endblock %}

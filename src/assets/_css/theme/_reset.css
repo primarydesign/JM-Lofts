@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-family: $gotham;
+  -webkit-font-smoothing: antialiased;
+}
+a, button {
+  cursor: pointer !important;
+}
+a, address {
+  color: inherit;
+  font-style: normal;
+  text-decoration: none;
+}

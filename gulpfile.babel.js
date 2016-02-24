@@ -1,6 +1,7 @@
 import gulp from 'gulp';
 import direque from 'require-dir';
 /* source processing */
+import data from 'gulp-data';
 import swig from 'gulp-swig';
 import named from 'vinyl-named';
 import webpack from 'gulp-webpack';
@@ -26,11 +27,13 @@ gulp.task('assets', function() {
 
 gulp.task('pages', function() {
   gulp.src(['./src/templates/{navbar,footer}.html'])
+  .pipe(data(_.data))
   .pipe(swig(_.swig()))
   .pipe(inline(_.inline))
   .pipe(htmlmin(_.htmlmin))
   .pipe(gulp.dest($.assets.dest));
   return gulp.src($.pages.globs)
+  .pipe(data(_.data))
   .pipe(swig(_.swig()))
   .pipe(inline(_.inline))
   .pipe(pretty())

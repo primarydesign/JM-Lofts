@@ -1,0 +1,145 @@
+.mapUI {
+  overflow: hidden;
+  background: $sable;
+  @media (width >= 800px) {
+    display: inline-block;
+    size: 25% 40vw;
+  }
+  @media (width < 800px) {
+    display: block;
+    height: 80vw;
+  }
+}
+
+.mapUI__categories {
+  max-height: 100%;
+  size: auto 100%;
+}
+.mapUI__category {
+  overflow: hidden;
+  transition: height 300ms easeOutQuad;
+  @media (width >= 800px) {
+    size: 100% calc(40vw/7);
+  }
+  @media (width < 800px) {
+    size: 100% calc(80vw/7);
+  }
+}
+.mapUI__category.is-active {
+  height: 100%;
+}
+
+.mapUI__button {
+  size: 100% calc(40vw/7);
+  background: none;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  text-align: left;
+  user-select: none;
+  @media (width >= 800px) {
+    cursor: pointer;
+    size: 100% calc(40vw/7);
+  }
+  @media (width < 800px) {
+    size: 100% calc(80vw/7);
+  }
+}
+.mapUI__button:after {
+  content: '';
+  display: inline-block;
+  size: 0 100%;
+  vertical-align: middle;
+}
+
+.mapUI__button.is-active,
+.mapUI__button:hover {
+  background: url(../img/rolled_ink.png) no-repeat center / 100% 100%;
+}
+
+.mapUI__buttonIcon {
+  display: inline-block;
+  position: relative;
+  size: 25% 65%;
+  vertical-align: middle;
+}
+.mapUI__buttonSVG {
+  display: block;
+  margin: 0 auto;
+  size: auto 100%;
+}
+.mapUI__buttonLabel {
+  display: inline-block;
+  vertical-align: middle;
+  color: $black;
+  /*font-family: $gotham;*/
+  user-select: none;
+  text-transform: uppercase;
+  @media (width >= 800px) {
+    font-size: 1.00vw;
+  }
+  @media (width < 800px) {
+    font-size: 4.00vw;
+  }
+}
+
+.mapUI__locations {
+  max-height: 0;
+  overflow: hidden;
+  size: 100% calc(40vw - (40vw/7) + 1px);
+  transition: max-height 300ms easeOutQuad;
+  @media (width >= 800px) {
+    size: 100% calc(40vw - (40vw/7) + 1px);
+  }
+  @media (width < 800px) {
+    size: 100% calc(80vw - (80vw/7) + 1px);
+  }
+}
+.mapUI__locations.is-active {
+  @media (width >= 800px) {
+    max-height: calc(40vw - (40vw/7) + 1px);
+  }
+  @media (width < 800px) {
+    max-height: calc(80vw - (80vw/7) + 1px);
+  }
+}
+
+.mapUI__location {
+  cursor: pointer;
+  border-top: 1px solid $black;
+  font-size: 0;
+  @media (width >= 800px) {
+    size: 100% 3vw;
+  }
+  @media (width < 800px) {
+    size: 100% 10vw;
+  }
+}
+.mapUI__location:last-child {
+  border-bottom: 1px solid $black;
+}
+.mapUI__location:after {
+  content: '';
+  display: inline-block;
+  size: 0 100%;
+  vertical-align: middle;
+}
+.mapUI__location.is-active,
+.mapUI__location:hover,
+.mapUI__location:focus {
+  background: url(../img/rolled_ink.png) no-repeat center / 100% 100%;
+}
+
+.mapUI__locationLabel {
+  display: inline-block;
+  margin-left: 10%;
+  vertical-align: middle;
+  color: $black;
+  /*font-family: $gotham;*/
+  @media (width >= 800px) {
+    font-size: 1.00vw;
+  }
+  @media (width < 800px) {
+    font-size: 3.00vw;
+  }
+}
