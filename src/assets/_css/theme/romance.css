@@ -1,4 +1,25 @@
-.romanceText {
+.section__copy {
+  margin: 0 auto;
+  max-width: 800px;
+  width: 80%;
+  font-family: $scala;
+  font-size: 1.30rem;
+}
+.paragraph {
+  margin-bottom: 1.50rem;
+  /*text-align: justify;*/
+}
+.paragraph:first-child {
+  text-indent: 2.50rem;
+}
+.paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.heading {}
+.subtitle { font-family: $scala; }
+
+/*.romanceText {
   margin: 0 auto;
   padding: 4vw 5vw 6vw;
   width: 80%;
@@ -23,9 +44,9 @@
   margin:auto;
   margin:30px auto 0;
 }
-
+*/
 .romanceText__subhead {
-  display: block;
+  /*display: block;
   text-align: center;
   font-family: $scala;
   line-height: 1.5em;
@@ -36,13 +57,12 @@
       &:br {
           display: none;
       }
-  }
+  }*/
 }
-
+/*
 .romanceText__paragraph {
   font-family: $scala;
   font-size: 2.0vw;
-  /*font-variant: small-caps;*/
   text-align: justify;
   text-indent: 2em;
   padding-top: 2vw;
@@ -65,4 +85,4 @@
   @media (width < 700px) {
     margin-top: 6vw;
   }
-}
+}*/
