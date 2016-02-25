@@ -6,6 +6,9 @@
 .type--paragraph:first-of-type {
   text-indent: 2.50rem;
 }
+.type--paragraph:last-of-type {
+  margin-bottom: 0;
+}
 .type--headline {}
 .type--descriptor {}
 .type--delineated {}

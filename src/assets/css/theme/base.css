@@ -23,6 +23,7 @@ html {
 .section__copy {
   margin: 0 auto;
   max-width: 850px;
+  padding: 3rem 0;
   width: 80%;
   font-family: $scala;
   font-size: 1.30rem;
