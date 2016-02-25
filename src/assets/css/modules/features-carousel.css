@@ -1,10 +1,12 @@
 .featuresCarousel {
+  padding-bottom: 65%;
   position: relative;
+  size: 100% 0;
 }
 .featuresCarousel__frame {
   overflow: hidden;
-  position: relative;
-  size: 100% 60vw;
+  position: absolute;
+  size: 100% 100%;
   touch-action: none;
 }
 .featuresCarousel__track {
