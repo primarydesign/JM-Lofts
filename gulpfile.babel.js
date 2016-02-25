@@ -35,7 +35,6 @@ gulp.task('pages', function() {
   return gulp.src($.pages.globs)
   .pipe(data(_.data))
   .pipe(swig(_.swig()))
-  .pipe(inline(_.inline))
   .pipe(pretty())
   .pipe(htmlmin(_.htmlmin))
   .pipe(gulp.dest($.pages.dest))
@@ -61,9 +60,7 @@ gulp.task('scripts', function() {
 gulp.task('images', function() {
   return gulp.src($.img.globs)
   .pipe(cached())
-  .pipe(Library.sprites)
   .pipe(imagemin())
-  .pipe(Library.sprites.restore)
   .pipe(gulp.dest($.img.dest))
   .pipe(Browser.stream());
 });
