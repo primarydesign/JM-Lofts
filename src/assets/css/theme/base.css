@@ -10,12 +10,13 @@ html {
 }
 .page__content {
   margin: 0 auto;
-  max-width: 1300px;
+  max-width: 1200px;
   width: 100%;
   background-color: $sable;
 }
 .section {
   position: relative;
+  width: 100%;
 }
 .section__heading {}
 .section__hero {}
@@ -25,4 +26,11 @@ html {
   width: 80%;
   font-family: $scala;
   font-size: 1.30rem;
+}
+
+.aspectWrapper {
+  height: 100%;
+  position: absolute;
+  top: 0;left: 0;
+  width: 100%;
 }
