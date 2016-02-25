@@ -49,12 +49,12 @@ toggle.addEventListener('click', function(e) {
   page.tillstand.locked.toggle();
 });
 
-overlay.addEventListener('click', function(e) {
-  toggles.tillstand.set('active', false);
-  overlay.tillstand.active.set(false);
-  navMenu.tillstand.active.set(false);
-  page.tillstand.locked.set(false);
-});
+// overlay.addEventListener('click', function(e) {
+//   toggles.tillstand.set('active', false);
+//   overlay.tillstand.active.set(false);
+//   navMenu.tillstand.active.set(false);
+//   page.tillstand.locked.set(false);
+// });
 
 window.addEventListener('resize', function(e) {
   if (window.innerWidth >= 700 && navMenu.tillstand.active.get()) {

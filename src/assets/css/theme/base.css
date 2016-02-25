@@ -19,34 +19,10 @@ html {
 }
 .section__heading {}
 .section__hero {}
-.section__copy {}
-
-/*body {
-  background: $sable;
-}
-
-.page {
-  padding: calc($navHeight - 0.5px) 0 0 !important;
-  background-color: $black;
-  border: $border-thick solid $black;
-  border-top: none;
-  color: $black;
-  font-family: $gotham;
-}
-
-.page__content {
-  margin: 0 auto;
-  max-width: 1300px;
-  width: 80%;
-  background-color: $sable;
-}
-
-.section {
-  position: relative;
-}
 .section__copy {
-  max-width: 800px;
+  margin: 0 auto;
+  max-width: 850px;
   width: 80%;
   font-family: $scala;
+  font-size: 1.30rem;
 }
-*/

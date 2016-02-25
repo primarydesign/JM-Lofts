@@ -4,12 +4,13 @@
   <div class="section" id="section--welcome">{% include 'sections/romance.html' %}</div>
   <div class="section" id="section--floorplans">{% include 'sections/floorplans.html' %}</div>
   <div class="section" id="section--features">{% include 'sections/features.html' %}</div>
-  <div class="section" id="section--downtown">{% include 'sections/downtown.html' %}</div>
-  <div class="section" id="section--contact">{% include 'sections/contact.html' %}</div>
+  <div class="section" id="section-downtown">{% include 'sections/downtown.html' %}</div>
+  <div class="section" id="section-contact">{% include 'sections/contact.html' %}</div>
 {% endblock %}
 {% block scripts %}
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3"></script>
   <script>
+    window.initMap = function() { console.log('works'); }
     window.JMLocations = [
       {% for location in locations %}
         {% set random = Math.round(Math.random()*3) %}

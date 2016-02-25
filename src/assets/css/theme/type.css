@@ -1,5 +1,11 @@
 .type__container {}
-.type--paragraph {}
+.type--paragraph {
+  margin-bottom: 1.50rem;
+  text-align: justify;
+}
+.type--paragraph:first-of-type {
+  text-indent: 2.50rem;
+}
 .type--headline {}
 .type--descriptor {}
 .type--delineated {}
