@@ -5,7 +5,7 @@
       {% for category in locations | values('category', ['master', 'transportation']) %}
         <li class="mapUI__category" data-category="{{ category }}">
           <button class="mapUI__button" data-category="{{ category }}">
-            <span class="mapUI__buttonIcon"></span>
+            <span class="mapUI__buttonIcon"><img src="assets/img/map_icons/button-{{ category | replace('/', '_') | lower }}.svg" alt="{{ category }}"></span>
             <span class="mapUI__buttonLabel">{{ category | replace('/', ' &amp; ') }}</span>
           </button>
           <ul class="mapUI__locations" data-category="{{ category }}">
