@@ -7,10 +7,10 @@
     <figure class="unitTable">
       <figcaption class="unitTable__captions">
         <span class="unitTable__caption">One-Bedroom Apartments</span>
-        <span class="unitTable__sub-caption">starting at $1,425*</span>
+        <span class="unitTable__caption">starting at $1,425*</span>
       </figcaption>
       <div class="unitTable__table">
-          <span class="unitTable__type">one bed <span class="small-char">&amp;</span> one bath</span>
+          <div class="unitTable__type">One Bed <span>&amp;</span> One Bath</div>
           <div class="unitTable__body">
           {% for unit in units %}{% if unit.br == 1 %}
             <div class="unitTable__row" data-unit-un="{{ unit.un }}" data-unit-br="{{ unit.br }}" data-unit-ba="1" data-unit-sf="{{ unit.sf }}" data-unit-image="{{ plans[unit.un] }}">
@@ -26,10 +26,10 @@
     <figure class="unitTable">
       <figcaption class="unitTable__captions">
         <span class="unitTable__caption">Two-Bedroom Apartments</span>
-        <span class="unitTable__sub-caption">starting at $1,600*</span>
+        <span class="unitTable__caption">starting at $1,600*</span>
       </figcaption>
       <div class="unitTable__table">
-        <span class="unitTable__type">two bed <span class="small-char">&amp;</span> one bath</span>
+        <div class="unitTable__type">Two Bed <span>&amp;</span> One Bath</div>
         <div class="unitTable__body">
           {% for unit in units %}{% if unit.br == 2 %}
             <div class="unitTable__row" data-unit-un="{{ unit.un }}" data-unit-br="{{ unit.br }}" data-unit-ba="1" data-unit-sf="{{ unit.sf }}" data-unit-image="{{ plans[unit.un] }}">
@@ -41,5 +41,5 @@
       </div>
     </figure>
   </div>
-  <p class="unitTable__disclaimer type--supplement">* rents subject to change. equal housing opportunity.</p>
 </div>
+<p class="unitTable__disclaimer type--supplement">*Rents subject to change. Equal housing opportunity.</p>
