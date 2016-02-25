@@ -4,6 +4,7 @@ html {
 .page {
   padding: calc($navHeight - 0.5px) 0 0 !important;
   background-color: $black;
+  border: $border-thick solid $black;
   color: $black;
   font-family: $gotham;
 }

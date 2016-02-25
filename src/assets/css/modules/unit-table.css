@@ -62,7 +62,6 @@
 }
 
 .unitTable__type {
-  @extend .romanceText__subhead;
   padding: 15px 0;
   border-bottom: 1px solid;
   @media (width < 800px) {
@@ -107,7 +106,6 @@
 .unitTable__cell {
   display: inline-block;
   width: calc(100%/2);
-  /*font-family: $gotham;*/
   font-size: 1.50vw;
   text-align: center;
   text-transform: uppercase;
@@ -134,8 +132,7 @@
 }
 
 .unitTable__disclaimer {
-    @extend .romanceText__subhead;
-    font-size: 1rem;
-    padding: 30px 0;
-    line-height: 2.5vw;
+  font-size: 1rem;
+  padding: 30px 0;
+  line-height: 2.5vw;
 }

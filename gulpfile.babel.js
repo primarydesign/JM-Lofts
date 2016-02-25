@@ -68,6 +68,8 @@ gulp.task('images', function() {
   .pipe(Browser.stream());
 });
 
+gulp.task('build', ['pages','assets','styles','scripts','images'], function() {});
+
 gulp.task('watch', function() {
   Browser.init(_.browsersync);
   gulp.watch($.assets.watch, ['assets']);
