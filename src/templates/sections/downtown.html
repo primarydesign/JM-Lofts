@@ -11,11 +11,19 @@
                 <img src="{{ categoryIcon }}" alt="{{ category }}" class="categoryItem__icon">
                 <span class="categoryItem__label">{{ categoryLabel }}</span>
               </button>
-              <ul class="mapMenu__locations" data-category="{{ category }}">
-                <li class="locationItem">
-                  <span class="locationItem__label"></span>
-                </li>
-              </ul>
+              <nav class="categoryItem__list" data-category="{{ category }}">
+                <ul class="mapMenu__locations" data-category="{{ category }}">
+                  {% set store = [] %}
+                  {% for location in locations | filter('category', category, 'equals') %}
+                    {% if store.indexOf(location.name) == -1 %}
+                      <li class="locationItem" data-category="{{ category }}" data-name="{{ location.name | safe }}">
+                        <span class="locationItem__label">{{ location.name }}</span>
+                      </li>
+                    {% endif %}
+                    {% set x = store.push(location.name) %}
+                  {% endfor %}
+                </ul>
+              </nav>
             </li>
           {% endfor %}
         </ul>

@@ -49,18 +49,21 @@
 
 .mapMenu {
   height: 100%;
+  overflow: hidden;
   width: 250px;
-  border: 1px solid $black;
-  border-left: none;
-  border-right: none;
+  background-color: $sable;
 }
 .mapMenu__categories {
   size: 100%;
 }
-.mapMenu__locations {}
+.mapMenu__locations {
+  display: block;
+  overflow: hidden;
+}
 
 .categoryItem {
   height: calc(100%/7);
+  overflow: hidden;
 }
 .categoryItem__button {
   size: 100%;
@@ -73,13 +76,27 @@
   margin: 0 0.50rem;
   size: 2.80rem;
   vertical-align: middle;
-  /*background: red;*/
 }
 .categoryItem__label {
   vertical-align: middle;
   font-size: 0.80rem;
   text-transform: uppercase;
 }
+.categoryItem__list {
+  overflow: hidden;
+}
 
-.locationItem {}
-.locationItem__label {}
+.locationItem {
+  cursor: pointer;
+  padding: 0.70rem;
+}
+.locationItem__label {
+  font-size: 0.80rem;
+  white-space: pre-wrap;
+}
+
+.categoryItem__button, .locationItem {
+  &:hover, &.is-active {
+    background: url(../img/rolled_ink.png) no-repeat center / 100% 100%;
+  }
+}

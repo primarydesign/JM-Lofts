@@ -2,6 +2,7 @@ import moptions from '../library/moptions';
 import Mapster from '../library/mapster';
 import Controls from './categories';
 import velocity from '../vendors/velocity';
+import instate from '../library/instate.js';
 
 const track = document.querySelector('.downtownMap__track');
 const canvas = document.querySelector('.mapCanvas__frame');
@@ -39,6 +40,33 @@ Downtown.markers.list.map(function(marker) {
 
 const Menu = new Controls();
 
+Menu.categoryButtons.map(function(button) {
+  button.addEventListener('click', function() {
+    let category = this.getAttribute('data-category');
+    Downtown.closeIW();
+    if (instate.get(this, 'active')) {
+      Menu.close(category);
+      restoreAllMarkers();
+    } else {
+      Menu.open(category);
+      toggleMarkersByCategory(category);
+    }
+  });
+});
+
+Menu.locationItems.map(function(location) {
+  location.addEventListener('click', function() {
+    if (instate.get(location, 'active')) {
+      // toggleLocations(Interface);
+      toggleMarkersByCategory(this.getAttribute('data-category'));
+
+    } else {
+      // toggleLocations(Interface, this);
+      toggleMarkersByName(this.getAttribute('data-name'));
+    }
+  });
+});
+
 /* MAP MENU APPEARANCE */
 
 filter.addEventListener('click', function(event) {
@@ -50,6 +78,8 @@ filter.addEventListener('click', function(event) {
 window.addEventListener('resize', function() {
   if (menuIsOpen && window.innerWidth >= 900) closeMenu(0);
 });
+
+/* FUNCTIONS INVENTORY */
 
 function openMenu(duration = 400) {
   menuIsOpen = true;
@@ -64,4 +94,47 @@ function closeMenu(duration = 400) {
   velocity(track, {
     'translateX': 0
   },{ duration: duration });
+}
+
+function toggleLocations(Menu, location) {
+  if (Menu.activeLocation) {
+    instate.set(Menu.activeLocation, 'active', false);
+  }
+  if (location) {
+    instate.set(location, 'active', true);
+    Menu.activeLocation = location;
+  }
+}
+
+function toggleMarkersByCategory(category) {
+  Downtown.markers.list.map(function(marker) {
+    if (marker.category === category) {
+      marker.setVisible(true);
+    } else if (!marker.alwaysVisible) {
+      marker.setVisible(false);
+    }
+  });
+}
+
+function toggleMarkersByName(name) {
+  Downtown.markers.list.map(function(marker) {
+    if (marker.name === name) {
+      if (marker.multiple) {
+        Downtown.zoom(13);
+        Downtown.center(JMLCenter);
+      } else {
+        Downtown.zoom(16);
+        Downtown.center(marker.position);
+      }
+      marker.setVisible(true);
+    } else if (!marker.alwaysVisible) {
+      marker.setVisible(false);
+    }
+  });
+}
+
+function restoreAllMarkers() {
+  Downtown.markers.list.map(function(marker) {
+    marker.setVisible(true);
+  });
 }
