@@ -5,7 +5,13 @@ import velocity from '../vendors/velocity';
 const track = document.querySelector('.downtownMap__track');
 const canvas = document.querySelector('.mapCanvas__frame');
 const filter = document.querySelector('.mapCanvas__filter');
+const JMLofts = { lat: 42.773403, lng: -71.083941 };
 let menuIsOpen = false;
+
+/* INITIALIZE MAP */
+
+moptions.center = JMLofts;
+const DowntownMap = new Mapster(canvas, moptions, JMLocations);
 
 /* MAP MENU APPEARANCE */
 
