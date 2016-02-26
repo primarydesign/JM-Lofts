@@ -44,6 +44,7 @@
   font-size: 0.90rem;
   outline: none;
   text-transform: uppercase;
+  @media (width >= 900px) { display: none; }
 }
 
 .mapMenu {
