@@ -14,6 +14,27 @@ let menuIsOpen = false;
 moptions.center = JMLofts;
 const Downtown = new Mapster(canvas, moptions, JMLocations);
 
+Downtown._setEvents(Downtown.map, [{
+  event: 'click',
+  action: function() {
+    Downtown.closeIW();
+    if (menuIsOpen) closeMenu();
+  }
+}]);
+
+Downtown.markers.list.map(function(marker) {
+  Downtown._setEvents(marker, [
+    {
+      event: 'click',
+      action: function() {
+        if (Downtown.activeIW === this.infoWindow) {
+          Downtown.closeIW();
+        } else Downtown.openIW(this);
+      }
+    }
+  ]);
+});
+
 /* INITIALIZE MENU */
 
 const Menu = new Controls();
