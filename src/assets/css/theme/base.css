@@ -40,3 +40,16 @@ html {
   top: 0;left: 0;
   width: 100%;
 }
+
+#section--contact {
+  padding: 8vw 0 1vw;
+  text-align: center;
+  background: url(../img/features/corridor.jpg) no-repeat center / cover;
+}
+#section--contact:before {
+  content: '';
+  position: absolute;
+  size: 100%;
+  top: 0;left: 0;
+  background: rgba($black, 0.25);
+}

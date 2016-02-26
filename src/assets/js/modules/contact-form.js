@@ -32,6 +32,7 @@ function submission(form) {
     url: 'assets/submit.php',
     data: jQuery(form).serialize(),
     beforeSend: function() {
+      console.log('sending soon');
       submit.disabled = true;
     },
     success: function() {
