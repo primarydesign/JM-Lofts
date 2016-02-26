@@ -3,19 +3,19 @@ import tillstand from '../library/tillstand';
 
 class Controls {
   constructor(selector) {
-    this.mapUI = tillstand(document.querySelector('.mapUI')).tillstand.instate('active');
-    this.categoryList = tillstand(document.querySelector('.mapUI__categories')).tillstand.instate('active');
-    this.locationList = tillstand(document.querySelectorAll('.mapUI__locations')).tillstand.instate('active');
-    this.categoryItems = tillstand(document.querySelectorAll('.mapUI__category')).tillstand.instate('active');
-    this.locationItems = tillstand(document.querySelectorAll('.mapUI__location')).tillstand.instate('active');
-    this.buttons = tillstand(document.querySelectorAll('.mapUI__button')).tillstand.instate('active');
+    this.mapUI = tillstand(document.querySelector('.mapMenu')).tillstand.instate('active');
+    this.categoryList = tillstand(document.querySelector('.mapMenu__categories')).tillstand.instate('active');
+    this.locationList = tillstand(document.querySelectorAll('.mapMenu__locations')).tillstand.instate('active');
+    this.categoryItems = tillstand(document.querySelectorAll('.categoryItem')).tillstand.instate('active');
+    this.locationItems = tillstand(document.querySelectorAll('.locationItem')).tillstand.instate('active');
+    this.buttons = tillstand(document.querySelectorAll('.categoryItem__button')).tillstand.instate('active');
     this.categories = {};
     for(let i = 0; i < this.categoryItems.length; i++) {
       let category = this.categoryItems[i].getAttribute('data-category');
       this.categories[category] = {
-        item: document.querySelector(`${selector}__category[data-category="${category}"]`),
-        button: document.querySelector(`${selector}__button[data-category="${category}"]`),
-        locationList: tillstand(document.querySelector(`${selector}__locations[data-category="${category}"]`)).tillstand.instate('active')
+        item: document.querySelector(`.categoryItem[data-category="${category}"]`),
+        button: document.querySelector(`.categoryItem__button[data-category="${category}"]`),
+        locationList: tillstand(document.querySelector(`.mapMenu__locations[data-category="${category}"]`)).tillstand.instate('active')
       };
     }
   }

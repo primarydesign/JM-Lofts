@@ -1,5 +1,6 @@
 import moptions from '../library/moptions';
 import Mapster from '../library/mapster';
+import Controls from './categories';
 import velocity from '../vendors/velocity';
 
 const track = document.querySelector('.downtownMap__track');
@@ -11,7 +12,11 @@ let menuIsOpen = false;
 /* INITIALIZE MAP */
 
 moptions.center = JMLofts;
-const DowntownMap = new Mapster(canvas, moptions, JMLocations);
+const Downtown = new Mapster(canvas, moptions, JMLocations);
+
+/* INITIALIZE MENU */
+
+const Menu = new Controls();
 
 /* MAP MENU APPEARANCE */
 
