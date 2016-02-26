@@ -1,22 +1,84 @@
-.locationsMap {
+.downtownMap {
+  max-height: 600px;
+  min-height: 400px;
   position: relative;
-  width: 100%;
+  size: 100% 40vw;
+  background: $black;
   font-size: 0;
-  border-bottom: 1px solid $black;
+  @media (width >= 900px) { min-height: 500px }
+  @media (width < 900px) { min-height: 400px }
 }
-.locationsMap__ui {
-  @media (width >= 800px) {
-    display: inline-block;
-    height: 40vw;
-    vertical-align: top;
+.downtownMap__frame {
+  overflow-x: hidden;
+  size: 100%;
+}
+.downtownMap__track {
+  position: relative;
+  size: 100%;
+  white-space: nowrap;
+  @media (width >= 900px) {}
+  @media (width < 900px) {
+    left: -250px;
   }
-  @media (width < 800px) {
-    display: block;
-    width: 100%;
-    height: 80vw;
-  }
 }
-.locationsMap__map {
-  size: 75% 100%;
-  background: url(../img/brand-pattern.svg) top / auto 40px;
+.downtownMap__item {
+  display: inline-block;
+  vertical-align: top;
 }
+
+.mapCanvas {
+  height: 100%;
+  position: relative;
+  @media (width >= 900px) { width: calc(100% - 250px); }
+  @media (width < 900px) { width: 100%; }
+}
+.mapCanvas__frame {
+  size: 100%;
+}
+.mapCanvas__filter {
+  padding: 0.50rem 0.80rem;
+  position: absolute;
+  top: 10px;left: 10px;
+  background: $sable;
+  border: 1px solid $black;
+  font-size: 0.90rem;
+  outline: none;
+  text-transform: uppercase;
+}
+
+.mapMenu {
+  height: 100%;
+  width: 250px;
+  border: 1px solid $black;
+  border-left: none;
+  border-right: none;
+}
+.mapMenu__categories {
+  size: 100%;
+}
+.mapMenu__locations {}
+
+.categoryItem {
+  height: calc(100%/7);
+}
+.categoryItem__button {
+  size: 100%;
+  background-color: $sable;
+  border: none;
+  outline: none;
+  text-align: left;
+}
+.categoryItem__icon {
+  margin: 0 0.50rem;
+  size: 2.80rem;
+  vertical-align: middle;
+  /*background: red;*/
+}
+.categoryItem__label {
+  vertical-align: middle;
+  font-size: 0.80rem;
+  text-transform: uppercase;
+}
+
+.locationItem {}
+.locationItem__label {}

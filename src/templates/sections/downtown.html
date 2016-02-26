@@ -1,28 +1,29 @@
-<div class="section__hero"></div>
-<div class="locationsMap">
-  <nav class="locationsMap__ui mapUI">
-    <ul class="mapUI__categories">
-      {% for category in locations | values('category', ['master', 'transportation']) %}
-        <li class="mapUI__category" data-category="{{ category }}">
-          <button class="mapUI__button" data-category="{{ category }}">
-            <span class="mapUI__buttonIcon"><img src="assets/img/map_icons/button-{{ category | replace('/', '_') | lower }}.svg" alt="{{ category }}"></span>
-            <span class="mapUI__buttonLabel">{{ category | replace('/', ' &amp; ') }}</span>
-          </button>
-          <ul class="mapUI__locations" data-category="{{ category }}">
-          {% set store = [] %}
-          {% for location in locations | filter('category', category, 'equals') %}
-            {% if store.indexOf(location.name) == -1 %}
-              <li class="mapUI__location" data-category="{{ category }}" data-name="{{location.name | safe}}"><span class="mapUI__locationLabel">{{ location.name }}</span></li>
-            {% endif %}
-            {% set x = store.push(location.name) %}
+<div class="downtownMap">
+  <div class="downtownMap__frame">
+    <div class="downtownMap__track">
+      <nav class="downtownMap__item mapMenu">
+        <ul class="mapMenu__categories">
+          {% for category in locations | values('category', ['master', 'transportation']) %}
+            {% set categoryIcon = "assets/img/map_icons/button-" + category | replace('/', '_') | lower + ".svg" %}
+            {% set categoryLabel = category | replace('/', ' &amp; ') | safe %}
+            <li class="categoryItem" data-category="{{ category }}">
+              <button class="categoryItem__button" data-category="{{ category }}">
+                <img src="{{ categoryIcon }}" alt="{{ category }}" class="categoryItem__icon">
+                <span class="categoryItem__label">{{ categoryLabel }}</span>
+              </button>
+              <ul class="mapMenu__locations">
+                <li class="locationItem">
+                  <span class="locationItem__label"></span>
+                </li>
+              </ul>
+            </li>
           {% endfor %}
-          </ul>
-        </li>
-      {% endfor %}
-    </ul>
-  </nav>
-  <div class="locationsMap__ui locationsMap__map"></div>
-</div>
-<div class="section__copy">
-  <p class="type--paragraph">Live original. Live in Downtown Haverhill. With over 25 unique restaurants and pubs, several eclectic shops and salons, and the MBTA Commuter Rail steps from your front door, you’ll have everything you need within reach. Downtown Haverhill’s historic vibe and Arts District provide a unique and fun setting for you to call home. For more information on Haverhill and the city’s local events visit our J.M. Blog.</p>
+        </ul>
+      </nav>
+      <div class="downtownMap__item mapCanvas">
+        <div class="mapCanvas__frame"></div>
+        <button class="mapCanvas__filter">Filter</button>
+      </div>
+    </div>
+  </div>
 </div>

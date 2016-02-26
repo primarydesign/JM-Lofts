@@ -1,11 +1,11 @@
-import tillstand from '../library/tillstand';
+// import tillstand from '../library/tillstand';
 import Mapster from '../library/mapster';
 import Controls from './categories';
 import '../vendors/slim-scroll';
 
-const Interface = new Controls('.mapUI');
+// const Interface = new Controls('.mapUI');
 const JMLCenter = { "lat": 42.773403, "lng": -71.083941 };
-const Downtown = new Mapster('.locationsMap__map', {
+const Downtown = new Mapster('.mapCanvas__frame', {
   center: JMLCenter,
   mapTypeControl: false,
   maxZoom: 18,
@@ -36,50 +36,50 @@ Downtown.markers.list.map(function(marker) {
   ]);
 });
 
-Interface.buttons.map(function(button) {
-  button.addEventListener('click', function() {
-    let category = this.getAttribute('data-category');
-    let list = Interface.categories[category].locationList;
-    if (this.tillstand.active.get()) {
-      Interface.close(category);
-      toggleLocations(Interface);
-      toggleAll();
-    } else {
-      Interface.open(category);
-      toggleByCategory(this);
-    }
-    if (list.className.search('has-slimScroll') < 0) {
-      list.className += '  has-slimScroll';
-      $(list).slimScroll({
-        height: '100%',
-        wheelStep: 10
-      });
-    }
-  });
-});
+// Interface.buttons.map(function(button) {
+//   button.addEventListener('click', function() {
+//     let category = this.getAttribute('data-category');
+//     let list = Interface.categories[category].locationList;
+//     if (this.tillstand.active.get()) {
+//       Interface.close(category);
+//       toggleLocations(Interface);
+//       toggleAll();
+//     } else {
+//       Interface.open(category);
+//       toggleByCategory(this);
+//     }
+//     if (list.className.search('has-slimScroll') < 0) {
+//       list.className += '  has-slimScroll';
+//       $(list).slimScroll({
+//         height: '100%',
+//         wheelStep: 10
+//       });
+//     }
+//   });
+// });
 
-Interface.locationItems.map(function(location) {
-  location.addEventListener('click', function() {
-    if (this.tillstand.active.get()) {
-      toggleLocations(Interface);
-      toggleByCategory(this);
+// Interface.locationItems.map(function(location) {
+//   location.addEventListener('click', function() {
+//     if (this.tillstand.active.get()) {
+//       toggleLocations(Interface);
+//       toggleByCategory(this);
 
-    } else {
-      toggleLocations(Interface, this);
-      toggleByLocation(this);
-    }
-  });
-});
+//     } else {
+//       toggleLocations(Interface, this);
+//       toggleByLocation(this);
+//     }
+//   });
+// });
 
-function toggleLocations(Interface, location) {
-  if (Interface.activeLocation) {
-    Interface.activeLocation.tillstand.active.set(false);
-  }
-  if (location) {
-    location.tillstand.active.set(true);
-    Interface.activeLocation = location;
-  }
-}
+// function toggleLocations(Interface, location) {
+//   if (Interface.activeLocation) {
+//     Interface.activeLocation.tillstand.active.set(false);
+//   }
+//   if (location) {
+//     location.tillstand.active.set(true);
+//     Interface.activeLocation = location;
+//   }
+// }
 
 
 function toggleByCategory(element) {
