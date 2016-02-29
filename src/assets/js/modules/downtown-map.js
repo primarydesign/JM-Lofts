@@ -56,6 +56,7 @@ Menu.categoryButtons.map(function(button) {
 
 Menu.locationItems.map(function(location) {
   location.addEventListener('click', function() {
+    Downtown.closeIW();
     if (instate.get(location, 'active')) {
       toggleLocations(Menu);
       toggleMarkersByCategory(this.getAttribute('data-category'));
