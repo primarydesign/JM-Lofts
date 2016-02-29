@@ -23,26 +23,29 @@
   background: no-repeat center center / cover;
 }
 .featuresCarousel__bullets {
-  margin-bottom: 10px;
+  margin-bottom: 1.00rem;
   position: absolute;
   size: 100% auto;
-  bottom: 0.25vw;left: 0%;
+  bottom: 0;left: 0;
   text-align: center;
+  @media (width < 800px) {
+    margin-bottom: 0.50rem;
+  }
 }
 .featuresCarousel__bullet {
-  size: 1.00vw;
-  border: 2px solid $sable;
+  size: 1.00rem;
+  border: 1px solid $sable;
   background-color: transparent;
-  border-radius: 100%;
+  border-radius: 0 !important;
   outline: none;
   @media (width < 800px) {
-    size: 15px;
+    /*size: 0.60rem;*/
   }
 }
 .featuresCarousel__bullet:nth-last-child(n+2) {
-  margin-right: 0.80vw;
+  margin-right: 1.00rem;
   @media (width < 800px) {
-    margin-right: 10px;
+    /*margin-right: 10px;*/
   }
 }
 .featuresCarousel__bullet.active,

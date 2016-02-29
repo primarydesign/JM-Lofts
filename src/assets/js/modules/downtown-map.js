@@ -57,11 +57,11 @@ Menu.categoryButtons.map(function(button) {
 Menu.locationItems.map(function(location) {
   location.addEventListener('click', function() {
     if (instate.get(location, 'active')) {
-      // toggleLocations(Interface);
+      toggleLocations(Menu);
       toggleMarkersByCategory(this.getAttribute('data-category'));
 
     } else {
-      // toggleLocations(Interface, this);
+      toggleLocations(Menu, this);
       toggleMarkersByName(this.getAttribute('data-name'));
     }
   });

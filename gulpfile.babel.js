@@ -13,6 +13,7 @@ import imagemin from 'gulp-imagemin';
 import bsync from 'browser-sync';
 import inline from 'gulp-inline';
 import pretty from 'gulp-pretty-url';
+import replace from 'gulp-replace';
 
 var Uppsta = direque('./gulp' ,{recurse: true});
 var Library = Uppsta.Library;
@@ -42,8 +43,10 @@ gulp.task('pages', function() {
 });
 
 gulp.task('styles', function() {
+  let siteURL = require('./src/assets/_data/site').url;
   return gulp.src($.css.globs)
   .pipe(postcss(_.postcss))
+  .pipe(replace(/__SITEURL__/g, siteURL))
   .pipe(cssnano(_.cssnano))
   .pipe(gulp.dest($.css.dest))
   .pipe(Browser.stream());

@@ -187,7 +187,7 @@
   display: inline-block;
   height: 100%;
   width: 100%;
-  background-image: url(../img/graphic-signature.svg);
+  background-image: url(__SITEURL__/assets/img/graphic-signature.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 80% 80%;
@@ -236,13 +236,13 @@
   }
 }
 .icon--ADA {
-  background-image: url(../img/icon-ada.svg);
+  background-image: url(__SITEURL__/assets/img/icon-ada.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 70% 70%;
 }
 .icon--EHO {
-  background-image: url(../img/icon-eho.svg);
+  background-image: url(__SITEURL__/assets/img/icon-eho.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 70% 70%;

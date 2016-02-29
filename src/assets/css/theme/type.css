@@ -1,6 +1,7 @@
 .type__container {}
 .type--paragraph {
   margin-bottom: 1.50rem;
+  font-family: $scala;
   text-align: justify;
 }
 .type--paragraph:first-of-type {

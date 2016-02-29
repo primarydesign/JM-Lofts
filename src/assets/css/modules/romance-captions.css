@@ -23,6 +23,6 @@
   background: no-repeat center center / contain;
 }
 
-.romanceCaptions__caption:nth-child(1) { background-image: url(../img/type-charm_living.png) }
-.romanceCaptions__caption:nth-child(2) { background-image: url(../img/type-bedrooms.png) }
-.romanceCaptions__caption:nth-child(3) { background-image: url(../img/type-downtown_haverhill.png) }
+.romanceCaptions__caption:nth-child(1) { background-image: url(__SITEURL__/assets/img/type-charm_living.png) }
+.romanceCaptions__caption:nth-child(2) { background-image: url(__SITEURL__/assets/img/type-bedrooms.png) }
+.romanceCaptions__caption:nth-child(3) { background-image: url(__SITEURL__/assets/img/type-downtown_haverhill.png) }

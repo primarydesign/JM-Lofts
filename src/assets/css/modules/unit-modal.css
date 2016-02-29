@@ -135,7 +135,7 @@
   color: #fff;
   /*font-family: $gotham;*/
   text-transform: uppercase;
-  background: url(../img/rolled_ink.png) no-repeat center center;
+  background: url(__SITEURL__/assets/img/rolled_ink.png) no-repeat center center;
   background-size: cover;
   @include smoothText;
 }

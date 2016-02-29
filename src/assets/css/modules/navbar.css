@@ -40,11 +40,11 @@
   @include scaleW(2.4/16.5);
   height: 100%;
   z-index: 2;
-  background: url(../img/brand-logo.svg) center / 85% auto no-repeat;
+  background: url(__SITEURL__/assets/img/brand-logo.svg) center / 85% auto no-repeat;
   background-color: $black;
 }
 .navbar__brandImage {
-  @include bordersImage(../img/brand-image.svg, center bottom, auto 101%);
+  @include bordersImage(__SITEURL__/assets/img/brand-image.svg, center bottom, auto 101%);
   @include scaleW(1.6/16.5);
   height: 100%;
   background-color: $sable;
