@@ -1,16 +1,22 @@
 html {
+  color: $black;
   font-size: 16px;
 }
 .page {
   padding: calc($navHeight - 0.5px) 0 0 !important;
+  width: 100%;
   background-color: $black;
   border: $border-thick solid $black;
-  color: $black;
+  background-color: $black;
   font-family: $gotham;
 }
 .page__content {
+  position: relative;
+}
+.page__constraint {
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1200px !important;
+  position: relative;
   width: 100%;
   background-color: $sable;
 }

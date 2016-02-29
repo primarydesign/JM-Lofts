@@ -13,7 +13,7 @@ Patterns['EMAIL'] = "[a-zA-Z0-9_.+\-]+@[a-zA-Z0-9-.]+$";
 Patterns['PHONE'] = "^\\(?([0-9]{3})\\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$";
 
 for(let i = 0; i < fields.length; i++) {
-  fields[i].addEventListener('focusout', function(event) {
+  fields[i].addEventListener('blur', function(event) {
     validateField(this);
   });
 }
