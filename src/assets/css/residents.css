@@ -16,7 +16,7 @@
   text-align: center;
   background-color: $sable;
   @media (width >= 800px) {
-    height: calc(100vh - $navHeight - 10vw - 1.1vw) !important;
+    height: calc(100vh - $navHeight - 10vw - 1.2vw) !important;
   }
 }
 .page__content:before {
