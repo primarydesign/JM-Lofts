@@ -121,7 +121,7 @@ function toggleMarkersByName(name) {
     if (marker.name === name) {
       if (marker.multiple) {
         Downtown.zoom(13);
-        Downtown.center(JMLCenter);
+        Downtown.center(JMLofts);
       } else {
         Downtown.zoom(16);
         Downtown.center(marker.position);
