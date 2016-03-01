@@ -22,6 +22,9 @@
                     {% endif %}
                     {% set x = store.push(location.name) %}
                   {% endfor %}
+                  <li class="backwardItem" data-category="{{ category }}">
+                    <span class="backwardItem__label">Back</span>
+                  </li>
                 </ul>
               </nav>
             </li>

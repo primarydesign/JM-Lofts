@@ -68,6 +68,15 @@ Menu.locationItems.map(function(location) {
   });
 });
 
+Menu.backwardItems.map(function(backwardItem) {
+  backwardItem.addEventListener('click', function() {
+    let category = this.getAttribute('data-category');
+    Downtown.closeIW();
+    Menu.close(category);
+    restoreAllMarkers();
+  });
+});
+
 /* MAP MENU APPEARANCE */
 
 filter.addEventListener('click', function(event) {

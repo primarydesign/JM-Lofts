@@ -86,16 +86,27 @@
   overflow: hidden;
 }
 
-.locationItem {
+.locationItem,
+.backwardItem {
   cursor: pointer;
   padding: 0.70rem;
 }
-.locationItem__label {
+
+.locationItem__label,
+.backwardItem__label {
   font-size: 0.80rem;
   white-space: pre-wrap;
 }
+.backwardItem__label:before {
+  content: '';
+  display: inline-block;
+  margin-right: 0.50rem;
+  size: 0.80rem;
+  vertical-align: middle;
+  background: url('__SITEURL__/assets/img/graphic-back.svg') no-repeat center / cover;
+}
 
-.categoryItem__button, .locationItem {
+.categoryItem__button, .locationItem, .backwardItem {
   &:hover, &.is-active {
     background: url(__SITEURL__/assets/img/rolled_ink.png) no-repeat center / 100% 100%;
   }

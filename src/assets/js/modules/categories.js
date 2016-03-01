@@ -10,6 +10,7 @@ class Controls {
     this.locationList = document.querySelector('.mapMenu__locations');
     this.categoryItems = Array.prototype.slice.call(document.querySelectorAll('.categoryItem'));
     this.locationItems = Array.prototype.slice.call(document.querySelectorAll('.locationItem'));
+    this.backwardItems = Array.prototype.slice.call(document.querySelectorAll('.backwardItem'));
     this.categoryButtons = Array.prototype.slice.call(document.querySelectorAll('.categoryItem__button'));
     this.categories = {};
     for(let i = 0; i < this.categoryItems.length; i++) {
