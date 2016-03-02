@@ -1,0 +1,41 @@
+.type__container {}
+.type--paragraph {
+  margin-bottom: 1.50rem;
+  font-family: $scala;
+  text-align: justify;
+}
+.type--paragraph:first-of-type {
+  text-indent: 2.50rem;
+}
+.type--paragraph:last-of-type {
+  margin-bottom: 0;
+}
+.type--heading {
+  padding: 0 2rem;
+  font-size: 1.80rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+.type--descriptor {
+  font-family: $scala;
+  font-size: 1.50rem;
+  text-align: center;
+  text-transform: lowercase;
+}
+.type--delineated:after {
+  content: '';
+  display: block;
+  height: 1.00px;
+  margin: 1.25rem auto;
+  min-width: 200px;
+  width: 20%;
+  background-color: $black;
+}
+.type--supplement {
+  margin-bottom: 3.00rem;
+  padding: 0 3.00rem;
+  font-family: $scala;
+  font-size: 0.90rem;
+  text-align: center;
+  text-transform: uppercase;
+}

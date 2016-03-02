@@ -54,7 +54,7 @@
 
 .mapUI__button.is-active,
 .mapUI__button:hover {
-  background: url(../img/rolled_ink.png) no-repeat center / 100% 100%;
+  background: url(__SITEURL__/assets/img/rolled_ink.png) no-repeat center / 100% 100%;
 }
 
 .mapUI__buttonIcon {
@@ -127,7 +127,7 @@
 .mapUI__location.is-active,
 .mapUI__location:hover,
 .mapUI__location:focus {
-  background: url(../img/rolled_ink.png) no-repeat center / 100% 100%;
+  background: url(__SITEURL__/assets/img/rolled_ink.png) no-repeat center / 100% 100%;
 }
 
 .mapUI__locationLabel {

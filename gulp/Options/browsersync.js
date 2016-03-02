@@ -13,5 +13,6 @@ module.exports = {
   browser: Boolean(argv.cross)
     ? ['google chrome', 'firefox', 'safari']
     : 'default',
+  scrollRestoreTechnique: false,
   notify: false
 };

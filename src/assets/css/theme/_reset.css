@@ -4,12 +4,16 @@
   position: relative;
   font-family: $gotham;
   -webkit-font-smoothing: antialiased;
-}
-a, button {
-  cursor: pointer !important;
+  -moz-osx-font-smoothing: greyscale;
 }
 a, address {
   color: inherit;
   font-style: normal;
   text-decoration: none;
+}
+a, button {
+  cursor: pointer;
+}
+ul > li {
+  list-style: none;
 }

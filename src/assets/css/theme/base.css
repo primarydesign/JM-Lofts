@@ -1,21 +1,63 @@
-body {
-    background: $sable;
+html {
+  color: $black;
+  font-size: 16px;
 }
-
 .page {
-  border: $border-thick solid $black;
   padding: calc($navHeight - 0.5px) 0 0 !important;
+  width: 100%;
+  background-color: $black;
+  border: $border-thick solid $black;
+  background-color: $black;
   font-family: $gotham;
 }
-.page.is-locked {
-  overflow-y: hidden;
-}
 .page__content {
+  position: relative;
+}
+.page__constraint {
   margin: 0 auto;
+  max-width: 1200px !important;
+  position: relative;
+  width: 100%;
   background-color: $sable;
 }
-.page__section {
+.section {
   position: relative;
+  width: 100%;
+}
+.section__heading {
+  margin-bottom: 3.00rem;
+}
+.section__hero {
+  margin: 0 auto;
+  text-align: center;
+}
+.section__copy {
+  margin: 0 auto;
+  max-width: 820px;
+  padding: 3rem 0;
+  width: 80%;
+  font-family: $scala;
+  font-size: 1.30rem;
+}
+
+.aspectWrapper {
+  height: 100%;
+  position: absolute;
+  top: 0;left: 0;
+  width: 100%;
+}
+
+#section--contact {
+  padding: 8vw 0 1vw;
+  text-align: center;
+  background: url(__SITEURL__/assets/img/features/corridor.jpg) no-repeat center / cover;
+}
+#section--contact:before {
+  content: '';
+  position: absolute;
+  size: 100%;
+  top: 0;left: 0;
+  background: rgba($black, 0.25);
 }
 .page__overlay {
   position: fixed;
@@ -34,62 +76,4 @@ body {
   animation-name: overlayFadeOut;
   animation-duration: 300ms;
   animation-fill-mode: forwards;
-}
-
-@keyframes overlayFadeOut {
-  0% {
-    opacity: 1;
-    z-index: 10;
-  }
-  99% {
-    z-index: 10;
-  }
-  100% {
-    opacity: 0;
-    z-index: -1;
-  }
-}
-.sectionImage {
-  width: 100%;
-  height: 40vw;
-  background: url(../img/washington_street.jpg) no-repeat center 90% / cover;
-}
-#section--contact {
-  padding: 8vw 0 1vw;
-  text-align: center;
-  background: url(../img/features/corridor.jpg) no-repeat center / cover;
-}
-#section--contact:before {
-  content: '';
-  position: absolute;
-  size: 100%;
-  top: 0;left: 0;
-  background: rgba($black, 0.25);
-}
-.applyButton {
-  appearance: none;
-  cursor: pointer;
-  display: inline-block;
-  margin: 6vw auto;
-  color: $sable;
-  /*font-family: $gotham*/;
-  letter-spacing: 0.35vw;
-  text-transform: uppercase;
-  background: url(../img/rolled_ink.png) no-repeat center center / 100% 100%;
-  border: none;
-  outline: none;
-  @media (width >= 800px) {
-    font-size: 1.50vw;
-    padding: 0.75vw 3vw;
-  }
-  @media (width < 800px) {
-    font-size: 4.50vw;
-    padding: 2.75vw 10vw;
-  }
-  @media (width >= 900px) {
-    margin-top: 6vw;
-  }
-  @media (width < 900px) {
-    margin-top: 12vw;
-  }
 }

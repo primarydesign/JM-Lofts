@@ -1,28 +1,28 @@
-import tillstand from '../library/tillstand';
+import moptions from '../library/moptions';
 import Mapster from '../library/mapster';
 import Controls from './categories';
-import '../vendors/slim-scroll';
+import velocity from '../vendors/velocity';
+import instate from '../library/instate.js';
 
-const Interface = new Controls('.mapUI');
-const JMLCenter = { "lat": 42.773403, "lng": -71.083941 };
-const Downtown = new Mapster('.locationsMap__map', {
-  center: JMLCenter,
-  mapTypeControl: false,
-  maxZoom: 18,
-  minZoom: 3,
-  scrollwheel: false,
-  streetViewControl: false,
-  zoom: 16,
-  zoomControlOptions: { position: google.maps.ControlPosition.TOP_LEFT },
-  styles: [{"featureType":"administrative.province","elementType":"geometry.stroke","stylers":[{"visibility":"on"},{"color":"#d78a3a"},{"gamma":"1.61"},{"lightness":"10"},{"weight":"1.20"}]},{"featureType":"administrative.province","elementType":"labels.text.fill","stylers":[{"color":"#b78653"}]},{"featureType":"landscape.natural","elementType":"all","stylers":[{"hue":"#ffbb00"},{"saturation":54}]},{"featureType":"poi","elementType":"labels","stylers":[{"saturation":-84},{"lightness":6},{"visibility":"off"}]},{"featureType":"poi.attraction","elementType":"all","stylers":[{"saturation":-55}]},{"featureType":"poi.park","elementType":"all","stylers":[{"visibility":"on"},{"saturation":-60},{"gamma":1.91}]},{"featureType":"poi.park","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"visibility":"simplified"},{"saturation":-27},{"gamma":1.8}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"hue":"#ff8800"},{"saturation":-79},{"lightness":-16},{"visibility":"simplified"}]},{"featureType":"road.highway","elementType":"labels","stylers":[{"saturation":-67},{"hue":"#ff9900"},{"lightness":6},{"visibility":"off"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"hue":"#ff6600"},{"saturation":-75},{"lightness":-21}]},{"featureType":"road.arterial","elementType":"labels","stylers":[{"saturation":-79},{"visibility":"off"}]},{"featureType":"road.local","elementType":"all","stylers":[{"hue":"#ff5e00"},{"saturation":-24},{"visibility":"simplified"},{"lightness":28}]},{"featureType":"road.local","elementType":"labels","stylers":[{"visibility":"on"}]},{"featureType":"transit.line","elementType":"all","stylers":[{"visibility":"simplified"},{"saturation":-27}]},{"featureType":"transit.station","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"visibility":"on"},{"saturation":-85}]}]
-}, JMLocations);
+const track = document.querySelector('.downtownMap__track');
+const canvas = document.querySelector('.mapCanvas__frame');
+const filter = document.querySelector('.mapCanvas__filter');
+const JMLofts = { lat: 42.773403, lng: -71.083941 };
+let menuIsOpen = false;
+
+/* INITIALIZE MAP */
+
+moptions.center = JMLofts;
+const Downtown = new Mapster(canvas, moptions, JMLocations);
 
 Downtown._setEvents(Downtown.map, [{
   event: 'click',
   action: function() {
     Downtown.closeIW();
+    if (menuIsOpen) closeMenu();
   }
 }]);
+
 Downtown.markers.list.map(function(marker) {
   Downtown._setEvents(marker, [
     {
@@ -36,54 +36,87 @@ Downtown.markers.list.map(function(marker) {
   ]);
 });
 
-Interface.buttons.map(function(button) {
+/* INITIALIZE MENU */
+
+const Menu = new Controls();
+
+Menu.categoryButtons.map(function(button) {
   button.addEventListener('click', function() {
     let category = this.getAttribute('data-category');
-    let list = Interface.categories[category].locationList;
-    if (this.tillstand.active.get()) {
-      Interface.close(category);
-      toggleLocations(Interface);
-      toggleAll();
+    Downtown.closeIW();
+    if (instate.get(this, 'active')) {
+      Menu.close(category);
+      restoreAllMarkers();
     } else {
-      Interface.open(category);
-      toggleByCategory(this);
-    }
-    if (list.className.search('has-slimScroll') < 0) {
-      list.className += '  has-slimScroll';
-      $(list).slimScroll({
-        height: '100%',
-        wheelStep: 10
-      });
+      Menu.open(category);
+      toggleMarkersByCategory(category);
     }
   });
 });
 
-Interface.locationItems.map(function(location) {
+Menu.locationItems.map(function(location) {
   location.addEventListener('click', function() {
-    if (this.tillstand.active.get()) {
-      toggleLocations(Interface);
-      toggleByCategory(this);
+    Downtown.closeIW();
+    if (instate.get(location, 'active')) {
+      toggleLocations(Menu);
+      toggleMarkersByCategory(this.getAttribute('data-category'));
 
     } else {
-      toggleLocations(Interface, this);
-      toggleByLocation(this);
+      toggleLocations(Menu, this);
+      toggleMarkersByName(this.getAttribute('data-name'));
     }
   });
 });
 
-function toggleLocations(Interface, location) {
-  if (Interface.activeLocation) {
-    Interface.activeLocation.tillstand.active.set(false);
+Menu.backwardItems.map(function(backwardItem) {
+  backwardItem.addEventListener('click', function() {
+    let category = this.getAttribute('data-category');
+    Downtown.closeIW();
+    Menu.close(category);
+    restoreAllMarkers();
+  });
+});
+
+/* MAP MENU APPEARANCE */
+
+filter.addEventListener('click', function(event) {
+  event.preventDefault();
+  if (menuIsOpen) closeMenu();
+  else openMenu();
+});
+
+window.addEventListener('resize', function() {
+  if (menuIsOpen && window.innerWidth >= 900) closeMenu(0);
+});
+
+/* FUNCTIONS INVENTORY */
+
+function openMenu(duration = 400) {
+  menuIsOpen = true;
+  filter.textContent = "Close";
+  velocity(track, {
+    'translateX': 250
+  },{ duration: duration });
+}
+function closeMenu(duration = 400) {
+  menuIsOpen = false;
+  filter.textContent = "Filter";
+  velocity(track, {
+    'translateX': 0
+  },{ duration: duration });
+}
+
+function toggleLocations(Menu, location) {
+  if (Menu.activeLocation) {
+    instate.set(Menu.activeLocation, 'active', false);
   }
   if (location) {
-    location.tillstand.active.set(true);
-    Interface.activeLocation = location;
+    instate.set(location, 'active', true);
+    Menu.activeLocation = location;
   }
 }
 
-
-function toggleByCategory(element) {
-  let category = element.getAttribute('data-category');
+function toggleMarkersByCategory(category) {
   Downtown.markers.list.map(function(marker) {
     if (marker.category === category) {
       marker.setVisible(true);
@@ -92,13 +125,13 @@ function toggleByCategory(element) {
     }
   });
 }
-function toggleByLocation(element) {
-  let name = element.getAttribute('data-name');
+
+function toggleMarkersByName(name) {
   Downtown.markers.list.map(function(marker) {
     if (marker.name === name) {
       if (marker.multiple) {
         Downtown.zoom(13);
-        Downtown.center(JMLCenter);
+        Downtown.center(JMLofts);
       } else {
         Downtown.zoom(16);
         Downtown.center(marker.position);
@@ -109,7 +142,8 @@ function toggleByLocation(element) {
     }
   });
 }
-function toggleAll() {
+
+function restoreAllMarkers() {
   Downtown.markers.list.map(function(marker) {
     marker.setVisible(true);
   });

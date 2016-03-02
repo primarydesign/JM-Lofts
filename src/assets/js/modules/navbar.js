@@ -10,19 +10,13 @@ const navMenu = tillstand('.navMenu');
 const scryers = document.querySelectorAll('.navMenu__link[data-scry]');
 const page = tillstand('.page');
 
-
-const currentURL = document.URL.replace(window.location.hash, '');
-for(let i = 0; i < scryers.length; i++) {
-  let link = scryers[i];
-  let href = link.getAttribute('href');
-  link.addEventListener('click', function(event) {
-    if (currentURL === "http://localhost:3000/") {
-      event.preventDefault();
-      scry(this);
-    }
-  });
-}
-
+jQuery('.navMenu__link').on('click', function() {
+  if (navbar.className.search('is-pinned') > -1) {
+    navbar.className = navbar.className.replace('is-pinned', 'not-pinned');
+  } else {
+    navbar.className += ' not-pinned';
+  }
+});
 
 const headroom = new Headroom(navbar, {
   tolerance : {
@@ -49,12 +43,12 @@ toggle.addEventListener('click', function(e) {
   page.tillstand.locked.toggle();
 });
 
-overlay.addEventListener('click', function(e) {
-  toggles.tillstand.set('active', false);
-  overlay.tillstand.active.set(false);
-  navMenu.tillstand.active.set(false);
-  page.tillstand.locked.set(false);
-});
+// overlay.addEventListener('click', function(e) {
+//   toggles.tillstand.set('active', false);
+//   overlay.tillstand.active.set(false);
+//   navMenu.tillstand.active.set(false);
+//   page.tillstand.locked.set(false);
+// });
 
 window.addEventListener('resize', function(e) {
   if (window.innerWidth >= 700 && navMenu.tillstand.active.get()) {

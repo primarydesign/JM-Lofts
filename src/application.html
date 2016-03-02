@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>J.M. Lofts</title>
-  <meta name="viewport" content="maximum-scale=1,width=device-width,initial-scale=1,user-scalable=0">
-  <link href='https://fonts.googleapis.com/css?family=Montserrat:700,400|IM+Fell+Great+Primer+SC' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="../assets/css/application.css">
-</head>
-<body class="page">
-  {% include 'navbar.html' %}
+{% extends 'base.html' %}
+
+{% block content %}
   <section class="application">
     <h1 class="application__headline">JM Lofts Rental Application</h1>
     <span class="application__hint">*indicates required field</span>
@@ -58,11 +50,6 @@
     </div>
   <div class="form__note">
         <p class="form__message">Thank you!<br/> The final step is to <a href="https://secure.squarespace.com/commerce/checkout?cartId=56cb33c862cd946188c3913c" target="_blank">click here to submit your application fee</a>. Once completed, our leasing staff will be in touch shortly.</p>
-  </div>    
+  </div>
   </section>
-  {% include 'footer.html' %}
-  <div class="page__overlay"></div>
-  <script src="../assets/js/application.js"></script>
-  <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
-</body>
-</html>
+{% endblock %}

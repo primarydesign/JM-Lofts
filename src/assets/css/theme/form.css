@@ -149,7 +149,7 @@
   color: $sable;
   /*font-family: $gotham;*/
   text-transform: uppercase;
-  background: url(../img/rolled_ink.png) no-repeat center center / 100% 100%;
+  background: url(__SITEURL__/assets/img/rolled_ink.png) no-repeat center center / 100% 100%;
   border: none;
   outline: none;
   @media (width >= 800px) {

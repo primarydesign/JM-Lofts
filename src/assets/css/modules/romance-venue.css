@@ -1,5 +1,7 @@
 .romanceVenue {
-  height: calc(550vw/8);
+  height: 0;
+  padding-bottom: calc(550%/8);
+  position: relative;
   width: 100%;
   background: $black;
   font-size: 0;
@@ -16,8 +18,8 @@
   background: no-repeat center center / cover $black;
 }
 .romanceVenue__panel--image:nth-child(1) {
-  background-image: url(../img/slide-building_facade.jpg);
+  background-image: url(__SITEURL__/assets/img/slide-building_facade.jpg);
 }
 .romanceVenue__panel--image:nth-child(3) {
-  background-image: url(../img/slide-workspace.jpg);
+  background-image: url(__SITEURL__/assets/img/slide-workspace.jpg);
 }

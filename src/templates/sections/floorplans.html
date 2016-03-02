@@ -1,17 +1,16 @@
-<div class="romanceText">
-  <h2 class="romanceText__headline">Find the floor plan<br>that fits your lifestyle</h2>
-  <hr class="romanceText__divider" size="2" color="#231F20">  
-  <p class="romanceText__subhead">J.M. Lofts offers uniquely designed<br>one- and two-bedroom apartment homes for rent.</p>
+<div class="section__heading">
+  <h2 class="type--heading type--delineated">Find the floor plan<br>that fits your lifestyle</h2>
+  <p class="type--descriptor">J.M. Lofts offers uniquely designed<br>one- and two-bedroom apartment homes for rent.</p>
 </div>
 <div class="unitTables">
   <div class="unitTables__column">
     <figure class="unitTable">
       <figcaption class="unitTable__captions">
         <span class="unitTable__caption">One-Bedroom Apartments</span>
-        <span class="unitTable__sub-caption">starting at $1,425*</span>
+        <span class="unitTable__caption">starting at $1,425*</span>
       </figcaption>
       <div class="unitTable__table">
-          <span class="unitTable__type">one bed <span class="small-char">&amp;</span> one bath</span>
+          <div class="unitTable__type">One Bed <span>&amp;</span> One Bath</div>
           <div class="unitTable__body">
           {% for unit in units %}{% if unit.br == 1 %}
             <div class="unitTable__row" data-unit-un="{{ unit.un }}" data-unit-br="{{ unit.br }}" data-unit-ba="1" data-unit-sf="{{ unit.sf }}" data-unit-image="{{ plans[unit.un] }}">
@@ -27,10 +26,10 @@
     <figure class="unitTable">
       <figcaption class="unitTable__captions">
         <span class="unitTable__caption">Two-Bedroom Apartments</span>
-        <span class="unitTable__sub-caption">starting at $1,600*</span>
+        <span class="unitTable__caption">starting at $1,600*</span>
       </figcaption>
       <div class="unitTable__table">
-        <span class="unitTable__type">two bed <span class="small-char">&amp;</span> one bath</span>
+        <div class="unitTable__type">Two Bed <span>&amp;</span> One Bath</div>
         <div class="unitTable__body">
           {% for unit in units %}{% if unit.br == 2 %}
             <div class="unitTable__row" data-unit-un="{{ unit.un }}" data-unit-br="{{ unit.br }}" data-unit-ba="1" data-unit-sf="{{ unit.sf }}" data-unit-image="{{ plans[unit.un] }}">
@@ -42,5 +41,5 @@
       </div>
     </figure>
   </div>
-  <p class="unitTable__disclaimer">* rents subject to change. equal housing opportunity.</p>
 </div>
+<p class="unitTable__disclaimer type--supplement">*Rents subject to change. Equal housing opportunity.</p>
