@@ -16,7 +16,7 @@
     ga('send', 'pageview');
   </script>
 </head>
-<body class="page">
+<body class="page {{ page }}">
   {% include 'components/navbar.html' %}
   <main class="page__content">
     <div class="page__constraint">{% block content %}{% endblock %}</div>

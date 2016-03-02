@@ -19,6 +19,9 @@ html {
   position: relative;
   width: 100%;
   background-color: $sable;
+  .residents & {
+    display: inline-block;
+  }
 }
 .section {
   position: relative;
