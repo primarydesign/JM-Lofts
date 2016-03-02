@@ -13,15 +13,10 @@
 .application {
   margin: 0 auto;
   position: relative;
-  @media (width >= 1000px) {
-    /*width: 46%;*/
-  }
-  @media (width >= 800px) {
-    width: 80%;
-  }
-  @media (width < 800px) {
-    width: 80%;
-  }
+  width: 100% !important;
+}
+.page__constraint {
+  padding: 0 10%;
 }
 .application__headline {
   text-align:center;
