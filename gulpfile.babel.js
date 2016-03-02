@@ -27,7 +27,7 @@ gulp.task('assets', function() {
 });
 
 gulp.task('pages', function() {
-  gulp.src(['./src/templates/{navbar,footer}.html'])
+  gulp.src(['./src/templates/components/{navbar,footer}.html'])
   .pipe(data(_.data))
   .pipe(swig(_.swig()))
   .pipe(inline(_.inline))

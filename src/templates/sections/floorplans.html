@@ -15,7 +15,7 @@
           {% for unit in units %}{% if unit.br == 1 %}
             <div class="unitTable__row" data-unit-un="{{ unit.un }}" data-unit-br="{{ unit.br }}" data-unit-ba="1" data-unit-sf="{{ unit.sf }}" data-unit-image="{{ plans[unit.un] }}">
               <div class="unitTable__cell unitTable__cell--ID">{{ unit.un }}</div>
-              <div class="unitTable__cell unitTable__cell--SF">{{ unit.sf | replace('\B(?=(\d{3})+(?!\d))', ',', 'g') }}</div>
+              <!-- <div class="unitTable__cell unitTable__cell--SF">{{ unit.sf | replace('\B(?=(\d{3})+(?!\d))', ',', 'g') }}</div> -->
             </div>
           {% endif %}{% endfor %}
         </div>
@@ -34,7 +34,7 @@
           {% for unit in units %}{% if unit.br == 2 %}
             <div class="unitTable__row" data-unit-un="{{ unit.un }}" data-unit-br="{{ unit.br }}" data-unit-ba="1" data-unit-sf="{{ unit.sf }}" data-unit-image="{{ plans[unit.un] }}">
               <div class="unitTable__cell unitTable__cell--ID">{{ unit.un }}</div>
-              <div class="unitTable__cell unitTable__cell--SF">{{ unit.sf | replace('\B(?=(\d{3})+(?!\d))', ',', 'g') }}</div>
+              <!-- <div class="unitTable__cell unitTable__cell--SF">{{ unit.sf | replace('\B(?=(\d{3})+(?!\d))', ',', 'g') }}</div> -->
             </div>
           {% endif %}{% endfor %}
         </div>
