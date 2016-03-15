@@ -682,5 +682,17 @@
     "state": "MA",
     "persistent": false,
     "multiple": false
+  },
+  {
+    "lat": 42.773918,
+    "lng": -71.080655,
+    "category": "institutions",
+    "name": "Haverhill Bank",
+    "url": "https://haverhillbank.com/",
+    "address": "180 Merrimack St",
+    "city": "Haverhill",
+    "state": "MA",
+    "persistent": false,
+    "multiple": false
   }
 ]
